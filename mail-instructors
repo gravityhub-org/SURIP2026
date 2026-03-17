@@ -1,0 +1,3 @@
+#!/bin/bash
+# Compose/start an email to "LEONG, Hin Wai" <samson.leong@link.cuhk.edu.hk>, "Souvik Jana" <souvikjana445@gmail.com>", "Sam Lange" <samlange04@gmail.com>, "Paul M." <martens.pjl@gmail.com>, "Ankur Barsode" <ankur.barsode@icts.res.in>, "CHENG, Hiu Yeung" <1155175825@link.cuhk.edu.hk>
+aerc "mailto:samson.leong@link.cuhk.edu.hk,souvikjana445@gmail.com,samlange04@gmail.com,martens.pjl@gmail.com,ankur.barsode@icts.res.in,1155175825@link.cuhk.edu.hk"
