@@ -40,12 +40,12 @@ if __name__ == "__main__":
     data = inject_waveforms(noise_data, waveforms)
     # Save the data:
     for name, dataset in data.items():
-        filename = f"{name}_data.txt"
+        filename = f"example_{name}_data.txt"
         dataset.save(filename)
     # Load the dataset:
     data = {}
     for name in detectors:
-        filename = f"{name}_data.txt"
+        filename = f"example_{name}_data.txt"
         data[name] = timeseries.load_timeseries(filename)
     fig = plot_detector_data(data, waveforms, epoch, duration)
     # Create 'plots' directory if it doesn't exist

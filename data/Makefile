@@ -1,9 +1,9 @@
-all: plots
+all: plots data
 
-data: H1_data.txt L1_data.txt V1_data.txt K1_data.txt
+data: example_H1_data.txt example_L1_data.txt example_V1_data.txt example_K1_data.txt
 plots: plots/detector_data.pdf
 
-H1_data.txt L1_data.txt V1_data.txt K1_data.txt plots/detector_data.pdf: scripts/create_data.py
+example_H1_data.txt example_L1_data.txt example_V1_data.txt example_K1_data.txt plots/detector_data.pdf: scripts/create_data.py
 	uv run scripts/create_data.py
 
 
