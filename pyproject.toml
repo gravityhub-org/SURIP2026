@@ -7,4 +7,5 @@ requires-python = ">=3.13"
 dependencies = [
     "dvc-ssh>=4.2.2",
     "ipython>=9.11.0",
+    "scienceplots>=2.2.1",
 ]
