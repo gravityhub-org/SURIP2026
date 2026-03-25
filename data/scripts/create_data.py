@@ -5,6 +5,8 @@ import numpy as np
 import pylab as plt
 from miscellaneous import get_gps_time_now
 from pycbc.psd import aLIGOZeroDetHighPower
+# Import TimeSeries
+from pycbc.types import timeseries
 # Default files
 from waveform import project_waveforms, generate_waveform, inject_waveforms
 from detector import create_detectors, compute_arrival_times, create_noise
@@ -36,6 +38,15 @@ if __name__ == "__main__":
     }
     waveforms = project_waveforms(detectors, hp, hc, ra, dec, polarization, gps_time)
     data = inject_waveforms(noise_data, waveforms)
+    # Save the data:
+    for name, dataset in data.items():
+        filename = f"{name}_data.txt"
+        dataset.save(filename)
+    # Load the dataset:
+    data = {}
+    for name in detectors:
+        filename = f"{name}_data.txt"
+        data[name] = timeseries.load_timeseries(filename)
     fig = plot_detector_data(data, waveforms, epoch, duration)
     # Create 'plots' directory if it doesn't exist
     import os
