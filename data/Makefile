@@ -1,4 +1,6 @@
-all: NRSur7dq4_v1.0.h5
+all: plots
+
+plots: plots/detector_data.pdf
 
 plots/detector_data.pdf: scripts/create_data.py
 	uv run scripts/create_data.py
