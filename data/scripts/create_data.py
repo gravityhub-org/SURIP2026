@@ -4,11 +4,7 @@
 import numpy as np
 import pylab as plt
 from miscellaneous import get_gps_time_now
-from pycbc.waveform import get_td_waveform
-from pycbc.noise import noise_from_psd
 from pycbc.psd import aLIGOZeroDetHighPower
-from pycbc.types import TimeSeries
-from pycbc.detector import Detector
 # Default files
 from waveform import project_waveforms, generate_waveform, inject_waveforms
 from detector import create_detectors, compute_arrival_times, create_noise
