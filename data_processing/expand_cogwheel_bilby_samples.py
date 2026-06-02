@@ -5,6 +5,10 @@ import json
 from multiprocessing import Pool
 from tqdm import tqdm
 
+import sys
+sys.path.append("../utils")
+from files_io import h5store
+
 main_dir = Path("/users/shared.user/Summer2026/cogwheel_O4_gaussian_injections/PE/IntrinsicLVCPrior/")
 all_dirs = list(main_dir.glob("*/MD_*/run_0"))
 total = len(all_dirs)
@@ -69,7 +73,8 @@ def worker(dir):
     bilby_samples.attrs['event_name'] = event_name
     bilby_samples.attrs['injection_values'] = inj_dict
     bilby_samples.attrs['cogwheel_samples_path'] = (dir / cogwheel_style).as_posix()
-    bilby_samples.to_feather(outdir / f"{event_name}_bilby_style_samples.feather")
+    h5store(outdir / f"{event_name}_bilby_style_samples.h5", bilby_samples)
+    # bilby_samples.to_feather(outdir / f"{event_name}_bilby_style_samples.feather")
 
     for key, val in injection_meta.items():
         vals.append(val)
