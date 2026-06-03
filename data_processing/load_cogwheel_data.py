@@ -5,18 +5,19 @@
 from pathlib import Path
 import warnings
 import numpy as np
-import pandas as pd
 from tqdm import tqdm
 from figaro.exceptions import FIGAROException
 from figaro.load import GW_par, supported_extensions, supported_waveforms, _prior_gw
 
-supported_extensions += 'feather'
+import sys
+sys.path.append("../utils")
+from files_io import h5load
 
 
-def load_feather_data(dir_path, seed=False, par=None, n_samples=-1,
-                      cosmology='Planck18', volume=False, waveform='combined',
-                      snr_threshold=None, far_threshold=None,
-                      verbose=True, likelihood=False, keep_dVdz=False):
+def load_data(dir_path, seed=False, par=None, n_samples=-1,
+                cosmology='Planck18', volume=False, waveform='combined',
+                snr_threshold=None, far_threshold=None,
+                verbose=True, likelihood=False, keep_dVdz=False):
     '''
     Loads the data from .txt files (for simulations) or .h5/.hdf5/.dat files (posteriors from GWTC-x).
     Default cosmological parameters from Planck Collaboration (2021) in a flat Universe (https://www.aanda.org/articles/aa/pdf/2020/09/aa33910-18.pdf)
@@ -62,14 +63,14 @@ def load_feather_data(dir_path, seed=False, par=None, n_samples=-1,
         ext = event.suffix[1:]
 
         # This function only accept `feather` as extension
-        if ext != 'feather':
+        if ext not in ['h5', 'hdf5']:
             if ext in supported_extensions:
-                raise FIGAROException("Not supported extension for this function, recommend using original `load_data` function")
+                raise FIGAROException(f"Not supported extension ({ext}) for this function, recommend using original `load_data` function")
             else:
                 raise TypeError(f"File {event.name} is not supported")
 
         # If everything is ok, load the samples
-        sample_df = pd.read_feather(event)
+        sample_df = h5load(event)
         out = _unpack_cogwheel_posterior(
             sample_df, par=par, n_samples=n_samples, cosmology=cosmology,
             rdstate=rdstate, waveform=waveform,
