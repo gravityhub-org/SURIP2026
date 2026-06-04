@@ -1,7 +1,7 @@
-#####################################################################
-# This script extends the data-loading function of FIGARO           #
-# accepting also the .feather format used for the cogwheel samples. #
-#####################################################################
+##############################################################
+# This script extends the data-loading function of FIGARO    #
+# accepting the .hdf5 format used for the cogwheel samples.  # 
+##############################################################
 from pathlib import Path
 import warnings
 import numpy as np
@@ -17,24 +17,25 @@ from files_io import h5load
 def load_data(dir_path, seed=False, par=None, n_samples=-1,
                 cosmology='Planck18', volume=False, waveform='combined',
                 snr_threshold=None, far_threshold=None,
-                verbose=True, likelihood=False, keep_dVdz=False):
+                verbose=True, likelihood=False, keep_dVdz=False, blacklist_events=None):
     '''
-    Loads the data from .txt files (for simulations) or .h5/.hdf5/.dat files (posteriors from GWTC-x).
+    Loads the data .h5/.hdf5 files (processed cogwheel posterior files).
     Default cosmological parameters from Planck Collaboration (2021) in a flat Universe (https://www.aanda.org/articles/aa/pdf/2020/09/aa33910-18.pdf)
     Not all GW parameters are implemented: run figaro.load.available_gw_pars() for a list of available parameters.
 
     Arguments:
-        str or Path path:     folder with data files
-        bool seed:            fixes the seed to a default value (1) for reproducibility
-        list-of-str par:      list with parameter(s) to extract from GW posteriors
-        int n_samples:        number of samples for (random) downsampling. Default -1: all samples
-        str cosmology:        set of cosmological parameters (Planck18 or Planck15)
-        str waveform:         waveform family to be used ('combined', 'seob', 'imr')
-        double snr_threhsold: SNR threshold for event filtering. For injection analysis only.
-        double far_threshold: FAR threshold for event filtering. For injection analysis only.
-        bool verbose:         show progress bar
-        bool likelihood:      resample to get likelihood samples
-        bool keep_dVdz:       do not remove dV/dz from the likelihood (only if the population model do NOT include it)
+        str or Path path:       folder with data files
+        bool seed:              fixes the seed to a default value (1) for reproducibility
+        list-of-str par:        list with parameter(s) to extract from GW posteriors
+        int n_samples:          number of samples for (random) downsampling. Default -1: all samples
+        str cosmology:          set of cosmological parameters (Planck18 or Planck15)
+        str waveform:           waveform family to be used ('combined', 'seob', 'imr')
+        double snr_threhsold:   SNR threshold for event filtering. For injection analysis only.
+        double far_threshold:   FAR threshold for event filtering. For injection analysis only.
+        bool verbose:           show progress bar. Default True.
+        bool likelihood:        resample to get likelihood samples
+        bool keep_dVdz:         do not remove dV/dz from the likelihood (only if the population model do NOT include it)
+        list blacklist_events:  list of (partial) file names to ignore (e.g. due to bad data quality).
 
     Returns:
         np.ndarray: samples
@@ -57,6 +58,17 @@ def load_data(dir_path, seed=False, par=None, n_samples=-1,
     unknown_pars = set(par).difference(set(GW_par.keys()))
     if not unknown_pars == set():
         raise FIGAROException("The following parameters are not implemented: "+", ".join(unknown_pars)+". Run figaro.load.available_gw_pars() for a list of available parameters.")
+
+    if blacklist_events is not None:
+        _event_files = []
+        for event_file in event_files:
+            for blacklisted in blacklist_events:
+                if blacklisted in event_file.name:
+                    print(f"File {event_file.name} is blacklisted, skipping.")
+                    break
+            else:
+                _event_files.append(event_file)
+        event_files = _event_files
 
     for event in tqdm(event_files, desc='Loading events', disable=not(verbose)):
         rdstate = np.random.RandomState(seed=1 if seed else None)
@@ -94,7 +106,6 @@ def _unpack_cogwheel_posterior(
     ):
         '''
         Reads data from .h5/.hdf5 GW posterior files.
-        For GWTC-3 data release, it uses by default the Mixed posterior samples.
         Not all parameters are implemented: run figaro.load.available_gw_pars() for a list of available parameters.
         The waveform argument allows the user to select a waveform family. The default value, 'combined' uses samples from both imr and seob waveforms.
         For SEOB waveforms, the following waveform models are used (in descending priority order):

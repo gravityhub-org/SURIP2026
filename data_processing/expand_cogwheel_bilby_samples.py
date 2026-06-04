@@ -5,6 +5,7 @@ import json
 from multiprocessing import Pool
 from tqdm import tqdm
 
+# This part is for importing local utilities
 import sys
 sys.path.append("../utils")
 from files_io import h5store
@@ -46,7 +47,7 @@ def worker(dir):
         # print(f'{event_name} does not have samples!')
         return (event_name, 2)
 
-    bilby_samples['network_optimal_filter_snr'] = np.sqrt(orig_cogwheel_samples['h_h'])
+    bilby_samples['network_optimal_snr'] = np.sqrt(orig_cogwheel_samples['h_h'])
     bilby_samples['log_likelihood'] = orig_cogwheel_samples['lnl']
 
     # Add mass parameters
