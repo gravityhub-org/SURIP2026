@@ -10,9 +10,12 @@ from figaro.exceptions import FIGAROException
 from figaro.load import GW_par, supported_extensions, supported_waveforms, _prior_gw
 
 import sys
-sys.path.append("../utils")
-from files_io import h5load
+sys.path.append("..")
+from utils import h5load
 
+__all__ = [
+    "load_data"
+]
 
 def load_data(dir_path, seed=False, par=None, n_samples=-1,
                 cosmology='Planck18', volume=False, waveform='combined',
