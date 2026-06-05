@@ -1,3 +1,4 @@
+#!/cvmfs/software.igwn.org/conda/envs/igwn-py311/bin/python
 from pathlib import Path
 import numpy as np
 import pandas as pd
@@ -11,6 +12,7 @@ sys.path.append("../utils")
 from files_io import h5store
 
 main_dir = Path("/users/shared.user/Summer2026/cogwheel_O4_gaussian_injections/PE/IntrinsicLVCPrior/")
+main_dir = Path.home() / "tmp/ankur_cogwheel_injections/PE/IntrinsicLVCPrior/"
 all_dirs = list(main_dir.glob("*/MD_*/run_0"))
 total = len(all_dirs)
 
