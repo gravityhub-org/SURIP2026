@@ -69,8 +69,8 @@ def add_spin_parameters(injection_dict):
     injection_dict['spin_2y'] = spin_2xy[1]
     injection_dict['phase'] = injection_dict.pop('phi_ref')
 
-    spin_1_inpln = np.sqrt(injection_dict['spin_1x']**2 + injection_dict['spin_1y']**2)
-    spin_2_inpln = np.sqrt(injection_dict['spin_2x']**2 + injection_dict['spin_2y']**2)
+    spin_1_inpln = np.sqrt(np.sum(spin_1xy**2, axis=0))
+    spin_2_inpln = np.sqrt(np.sum(spin_2xy**2, axis=0))
 
     # Effective spin
     injection_dict['chi_eff'] = (injection_dict['spin_1z'] + mass_ratio * injection_dict['spin_2z']) / (1 + mass_ratio)
