@@ -8,31 +8,16 @@ from tqdm import tqdm
 
 # This part is for importing local utilities
 import sys
-sys.path.append("../utils")
-from files_io import h5store
+sys.path.append("..")
+from utils import h5store, cogwheel_to_bilby, add_mass_parameters
 
 main_dir = Path("/users/shared.user/Summer2026/cogwheel_O4_gaussian_injections/PE/IntrinsicLVCPrior/")
-main_dir = Path.home() / "tmp/ankur_cogwheel_injections/PE/IntrinsicLVCPrior/"
+# main_dir = Path.home() / "tmp/ankur_cogwheel_injections/PE/IntrinsicLVCPrior/"
 all_dirs = list(main_dir.glob("*/MD_*/run_0"))
 total = len(all_dirs)
 
 cogwheel_style = 'samples.feather'
 bilby_style = 'bilby_style_samples.feather'
-
-print("Pre-computing cosmology interpolation...")
-# This cosmology is taken from FIGARO, not exactly the same as Planck18 from astropy
-from astropy.cosmology import wCDM
-h, om, ol, w0 = 0.674, 0.315, 0.685, -1
-w1, w2 = 0, 0
-Planck18 = wCDM(H0=h*100, Om0=om, Ode0=ol, w0=w0)
-
-# Pre-compute and interpolate dL-z relation for faster conversion
-from astropy.cosmology import z_at_value
-import astropy.units as u
-from scipy.interpolate import interp1d
-dLs = np.geomspace(0.5, 4e5, 10000)
-zs = z_at_value(Planck18.luminosity_distance, dLs * u.Mpc).value
-dL2z = interp1d(dLs, zs, bounds_error=True)
 
 
 def worker(dir):
@@ -52,23 +37,12 @@ def worker(dir):
     bilby_samples['network_optimal_snr'] = np.sqrt(orig_cogwheel_samples['h_h'])
     bilby_samples['log_likelihood'] = orig_cogwheel_samples['lnl']
 
-    # Add mass parameters
-    m1, m2 = bilby_samples['mass_1'], bilby_samples['mass_2']
-    bilby_samples['total_mass'] = m1 + m2
-    assert np.all(bilby_samples['mass_ratio'] <= 1), "All m2 <= m1 should always be true."
-
-    # Add source-frame parameters
-    redshift = dL2z(bilby_samples['luminosity_distance'].values)
-    bilby_samples['redshift'] = redshift
-    bilby_samples['mass_1_source'] = m1 / (1 + redshift)
-    bilby_samples['mass_2_source'] = m2 / (1 + redshift)
-    bilby_samples['chirp_mass_source'] = (bilby_samples['chirp_mass'] / (1 + redshift))
-    bilby_samples['total_mass_source'] = (bilby_samples['total_mass'] / (1 + redshift))
+    bilby_samples = add_mass_parameters(bilby_samples)
 
     # Load injection values
     npz_file = np.load(dir / f'{event_name}.npz')
     injection_meta = json.loads(npz_file['injection'].tobytes())
-    inj_dict = injection_meta.pop('par_dic')
+    inj_dict = cogwheel_to_bilby(injection_meta.pop('par_dic'))
     vals = list(inj_dict.values())
     dtypes = [(k, 'f8') for k in inj_dict.keys()]
 
