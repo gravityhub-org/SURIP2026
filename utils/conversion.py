@@ -32,7 +32,7 @@ def add_mass_parameters(dataframe):
     assert np.all(dataframe['mass_ratio'] <= 1), "All m2 <= m1 should always be true."
 
     # Add source-frame parameters
-    redshift = dL2z(dataframe['luminosity_distance'].values)
+    redshift = dL2z(dataframe['luminosity_distance'])
     dataframe['redshift'] = redshift
     dataframe['mass_1_source'] = m1 / (1 + redshift)
     dataframe['mass_2_source'] = m2 / (1 + redshift)
