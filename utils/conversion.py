@@ -50,7 +50,7 @@ def rotate_cogwheel_spins(s1x_n, s1y_n, s2x_n, s2y_n, phi_ref):
 
     rot_mat = np.array([[cos_phi, sin_phi], [-sin_phi, cos_phi]])
     spins_in = np.array([[s1x_n, s1y_n], [s2x_n, s2y_n]])
-    spins_out = np.einsum('ij,kj->ki', rot_mat, spins_in)
+    spins_out = np.einsum('ij...,kj...->ki...', rot_mat, spins_in)
 
     return spins_out[0], spins_out[1]
 
@@ -69,8 +69,14 @@ def add_spin_parameters(injection_dict):
     injection_dict['spin_2y'] = spin_2xy[1]
     injection_dict['phase'] = injection_dict.pop('phi_ref')
 
-    spin_1_inpln = np.sqrt(np.sum(spin_1xy**2, axis=0))
-    spin_2_inpln = np.sqrt(np.sum(spin_2xy**2, axis=0))
+    injection_dict['chi_1_in_plane'] = spin_1_inpln = np.sqrt(np.sum(spin_1xy**2, axis=0))
+    injection_dict['chi_2_in_plane'] = spin_2_inpln = np.sqrt(np.sum(spin_2xy**2, axis=0))
+
+    # The spin magnitudes and polar angles (tilts)
+    injection_dict['a_1'] = np.sqrt(injection_dict['spin_1z']**2 + spin_1_inpln**2)
+    injection_dict['a_2'] = np.sqrt(injection_dict['spin_2z']**2 + spin_2_inpln**2)
+    injection_dict['tilt_1'] = np.arccos(injection_dict['spin_1z'])
+    injection_dict['tilt_2'] = np.arccos(injection_dict['spin_2z'])
 
     # Effective spin
     injection_dict['chi_eff'] = (injection_dict['spin_1z'] + mass_ratio * injection_dict['spin_2z']) / (1 + mass_ratio)
@@ -89,12 +95,18 @@ cogwheel_to_bilby_mapping = {
     's2z': 'spin_2z',
     'l1': 'lambda_1',
     'l2': 'lambda_2',
+    'SNR_net': 'network_optimal_snr',
+    't_geocenter': 'geocent_time',
 }
 
 
 def cogwheel_to_bilby(injection_dict):
     for old_key, new_key in cogwheel_to_bilby_mapping.items():
-        injection_dict[new_key] = injection_dict.pop(old_key)
+        try:
+            injection_dict[new_key] = injection_dict.pop(old_key)
+        except KeyError:
+            print(f'Warning: {old_key} not found, skipping.')
+            continue
 
     # Add the mass parameters
     injection_dict = add_mass_parameters(injection_dict)
