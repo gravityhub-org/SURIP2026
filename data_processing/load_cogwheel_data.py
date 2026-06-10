@@ -58,7 +58,7 @@ def load_data(dir_path, seed=False, par=None, n_samples=-1,
     if par is None:
         raise TypeError("Please provide a list of parameter names you want to load (e.g. ['m1']).")
     # Check that all the parametes are loadable
-    unknown_pars = set(par).difference(set(GW_par.keys()))
+    unknown_pars = set(par) - set(GW_par.keys())
     if not unknown_pars == set():
         raise FIGAROException("The following parameters are not implemented: "+", ".join(unknown_pars)+". Run figaro.load.available_gw_pars() for a list of available parameters.")
 
