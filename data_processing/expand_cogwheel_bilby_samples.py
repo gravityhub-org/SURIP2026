@@ -68,7 +68,7 @@ def worker(dir):
 
 if __name__ == "__main__":
     print("Starting multi-processing...")
-    with Pool(20) as pool:
+    with Pool(26) as pool:
         output = list(tqdm(pool.imap(worker, all_dirs), total=total))
 
     statuses = np.array(output, dtype=[('event_name', 'U30'), ('status', 'i4')])

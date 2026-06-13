@@ -1,0 +1,23 @@
+xtick.labelsize: 9.3
+ytick.labelsize: 9.3
+legend.fontsize: 9
+legend.handlelength: 2
+axes.titlesize:  10.3
+axes.labelsize:  10
+
+figure.figsize :  3.3879, 3.1016
+
+axes.linewidth:   0.8
+axes.edgecolor:   gray
+lines.linewidth:  1.0
+lines.markersize: 5
+scatter.edgecolors: none
+figure.constrained_layout.use: True
+
+text.usetex:      True
+font.family:      serif
+font.serif:       Computer Modern Roman
+font.monospace:   Computer Modern Typewriter
+mathtext.fontset: stix
+text.latex.preamble: \usepackage{amsmath}
+font.size:        10.0

@@ -79,8 +79,10 @@ def add_spin_parameters(injection_dict):
     injection_dict['tilt_2'] = np.arccos(injection_dict['spin_2z'])
 
     # Effective spin
+    # This was first mentioned in https://arxiv.org/pdf/0909.2867 
     injection_dict['chi_eff'] = (injection_dict['spin_1z'] + mass_ratio * injection_dict['spin_2z']) / (1 + mass_ratio)
     # Effective precession spin
+    # Introduced in https://arxiv.org/pdf/1408.1810 (Eq. 3.4)
     chi_p_factor = (4 + 3 * mass_ratio) / (4 + 3 / mass_ratio)
     injection_dict['chi_p'] = np.max([spin_1_inpln, spin_2_inpln * chi_p_factor])
     return injection_dict
