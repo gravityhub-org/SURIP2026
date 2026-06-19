@@ -1,0 +1,118 @@
+# Prior configuration for batch inference
+#
+# Structure
+# ---------
+# global:   priors applied to every simulation
+# sims:     per-simulation overrides keyed by id (merge on top of global)
+#
+# Value syntax per parameter
+# --------------------------
+#   truth                         → pin to truth value  float(tp["param"])
+#   0.05                          → fix to explicit scalar
+#   {type: Uniform, low: , high:} → dist.Uniform(low, high)
+#   {type: Normal, loc: , scale:} → dist.Normal(loc, scale)
+#   {type: TruncatedNormal, loc: , scale: , low: , high: }
+#                                 → dist.TruncatedNormal(loc, scale, low=, high=)
+#   any other numpyro dist name works the same way
+#
+# Any parameter not listed → gwemfish uses its internal default.
+
+global:
+  # --- free lens-mass parameters ---
+  # lens0_theta_E:
+  #   type: Uniform
+  #   low: 0.84
+  #   high: 1.56
+  # lens0_e2:
+  #   type: Uniform
+  #   low: -0.3
+  #   high: 0.3
+  # lens0_gamma:
+  #   type: Uniform
+  #   low: 1.8
+  #   high: 2.2
+  lens1_kappa: truth
+
+  # # --- lens-mass parameters ---
+  # lens0_e1:
+  #   type: Uniform
+  #   low: -0.3
+  #   high: 0.3
+  lens0_center_x: truth
+  lens0_center_y: truth
+  lens1_ra_0: truth
+  lens1_dec_0: truth
+
+  # --- GW nuisance (free, centered on truth ±10%) ---
+  # T_star:
+  #   type: Normal
+  #   loc: truth
+  #   scale_truth_frac: 0.5
+  # dL:
+  #   type: Normal
+  #   loc: truth
+  #   scale_truth_frac: 0.5
+
+  # --- lens light (free) ---
+  # light0_center_x: truth
+  # light0_center_y: truth
+  light0_center_x: truth
+  #   type: Normal
+  #   loc: 0.0
+  #   scale: 0.1      # pix_scl / 2
+  light0_center_y: truth
+  #   type: Normal
+  #   loc: 0.0
+  #   scale: 0.1
+  light0_e1: truth
+  #   type: TruncatedNormal
+  #   loc: 0.0
+  #   scale: 0.2
+  #   low: -0.3
+  #   high: 0.3
+  light0_e2: truth
+  #   type: TruncatedNormal
+  #   loc: 0.0
+  #   scale: 0.2
+  #   low: -0.3
+  #   high: 0.3
+  light0_amp: truth  
+  #   type: TruncatedNormal
+  #   loc: 50.0
+  #   scale: 20.0
+  #   low: 5.0
+  #   high: 150.0
+  light0_R_sersic: truth
+  #   type: TruncatedNormal
+  #   loc: 0.06
+  #   scale: 0.03
+  #   low: 0.005
+  #   high: 0.5
+  light0_n_sersic: truth
+  #   type: Uniform
+  #   low: 1.0
+  #   high: 6.0
+
+  # # --- noise ---
+  # noise_sigma_bkg:
+  #   type: TruncatedNormal
+  #   loc: truth
+  #   scale_truth_frac: 0.3
+  #   low: 0.001
+  #   high: 1.0
+
+# ---------------------------------------------------------------------------
+# Per-simulation overrides.
+# Only list sims where you want something different from the global block.
+# ---------------------------------------------------------------------------
+sims: []
+# Examples of per-sim overrides (uncomment and edit as needed):
+# sims:
+#   - id: 2
+  #   lens1_kappa: 0.02            # fix kappa to a specific scalar
+  #   lens0_theta_E:
+  #     type: TruncatedNormal
+  #     loc: 1.10
+  #     scale: 0.15
+  #     low: 0.5
+  #     high: 2.0

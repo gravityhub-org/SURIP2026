@@ -1,0 +1,149 @@
+# Batch EM+GW simulation configuration
+#
+# base:     settings shared by every simulation (EM imaging, GW noise, cosmology)
+# simulations: per-system overrides (lens params, source position, noise seed)
+#
+# Usage:
+#   python scripts/simulate_batch.py --config configs/batch_sim_config.yaml
+#   python scripts/infer_batch.py    --config configs/batch_sim_config.yaml
+
+base:
+  # Lens model topology — same for all sims
+  lens_model_list: ["EPL", "CONVERGENCE"]
+  zl: 0.7
+  zs: 1.5
+
+  # EM imaging settings
+  em:
+    npix: 20
+    pix_scl: 0.2
+    psf_fwhm: 0.4
+    background_rms: 0.01
+    exposure_time: 2200
+    kwargs_lens_light:
+      - amp: 50.0
+        R_sersic: 0.06
+        n_sersic: 4.0
+        e1: 0.0
+        e2: 0.1
+        center_x: 0.0
+        center_y: 0.0
+
+  # GW noise / error scales
+  gw:
+    sigma_td: 0.001          
+    sigma_dL_eff: 0.3
+    epsilon: 0.0001
+    sigma_td_floor: 0.0001
+    image_box_half_width: 10.6
+
+  # Default inference mode (read by infer_batch.py; can be overridden via CLI)
+  inference_mode: "EM+GW"
+
+  # Root output directory (relative to project root)
+  output_dir: "sims"
+
+# ---------------------------------------------------------------------------
+# Per-simulation entries.  Each entry overrides base settings for that system.
+# Required keys per entry:  id, seed, source_pos, kwargs_lens, kwargs_source
+# ---------------------------------------------------------------------------
+simulations:
+  - id: 0
+    seed: 87651
+    source_pos: [0.02, 0.0001]
+    kwargs_lens:
+      - theta_E: 1.20
+        e1: 0.00
+        e2: 0.10
+        gamma: 2.00
+        center_x: 0.0
+        center_y: 0.0
+      - kappa: 0.05
+        ra_0: 0.0
+        dec_0: 0.0
+    kwargs_source:
+      - amp: 250
+        R_sersic: 0.4
+        n_sersic: 1.0
+        e1: -0.10
+        e2: 0.20
+
+  - id: 1
+    seed: 12345
+    source_pos: [0.03, 0.01]
+    kwargs_lens:
+      - theta_E: 1.35
+        e1: 0.05
+        e2: 0.15
+        gamma: 2.05
+        center_x: 0.0
+        center_y: 0.0
+      - kappa: 0.08
+        ra_0: 0.0
+        dec_0: 0.0
+    kwargs_source:
+      - amp: 200
+        R_sersic: 0.5
+        n_sersic: 1.5
+        e1: 0.05
+        e2: 0.10
+
+  - id: 2
+    seed: 99999
+    source_pos: [0.04, 0.005]
+    kwargs_lens:
+      - theta_E: 1.10
+        e1: -0.05
+        e2: 0.05
+        gamma: 1.95
+        center_x: 0.0
+        center_y: 0.0
+      - kappa: 0.02
+        ra_0: 0.0
+        dec_0: 0.0
+    kwargs_source:
+      - amp: 300
+        R_sersic: 0.3
+        n_sersic: 1.0
+        e1: -0.05
+        e2: 0.15
+
+  - id: 3
+    seed: 42000
+    source_pos: [0.01, 0.02]
+    kwargs_lens:
+      - theta_E: 1.50
+        e1: 0.10
+        e2: -0.10
+        gamma: 2.10
+        center_x: 0.0
+        center_y: 0.0
+      - kappa: 0.10
+        ra_0: 0.0
+        dec_0: 0.0
+    kwargs_source:
+      - amp: 180
+        R_sersic: 0.6
+        n_sersic: 2.0
+        e1: 0.10
+        e2: -0.05
+
+  - id: 4
+    seed: 55555
+    source_pos: [0.025, 0.015]
+    kwargs_lens:
+      - theta_E: 1.25
+        e1: -0.02
+        e2: 0.08
+        gamma: 2.02
+        center_x: 0.0
+        center_y: 0.0
+      - kappa: 0.04
+        ra_0: 0.0
+        dec_0: 0.0
+    kwargs_source:
+      - amp: 220
+        R_sersic: 0.45
+        n_sersic: 1.2
+        e1: 0.00
+        e2: 0.12
