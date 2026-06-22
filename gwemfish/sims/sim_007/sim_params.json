@@ -1,0 +1,74 @@
+{
+  "base": {
+    "lens_model_list": [
+      "EPL",
+      "CONVERGENCE"
+    ],
+    "zl": 0.7,
+    "zs": 1.5,
+    "em": {
+      "npix": 20,
+      "pix_scl": 0.2,
+      "psf_fwhm": 0.4,
+      "background_rms": 0.01,
+      "exposure_time": 2200,
+      "kwargs_lens_light": [
+        {
+          "amp": 50.0,
+          "R_sersic": 0.06,
+          "n_sersic": 4.0,
+          "e1": 0.0,
+          "e2": 0.1,
+          "center_x": 0.0,
+          "center_y": 0.0
+        }
+      ]
+    },
+    "gw": {
+      "sigma_td": 0.001,
+      "sigma_dL_eff": 0.3,
+      "epsilon": 0.0001,
+      "sigma_td_floor": 0.0001,
+      "image_box_half_width": 10.6
+    },
+    "inference_mode": "EM+GW",
+    "output_dir": "sims"
+  },
+  "sim": {
+    "id": 7,
+    "lens_model_list": [
+      "EPL",
+      "SHEAR"
+    ],
+    "seed": 100000,
+    "source_pos": [
+      0.04,
+      0.005
+    ],
+    "kwargs_lens": [
+      {
+        "theta_E": 1.1,
+        "e1": -0.05,
+        "e2": 0.05,
+        "gamma": 1.95,
+        "center_x": 0.0,
+        "center_y": 0.0
+      },
+      {
+        "gamma1": 0.03,
+        "gamma2": 0.04,
+        "ra_0": 0.0,
+        "dec_0": 0.0
+      }
+    ],
+    "kwargs_source": [
+      {
+        "amp": 300,
+        "R_sersic": 0.3,
+        "n_sersic": 1.0,
+        "e1": -0.05,
+        "e2": 0.15
+      }
+    ]
+  }
+}

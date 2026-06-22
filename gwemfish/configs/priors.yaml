@@ -105,14 +105,55 @@ global:
 # Per-simulation overrides.
 # Only list sims where you want something different from the global block.
 # ---------------------------------------------------------------------------
-sims: []
-# Examples of per-sim overrides (uncomment and edit as needed):
-# sims:
-#   - id: 2
-  #   lens1_kappa: 0.02            # fix kappa to a specific scalar
-  #   lens0_theta_E:
-  #     type: TruncatedNormal
-  #     loc: 1.10
-  #     scale: 0.15
-  #     low: 0.5
-  #     high: 2.0
+sims:
+  - id: 5
+    lens1_gamma1:
+      type: Uniform
+      low: -0.3
+      high: 0.3
+    lens1_gamma2:
+      type: Uniform
+      low: -0.3
+      high: 0.3
+    lens1_ra_0:
+      type: Normal
+      loc: 0.0
+      scale: 0.1
+    lens1_dec_0:
+      type: Normal
+      loc: 0.0
+      scale: 0.1
+  - id: 6
+    lens1_gamma1:
+      type: Uniform
+      low: -0.3
+      high: 0.3
+    lens1_gamma2:
+      type: Uniform
+      low: -0.3
+      high: 0.3
+    lens1_ra_0:
+      type: Normal
+      loc: 0.0
+      scale: 0.1
+    lens1_dec_0:
+      type: Normal
+      loc: 0.0
+      scale: 0.1
+  - id: 7
+    lens1_gamma1:
+      type: Uniform
+      low: -0.3
+      high: 0.3
+    lens1_gamma2:
+      type: Uniform
+      low: -0.3
+      high: 0.3
+    lens1_ra_0:
+      type: Normal
+      loc: 0.0
+      scale: 0.1
+    lens1_dec_0:
+      type: Normal
+      loc: 0.0
+      scale: 0.1

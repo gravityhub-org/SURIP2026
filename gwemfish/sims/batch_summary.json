@@ -1,59 +1,17 @@
 {
   "simulations": [
     {
-      "sim_id": 0,
-      "sim_dir": "sims/sim_000",
-      "seed": 87651,
-      "source_pos": [
-        0.02,
-        0.0001
-      ],
-      "theta_E": 1.2,
-      "kappa": 0.05,
-      "e2": 0.1,
-      "gamma": 2.0,
-      "n_gw_images": 4
-    },
-    {
-      "sim_id": 1,
-      "sim_dir": "sims/sim_001",
-      "seed": 12345,
+      "sim_id": 6,
+      "sim_dir": "sims/sim_006",
+      "seed": 12346,
       "source_pos": [
         0.03,
         0.01
       ],
       "theta_E": 1.35,
-      "kappa": 0.08,
+      "kappa": null,
       "e2": 0.15,
       "gamma": 2.05,
-      "n_gw_images": 4
-    },
-    {
-      "sim_id": 2,
-      "sim_dir": "sims/sim_002",
-      "seed": 99999,
-      "source_pos": [
-        0.04,
-        0.005
-      ],
-      "theta_E": 1.1,
-      "kappa": 0.02,
-      "e2": 0.05,
-      "gamma": 1.95,
-      "n_gw_images": 4
-    },
-    {
-      "sim_id": 3,
-      "sim_dir": "sims/sim_003",
-      "seed": 42000,
-      "source_pos": [
-        0.01,
-        0.02
-      ],
-      "theta_E": 1.5,
-      "kappa": 0.1,
-      "e2": -0.1,
-      "gamma": 2.1,
       "n_gw_images": 4
     }
   ]

@@ -147,3 +147,69 @@ simulations:
         n_sersic: 1.2
         e1: 0.00
         e2: 0.12
+
+  - id: 5
+    lens_model_list: ["EPL", "SHEAR"]
+    seed: 87652
+    source_pos: [0.02, 0.0001]
+    kwargs_lens:
+      - theta_E: 1.20
+        e1: 0.00
+        e2: 0.10
+        gamma: 2.00
+        center_x: 0.0
+        center_y: 0.0
+      - gamma1: 0.05
+        gamma2: 0.02
+        ra_0: 0.0
+        dec_0: 0.0
+    kwargs_source:
+      - amp: 250
+        R_sersic: 0.4
+        n_sersic: 1.0
+        e1: -0.10
+        e2: 0.20
+
+  - id: 6
+    lens_model_list: ["EPL", "SHEAR"]
+    seed: 12346
+    source_pos: [0.03, 0.01]
+    kwargs_lens:
+      - theta_E: 1.35
+        e1: 0.05
+        e2: 0.15
+        gamma: 2.05
+        center_x: 0.0
+        center_y: 0.0
+      - gamma1: 0.08
+        gamma2: 0.03
+        ra_0: 0.0
+        dec_0: 0.0
+    kwargs_source:
+      - amp: 200
+        R_sersic: 0.5
+        n_sersic: 1.5
+        e1: 0.05
+        e2: 0.10
+
+  - id: 7
+    lens_model_list: ["EPL", "SHEAR"]
+    seed: 100000
+    source_pos: [0.04, 0.005]
+    kwargs_lens:
+      - theta_E: 1.10
+        e1: -0.05
+        e2: 0.05
+        gamma: 1.95
+        center_x: 0.0
+        center_y: 0.0
+      - gamma1: 0.03
+        gamma2: 0.04
+        ra_0: 0.0
+        dec_0: 0.0
+    kwargs_source:
+      - amp: 300
+        R_sersic: 0.3
+        n_sersic: 1.0
+        e1: -0.05
+        e2: 0.15
