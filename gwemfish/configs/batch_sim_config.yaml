@@ -8,7 +8,7 @@
 #   python scripts/infer_batch.py    --config configs/batch_sim_config.yaml
 
 base:
-  # Lens model topology — same for all sims
+  # Default lens topology — overridable per sim (sims 5–7 use EPL + SHEAR)
   lens_model_list: ["EPL", "CONVERGENCE"]
   zl: 0.7
   zs: 1.5
