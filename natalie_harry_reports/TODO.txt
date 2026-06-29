@@ -7,4 +7,5 @@ First steps:
  - Put the files in your directry (under Harry or Natalie)
 3. Make sure it compiles on your computer
 4. Find Otto about planning the report + problems you encounter [use google calendar to set up a meeting]
-
+5. Write plan
+6. Present on next week Tuesday in checkpoint & group meeting
