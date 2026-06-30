@@ -1,0 +1,13 @@
+[project]
+name = "autolens-tests"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "autoarray>=2026.5.29.4",
+    "autofit>=2026.5.29.4",
+    "autogalaxy>=2026.5.29.4",
+    "autolens>=2026.5.29.4",
+    "jupyter>=1.1.1",
+]

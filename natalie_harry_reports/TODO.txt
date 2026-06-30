@@ -1,0 +1,11 @@
+First steps:
+1. Make a directory here:
+./Harry
+./Natalie
+2. Make a latex report file that compiles (in Nature format)
+ - Google nature format (or whatever journal format is your favorite one)
+ - Put the files in your directry (under Harry or Natalie)
+3. Make sure it compiles on your computer
+4. Find Otto about planning the report + problems you encounter [use google calendar to set up a meeting]
+5. Write plan
+6. Present on next week Tuesday in checkpoint & group meeting

@@ -1,0 +1,164 @@
+{
+  "simulations": [
+    {
+      "sim_id": 0,
+      "sim_dir": "sims/sim_000",
+      "lens_model_list": [
+        "EPL",
+        "CONVERGENCE"
+      ],
+      "seed": 87651,
+      "source_pos": [
+        0.02,
+        0.0001
+      ],
+      "theta_E": 1.2,
+      "kappa": 0.05,
+      "gamma1": null,
+      "gamma2": null,
+      "e2": 0.1,
+      "gamma": 2.0,
+      "n_gw_images": 4
+    },
+    {
+      "sim_id": 1,
+      "sim_dir": "sims/sim_001",
+      "lens_model_list": [
+        "EPL",
+        "CONVERGENCE"
+      ],
+      "seed": 12345,
+      "source_pos": [
+        0.03,
+        0.01
+      ],
+      "theta_E": 1.35,
+      "kappa": 0.08,
+      "gamma1": null,
+      "gamma2": null,
+      "e2": 0.15,
+      "gamma": 2.05,
+      "n_gw_images": 4
+    },
+    {
+      "sim_id": 2,
+      "sim_dir": "sims/sim_002",
+      "lens_model_list": [
+        "EPL",
+        "CONVERGENCE"
+      ],
+      "seed": 99999,
+      "source_pos": [
+        0.04,
+        0.005
+      ],
+      "theta_E": 1.1,
+      "kappa": 0.02,
+      "gamma1": null,
+      "gamma2": null,
+      "e2": 0.05,
+      "gamma": 1.95,
+      "n_gw_images": 4
+    },
+    {
+      "sim_id": 3,
+      "sim_dir": "sims/sim_003",
+      "lens_model_list": [
+        "EPL",
+        "CONVERGENCE"
+      ],
+      "seed": 42000,
+      "source_pos": [
+        0.01,
+        0.02
+      ],
+      "theta_E": 1.5,
+      "kappa": 0.1,
+      "gamma1": null,
+      "gamma2": null,
+      "e2": -0.1,
+      "gamma": 2.1,
+      "n_gw_images": 4
+    },
+    {
+      "sim_id": 4,
+      "sim_dir": "sims/sim_004",
+      "lens_model_list": [
+        "EPL",
+        "CONVERGENCE"
+      ],
+      "seed": 55555,
+      "source_pos": [
+        0.025,
+        0.015
+      ],
+      "theta_E": 1.25,
+      "kappa": 0.04,
+      "gamma1": null,
+      "gamma2": null,
+      "e2": 0.08,
+      "gamma": 2.02,
+      "n_gw_images": 4
+    },
+    {
+      "sim_id": 5,
+      "sim_dir": "sims/sim_005",
+      "lens_model_list": [
+        "EPL",
+        "SHEAR"
+      ],
+      "seed": 87652,
+      "source_pos": [
+        0.02,
+        0.0001
+      ],
+      "theta_E": 1.2,
+      "kappa": null,
+      "gamma1": 0.05,
+      "gamma2": 0.02,
+      "e2": 0.1,
+      "gamma": 2.0,
+      "n_gw_images": 4
+    },
+    {
+      "sim_id": 6,
+      "sim_dir": "sims/sim_006",
+      "lens_model_list": [
+        "EPL",
+        "SHEAR"
+      ],
+      "seed": 12346,
+      "source_pos": [
+        0.03,
+        0.01
+      ],
+      "theta_E": 1.35,
+      "kappa": null,
+      "gamma1": 0.08,
+      "gamma2": 0.03,
+      "e2": 0.15,
+      "gamma": 2.05,
+      "n_gw_images": 4
+    },
+    {
+      "sim_id": 7,
+      "sim_dir": "sims/sim_007",
+      "lens_model_list": [
+        "EPL",
+        "SHEAR"
+      ],
+      "seed": 100000,
+      "source_pos": [
+        0.04,
+        0.005
+      ],
+      "theta_E": 1.1,
+      "kappa": null,
+      "gamma1": 0.03,
+      "gamma2": 0.04,
+      "e2": 0.05,
+      "gamma": 1.95,
+      "n_gw_images": 4
+    }
+  ]
+}
