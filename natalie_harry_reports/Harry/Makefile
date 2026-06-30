@@ -1,13 +1,13 @@
-all: sn-article.pdf
+all: main.pdf
 
-sn-article.pdf: sn-article.tex sn-bibliography.bib sn-mathphys-num.bst sn-jnl.cls 
-	latexmk -pdf sn-article.tex
-	echo "Created sn-article.pdf"
+main.pdf: main.tex references.bib sn-mathphys-num.bst sn-jnl.cls 
+	latexmk -pdf main.tex
+	echo "Created main.pdf"
 
 
 clean: 
 	latexmk -C
-	rm sn-article.bbl
+	rm -f main.bbl
 
 
 
