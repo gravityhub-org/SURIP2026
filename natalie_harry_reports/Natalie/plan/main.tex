@@ -15,19 +15,6 @@
 \usepackage{algpseudocode}%
 \usepackage{listings}%
 
-\theoremstyle{thmstyleone}%
-\newtheorem{theorem}{Theorem}%  meant for continuous numbers
-\newtheorem{proposition}[theorem]{Proposition}% 
-
-\theoremstyle{thmstyletwo}%
-\newtheorem{example}{Example}%
-\newtheorem{remark}{Remark}%
-
-\theoremstyle{thmstylethree}%
-\newtheorem{definition}{Definition}%
-
-\raggedbottom
-
 \begin{document}
 
 \title[Article Title]{Project Plan}
@@ -35,25 +22,27 @@
 
 \maketitle
 
-\section{Background}
-testing
+\section{Research background}
+Gravitational waves (GW) produced by merging binary black holes (BBH) can be lensed by massive objects such as galaxies along their path, potentially leading to observation of multiple events with similar waveform. However, there is no strong evidence demonstrating gravitational lensing yet. As light is lensed by massive objects in a similar way as GW, addition of EM information may increase our confidence in determining whether two similar signals are from two pairs of identical BBH or from one pair of merging BBH lensed.
 
-\section{Focus}
+\section{Research challenge}
+%1. broad (common)
+%2-sigma -> 5 sigma; whats missing
+%2. specific
+%why difficult to include population analyses to lensing and whats the challenge and why do it
+%expected outcome
+The main goal is to confirm whether the addition of EM information to GW signals would provide stronger evidence of strong gravitational lensing.\\
+The particular part I will be focusing on is the reconstruction of BBH population, which indicates the chance of having similar GW signals from two individual events and determines the prior used for computing Bayes factor. One of the challenges is model misspecification - biases may arise in the parametric conversion of posterior samples into a mathematical population model. This will lead to biased Bayes factors and hence inaccurate conclusion of lensing evidence.
+%prior should not include lensed signals
 
-\section{Method}
+\section{Steps to solve research challenge}
+% gw signals -> posterior samples -> prior obtained using figaro -> compute unbiased bayes factor
+In order to obtain an unbiased population model, we use Figaro, which performs non-parametric modelling. We can then compute unbiased Bayes factors from the probability density functions output by Figaro.\\ 
+It is expected that combining with EM information will increase the confidence of concluding (no) lensing.
 
 \section{Schedule}
 
-\subsection{Details on reference citations}\label{subsec7}
-
-Standard \LaTeX\ permits only numerical citations. To support both numerical and author-year citations this template uses \verb+natbib+ \LaTeX\ package. For style guidance please refer to the template user manual.
-
-Here is an example for \verb+\cite{...}+: \cite{bib1}. Another example for \verb+\citep{...}+: \citep{bib2}. For author-year citation mode, \verb+\cite{...}+ prints Jones et al. (1990) and \verb+\citep{...}+ prints (Jones et al., 1990).
-
-All cited bib entries are printed at the end of this article: \cite{bib3}, \cite{bib4}, \cite{bib5}, \cite{bib6}, \cite{bib7}, \cite{bib8}, \cite{bib9}, \cite{bib10}, \cite{bib11}, \cite{bib12} and \cite{bib13}.
 
 \bibliography{references}% common bib file
-%% if required, the content of .bbl file can be included here once bbl is generated
-%%\input main.bbl
 
 \end{document}
