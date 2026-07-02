@@ -3,4 +3,12 @@ personal_notes/
 **condor_log/
 **.sub
 .Ds_Store
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+main.pdf
 
