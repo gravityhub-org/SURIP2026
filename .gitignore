@@ -1,16 +1,16 @@
 # Python-related
-**__pycache__/
-**.ipynb_checkpoints/
+__pycache__/
+.ipynb_checkpoints/
 build/
 dist/
 eggs/
 
 # Condor
-**condor_log/
-**.sub
+condor_log/
+*.sub
 
 # MacOS Index
-**.DS_Store
+*.DS_Store
 
 # LaTeX 
 *.aux
@@ -38,4 +38,4 @@ main.pdf
 
 # Others
 personal_notes/
-**figures/
+figures/
