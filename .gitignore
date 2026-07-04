@@ -1,14 +1,41 @@
-personal_notes/
-**__pycache__
+# Python-related
+**__pycache__/
+**.ipynb_checkpoints/
+build/
+dist/
+eggs/
+
+# Condor
 **condor_log/
 **.sub
-.Ds_Store
+
+# MacOS Index
+**.DS_Store
+
+# LaTeX 
 *.aux
 *.bbl
 *.blg
-*.fdb_latexmk
-*.fls
+*.bcf
+*.lof
 *.log
+*.lot
+*.fls
 *.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
 main.pdf
 
+*.fdb_latexmk
+*.synctex
+*.synctex(busy)
+*.synctex.gz
+*.synctex.gz(busy)
+
+# Others
+personal_notes/
+**figures/
