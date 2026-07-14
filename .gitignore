@@ -1,11 +1,23 @@
-personal_notes/
-**__pycache__
-**condor_log/
-**.sub
-.Ds_Store
+
+# Python-related
+__pycache__/
+.ipynb_checkpoints/
+build/
+dist/
+eggs/
+
+# Condor
+condor_log/
+*.sub
+
+# MacOS Index
+*.DS_Store
+
+# LaTeX 
 *.aux
 *.bbl
 *.blg
+<<<<<<< HEAD
 *.fdb_latexmk
 *.fls
 <<<<<<< HEAD
@@ -27,8 +39,34 @@ main.pdf
 
 
 =======
+=======
+*.bcf
+*.lof
+>>>>>>> 3c2d4a62ae4578353145ed7d7751e990e9fd279e
 *.log
+*.lot
+*.fls
 *.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
 main.pdf
 
+<<<<<<< HEAD
 >>>>>>> 79f55470c0748a4d8f2b5d7587648d8be791b42c
+=======
+*.fdb_latexmk
+*.synctex
+*.synctex(busy)
+*.synctex.gz
+*.synctex.gz(busy)
+
+# Others
+personal_notes/
+figures/
+=======
+data
+>>>>>>> 3c2d4a62ae4578353145ed7d7751e990e9fd279e
