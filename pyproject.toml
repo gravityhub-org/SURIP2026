@@ -5,7 +5,16 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "corner>=2.2.3",
     "dvc-ssh>=4.2.2",
+    "gwpy>=4.0.1",
     "ipython>=9.11.0",
+    "matplotlib>=3.10.8",
+    "numpy>=2.4.3",
     "scienceplots>=2.2.1",
+]
+
+[tool.uv.workspace]
+members = [
+    "git",
 ]

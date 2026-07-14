@@ -1,0 +1,101 @@
+\documentclass[pdflatex,sn-mathphys-ay]{sn-jnl}% Math and Physical Sciences Author Year Reference Style
+
+\usepackage{graphicx}%
+\usepackage{multirow}%
+\usepackage{amsmath,amssymb,amsfonts}%
+\usepackage{amsthm}%
+\usepackage{mathrsfs}%
+\usepackage[title]{appendix}%
+\usepackage{xcolor}%
+\usepackage{textcomp}%
+\usepackage{manyfoot}%
+\usepackage{booktabs}%
+\usepackage{algorithm}%
+\usepackage{algorithmicx}%
+\usepackage{algpseudocode}%
+\usepackage{listings}%
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, chains, calc, positioning, decorations.pathreplacing, fit}
+
+\begin{document}
+
+\title[Article Title]{Project Plan}
+\author*[]{\fnm{Natalie} \sur{You}}
+
+\maketitle
+
+\section{Research background}
+Gravitational waves (GW) produced by merging binary black holes (BBH) can be lensed by massive objects such as galaxies along their path, potentially leading to observation of multiple images with similar waveform as the GW take different paths to the detectors. Lensed signals are not exactly identical as each image passes through a different part of the lens and hence experiences different magnification. Different arrival times of the images and therefore different detector noises also contribute to the difference in waveform. On the other hand, GW signals originating from two individual merger events of two pairs of BBH with approximately the same parameters may look like copies of one another. Thus, we have to find a way to determine whether similar signals are gravitationally lensed or unlensed.\\
+There is no strong evidence demonstrating gravitational lensing yet. As light is lensed by massive objects in a similar way as GW, we may deduce the BBH source population and lens population from the paths of light, which affect the probability of lensing. Consequently, addition of electromagnetic (EM) information may increase our confidence in determining whether two similar signals are from two pairs of very similar BBH or from one pair of merging BBH lensed.\\
+Mathematically, according to Bayes' theorem, combining prior knowledge (GW signals) with new evidence (EM information) gives rise to updated, revised belief which is more accurate.
+
+\section{Research challenge}
+The main goal is to confirm whether the addition of EM information to GW signals would provide stronger evidence of strong gravitational lensing. The overall project is divided into two branches: the GW branch, which aims to identify and quantify evidence for strong lensing using GW observations alone, and an EM branch, which reconstructs the lensing galaxies from EM data to provide independent constraints that can strengthen the GW-based lensing claims.\\
+In the GW branch, GW signals are first simulated and analysed through parameter estimation, giving posterior samples. Posterior densities, which are the probability densities of parameters conditioned on certain observed data ($P(\theta|d)$), can be computed from the posterior samples with the use of FIGARO. Posterior sample of many events are then converted to BBH population density using HDPGMM in FIGARO, which becomes the updated prior ($P(\theta)$) in the Bayes factor. The Bayes factors comparing the lensed and unlensed hypotheses ($B_U^L$) of lensing candidates are then computed.\\
+In parallel, the EM branch begins with the simulation of an electromagnetic lens population, which is prepared in advance. The lensing population is then reconstructed using gwemfish.\\ 
+Finally, the results from the GW and EM branches are combined to determine how much multimessenger (MM) information strengthens the evidence for strong lensing, specifically by assessing whether a candidate with moderate significance (e.g. around 2$\sigma$) based on GW data alone can be promoted to a highly significant detection (e.g. 5$\sigma$) when EM information is included.
+
+\section{Steps to solve research challenge}
+\begin{figure}[hbt]
+    \centering
+    \resizebox{\textwidth}{!}{
+    \begin{tikzpicture}[
+	node distance=5mm,
+        start chain=A going below,
+        block/.style={
+            rectangle,
+            draw,
+            rounded corners,
+            text width=30em,
+            minimum height=10em,
+            align=center,
+            join=by arrow,
+            on chain,
+	    font=\LARGE
+        },
+        branch/.style={
+            rectangle,
+            draw,
+            rounded corners,
+            text width=30em,
+            minimum height=10em,
+            align=center,
+	    font=\LARGE
+        },
+        arrow/.style={-{Latex[width=3mm,length=1.5mm]},thick}
+    ]
+    \begin{scope}[every node/.style={block}]
+	    \node (n1) {1. Get access to GW signals and posterior samples in cluster (done)};
+	    \node (n2) {2. Obtain posterior densities from posterior samples using DPGMM with FIGARO (1, 2 then all parameters)$^\text{W2}$};
+	    \node (n3) {3. BBH population renconstruction with non-paramatric approach to produced unbiased result (learn to use FIGARO, compute population density for one parameter (e.g. chirp mass) first using HDPGMM, check if shape of the PDF obtained is consistent with the data, then compute the joint PDF including all parameters$^\text{W2-3}$};
+            \node (n4) {4. Check overlapping of population and lensing candidates by plotting population prior against parameter and posterior densities of candidate events in the same graph$^\text{W4}$};
+	    \node (n5) {5. Compute simplified Bayes factor comparing the lensed and unlensed hypotheses of one parameter for a lensing candidate using importance sampling (see below)$^\text{W5}$};
+	    \node (n6) {6. Compute the full Bayes factors that includes all parameters, then deliberately pick 2 pairs of events with low-overlap and high-overlap of posterior densities (i.e. lensing and non-lensing candidates) but both located in similar regions of the prior, and compare the Bayes factors for validation.$^\text{W6}$};
+    \end{scope}
+    \node[
+        branch,
+        below left=12mm and 12mm of n6
+    ] (n7)
+    {7a. Robust identification of lensing candidates, e.g. low/high mass, and compare with population, then compute posterior odds to validate lensing candidates$^\text{W7}$};
+    \node[
+        branch,
+        below right=12mm and 12mm of n6
+    ] (n8)
+    {7b. Comparison with posterior odds from GW and EM information combined to check if lensing confidence is increased$^\text{W7}$};
+    \draw[arrow] (n6.south) -- ++(0,-8mm) -| (n7.north);
+    \draw[arrow] (n6.south) -- ++(0,-8mm) -| (n8.north);
+    \end{tikzpicture}
+    }
+    \caption{workflow of solving research challenge (GW branch).}
+    \label{fig:workflow}
+\end{figure}
+
+\noindent Figure~\ref{fig:workflow} shows the workflow of the GW branch.\\
+The Bayes factor comparing the lensed and unlensed hypotheses can be found with\vspace{-4pt} 
+\[B_U^L=\frac{P(d_1,d_2|\text{lensed})}{P(d_1,d_2|\text{unlensed})}=\int\,\frac{P(\theta\mid d_1)\,P(\theta\mid d_2)}{P(\theta)}\,d\theta,\]\vspace{-12pt}\\
+where $\theta$ is the set of BBH parameters ${m_1, m_2, ...}$ and $d_1$ and $d_2$ are the data associated with events 1 and 2.
+The 15-dimensional integral can be simplified using importance sampling to save computational cost:\vspace{-8pt} 
+\[B_U^L \approx \frac{1}{N}\sum_{i=1}^{N}\frac{P(\theta_i \mid d_2)}{P(\theta_i)}, \qquad \theta_i \sim P(\theta \mid d_1),\]\vspace{-8pt}\\
+where $N$ is the number of posterior samples and $\theta_i$ is the $i$-th sample drawn from $P(\theta \mid d_1)$.
+
+\end{document}
