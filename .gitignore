@@ -1,3 +1,4 @@
+personal_notes/
 **__pycache__
 **condor_log/
 **.sub
@@ -7,6 +8,7 @@
 *.blg
 *.fdb_latexmk
 *.fls
+<<<<<<< HEAD
 *.out
 *.log
 main.pdf
@@ -24,3 +26,9 @@ main.pdf
 
 
 
+=======
+*.log
+*.out
+main.pdf
+
+>>>>>>> 79f55470c0748a4d8f2b5d7587648d8be791b42c
