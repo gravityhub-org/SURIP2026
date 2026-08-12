@@ -70,6 +70,27 @@ posterior samples, non-parametric, (H)DPGMM, FIGARO, uncertainties (blue region)
 % Natalie's part
 definition, formula (cite Otto's paper), how each component is calculated (ler)
 
+\subsection{Bayesian hypothesis space}
+%sams part
+Consider two GW detections, dGW={dGW,1,dGW,2}, together with EM observations dEM drawin from a catalogue of potential foreground lenses. We divide the lensing interpretation into three mutually exclusive observational cases and compare their union with an unlensed alternative.
+\begin{table}[h]
+\centering
+\caption{Table.1 Mutually exclusive hypotheses used in the joint GW-EM model comparison}
+\label{}
+\begin{tabular}{|l|c|r|}
+\hline
+Hypothesis & GW interpretation & EM/catalogue information \\ \hline
+H1       & Two detections are lensed images of the same BBH.        & The repsonsible lens is catalogues and resolved strong-lensing EM information constrains a detailed lens model.         \\ \hline
+H2       & Two detections are lensed images of the same BBH.        & The responsible lens is catalogues, but no resolved strong-lensing image configuration is available; EM data constrain galaxy properties.        \\ \hline
+H3       & Two detections are lensed images of the same BBH.        & The responsible foreground lens is absent from the catalogue.              \\ \hline
+HU       & The detections arise from two independent unlensed BBHs.         & Any galaxy in the search region is treated as an unrelated field object, conditional on the search selection.              \\ \hline  
+\end{tabular}
+\end{table}
+\begin{equation}
+H_L = H_1 \cup H_2 \cup H_3
+\end{equation}
+with H1, H2 and H3 mutually exclusive within the assumed search space. The posterior
+
 \section{Result}
 \subsection{Reconstructed Population}
 % Natalie's part
