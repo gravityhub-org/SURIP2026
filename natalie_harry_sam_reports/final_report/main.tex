@@ -56,6 +56,7 @@
 
 
 \section{Introduction}
+%sam did this
 Gravitational waves propagate along null geodiscs and are therefore subject to gravitatioanl lensing in the sam manner as electromagnetic radiation in the geometric optics limit \cite{1}\cite{2}. 
 For galaxy scale lenses, a single compact binary coalescence can produce multiple detectable images separated by minutes to months, depending on the lens potential and source geometry. 
 To leasing order, the images share the same intrinsic binary paramters while differing in arrival time, amplitude through the lensing magnification, and an image type dependent phase contribution \cite{3}\cite{4}\cite{5}\cite{6}. 
@@ -89,7 +90,7 @@ Used to compute prior odds, Bayes factor, ...
 % Natalie's part
 definition, formula (cite Otto's paper), how each component is calculated (ler)
 
-\subsection{Bayesian hypothesis space}
+\section{Bayesian hypothesis space}
 %sams part
 Consider two GW detections, $d_{GW}={d_{GW,1},d_{GW,2}}$, together with EM observations dEM drawin from a catalogue of potential foreground lenses. 
 We divide the lensing interpretation into three mutually exclusive observational cases and compare their union with an unlensed alternative.
@@ -162,6 +163,45 @@ This mapping is the bridge between the GW and EM analyses: the GW data constrain
 EM observations require nuisance parameters $\nu_{EM}$ describing measurement and modelling uncertainties.
 Depending on the catalogue and imaging data, $\nu_{EM}$ may include the point spread function, photometruc calibration, specral energy distribution parameters, stellar mass to light ratio, background subtraction, photometric redshift calibration and other instrument or population level terms.
 These parameter should be maginalised rather than fixed when their uncertainty is non negligible, beause overly narrow EM constraints can artificially increase the GW-EM consistency factor.
+
+\section{Unlensed Hypothesis}
+%sam
+Under $H_U$ the detections correspond to two independent BBH mergers.
+The GW evidence is
+\begin{equation}
+Z_{GW,U} = \int p(d_{GW,1}|\theta_{BBH,1},H_U) p(d_{GW,2}|\theta_{BBH,2},H_U) \pi_U(\theta_{BBH,1},\theta_{BBH,2})d\theta_{BBH,1}d\theta_{BBH,2}
+\end{equation}
+The EM observations must not be allowed to depend pn whether the GW pair happens to be unlensed.
+We therefore introduce an EM field model, $H_{EM,field}$, that describes unrelated foreground galaxies under the same catalogue/search selection.
+When the GW and EM data are conditionally independent under $H_U$,
+\begin{equation}
+H_U \equiv H_{GW,U} \cap H_{EM,field}
+\end{equation}
+\begin{equation}
+Z_U = Z_{GW,U} Z_{EM,field}, Z_{EM,field} = p(d_{EM}|H_{EM,field})
+\end{equation}
+This term is essential whenever the lensed hypotheses recieve evidence from the existence or properties of a catalogue galaxy.
+Omitting the corresponding field galaxy probability from $H_U$ would systematically favour catalogues lens hypotheses simply because a galaxy was searched for and found.
+
+\section{$H_2$: catalogued lens without resolved strong lensing EM images}
+%sam
+\subsection{EM observables and parameters set}
+%sam
+For a catalogue candidate c, the available EM information may be represented schematically as
+\begin{equation}
+d_{EM,c} = {\Omega_{l,c},z_{l,c},F_{\nu,c},q_c,R_{eff,c},\sigma_{v,c},...}
+\end{equation}
+The specific set is catalogue dependent.
+Spectroscopic redshifts can be represented by a narrow likelihood; photometric redshifts should retain the full probability distributions.
+For BBH systems without an identified source counterpart, $z_s$ is latent and must be marginalised using the GW distance information, cosmology, magnification model and source population prior.\\
+\\The $H_2$ parameter vector is
+\begin{equation}
+\Theta_2=\{\theta_{BBH},\theta_{lens},\beta,\nu_{EM}\}
+\end{equation}
+Conditional on $\Theta_2$, the detector strain data and galaxy observations are taken to be independent measurements of the common physical system,
+\begin{equation}
+p(d_{GW},d_{EM,c}|\Theta_2,H_2) = p(d_{GW}|\theta_{BBH},\theta_{lens},\beta,H_2)p(d_{EM,c}|\theta_{lens},\nu_{EM},H_2)
+\end{equation}
 
 \section{Result}
 \subsection{Reconstructed Population}
