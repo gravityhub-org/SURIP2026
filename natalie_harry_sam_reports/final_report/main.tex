@@ -54,6 +54,14 @@
 
 \maketitle
 
+\section{Abstract}
+%sam did this
+Strong gravitational lensing of gravitational waves (GWs) is an expected consequence of the propagation of compact binary signals through an inhomogeneous universe, and a small but non-zero fraction of events detected by ground based observatories should be multiply imaged by intervening galaxies or clusters \cite{2}\cite{6}\cite{18}\cite{19}.
+Recent forecasts indicate that the first confident strongly lensed GW detection could occur during the fifth LIGO-Virgo-KAGRA observing run (O5)\cite{19}, while searches incorporating 01-O4a events forecast a substantial probability of reaching at least $3\sigma$ significance in O5\cite{20}.
+At the same time, simulations based on the Hubble Space Telescope (HST) quality imaging show that resolved electromagnetic (EM) strong lensing data can constrain the lens potential at the sub-percent level in a favourable GW+EM systems \cite{21}.
+Motivated by these results, this work develops a Bayesian framework in which a catalogued lens with resolved strong lensing information ($H_1$) is used to increase the confidence of a candidate lensed GW pair.
+The central forecast to be tested is that targeted HST follow-up can, for favourable $H_1$ systems, sharpen the lens prediction sufficiently to raise the strong lensing detection confidence toward $5\sigma$. We derive the full $H_1$ evidence, (insert natalie) and (insert harry). The remaining hypotheses describe a catalogued lens without resolved images ($H_2$), an uncatalogued lens ($H_3)$, and two independent unlensed BBHs ($H_U$).\\
+Keywords: gravitational waves; gravitational lensing: strong; Bayesian inference; electromagnetic catalogues; binary black holes; multi-messenger astronomy.
 
 \section{Introduction}
 %sam did this
@@ -183,25 +191,43 @@ Z_U = Z_{GW,U} Z_{EM,field}, Z_{EM,field} = p(d_{EM}|H_{EM,field})
 This term is essential whenever the lensed hypotheses recieve evidence from the existence or properties of a catalogue galaxy.
 Omitting the corresponding field galaxy probability from $H_U$ would systematically favour catalogues lens hypotheses simply because a galaxy was searched for and found.
 
-\section{$H_2$: catalogued lens without resolved strong lensing EM images}
+\section{$H_1$: catalogued lens wit resolved strong lensing information}
 %sam
-\subsection{EM observables and parameters set}
+\subsection{Resolved EM data and parameter set}
 %sam
-For a catalogue candidate c, the available EM information may be represented schematically as
+Under $H_1$, the two GW detections are strongly lensed images of the same BBH and the responsible foreground lens is present in the EM catalogue with resolved strong lensing information.
+(not sure about this but had a thought) The resolved EM source need not be the BBH counterpart; it provides an independednt probe of the same foreground gravitational potential.
+The EM data may therefore be separated schematically into measurements of the lens galaxy and measurements of the resolved strong lensing configuration.
 \begin{equation}
-d_{EM,c} = {\Omega_{l,c},z_{l,c},F_{\nu,c},q_c,R_{eff,c},\sigma_{v,c},...}
+d_{EM,c} = \{d_{gal,c},d_{SL,c}\}
 \end{equation}
-The specific set is catalogue dependent.
-Spectroscopic redshifts can be represented by a narrow likelihood; photometric redshifts should retain the full probability distributions.
-For BBH systems without an identified source counterpart, $z_s$ is latent and must be marginalised using the GW distance information, cosmology, magnification model and source population prior.\\
-\\The $H_2$ parameter vector is
+Here $d_{gal,c}$ may contain quantities such as lens position, redshift, photometry, and velocity dispersion, while $d_{SL,c}$ may contain resolved image positions, arc, an Einstein ring or pixel level surface brightness data.
+The exact observables depend on the survey and lens modelling procedure.\\
+\\
+The parameter vector is
 \begin{equation}
-\Theta_2=\{\theta_{BBH},\theta_{lens},\beta,\nu_{EM}\}
+\Theta_1 = \{\theta_{BBH},\theta_{lens},\beta_{GW},\theta_{EMsrc},\beta_{EMsrc},\nu_{EM}\}
 \end{equation}
-Conditional on $\Theta_2$, the detector strain data and galaxy observations are taken to be independent measurements of the common physical system,
+The parameters $\Theta_{BBH}$ describe the common BBH source, $\theta_{lens}$ describes the foreground mass model, and $\beta_{GW}$ is the BBH source plane position.
+The parameters $\theta_{EMsrc}$ and $\beta_{EMsrc}$ describe the independently lansed background EM source, while $\nu_{EM}$ contains observational nuisance parameters such as the point spread function, calibration, sky background and noise model.
+The central coupling is that the same $\theta_{lens}$ appears in both the GW and EM likelihoods.\\
+\\Conditional on $\Theta_1$, the joint data model is
 \begin{equation}
-p(d_{GW},d_{EM,c}|\Theta_2,H_2) = p(d_{GW}|\theta_{BBH},\theta_{lens},\beta,H_2)p(d_{EM,c}|\theta_{lens},\nu_{EM},H_2)
+p(d_{GW},d_{EM,c}|\Theta_1,H_1) = p(d_{GW}|\theta_{BBH},\theta_{lens},\beta_{GW},H_1)p(d_{EM,c}|\theta_{lens},\theta_{EMsrc},\beta_{EMsrc},\nu_{EM},H_1)
 \end{equation}
+
+\subsection{Full joint evidence and prior}
+%sam
+For a catalogue candidate c, the primary model selection quantity is the full joint evidence
+\begin{equation}
+Z_{1,c} = \int p(d_{GW}|\theta_{BBH},\theta_{lens},\beta_{GW},H_1)p(d_{EM,c}|\theta_{lens},\theta_{EMsrc},\beta_{EMsrc},\nu_{EM},H_1)\pi_1(\Theta_1)d\Theta_1
+\end{equation}
+A useful schematic prior factorisation is
+\begin{equation}
+\pi_1(\Theta_1)=\pi_{BBH}\pi_{lens}\pi_{\beta,GW}\pi_{\nu,EM}S_1
+\end{equation}
+where $S_1$ denotes the required GW detection, catalogue and resolved lens selection conditioning.
+This factorisation is schematic: correlations implied by a population model or a particular lens modelling analysis should be retained rather than forced into independent factors.
 
 \section{Result}
 \subsection{Reconstructed Population}
@@ -223,6 +249,6 @@ rates, rate ratio, prior odds.
 
 \bibliography{references}% common bib file
 
-
+\section{Appendix}
 
 \end{document}
