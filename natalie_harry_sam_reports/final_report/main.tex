@@ -48,19 +48,20 @@
 
 \begin{document}
 
-\title[Article Title]{Report}
+\title[Article Title]{Placeholder}
 
 \author{\fnm{} \sur{}}
 
 \maketitle
 
-\section{Abstract}
+\section*{Abstract}
 %sam did this
-Strong gravitational lensing of gravitational waves (GWs) is an expected consequence of the propagation of compact binary signals through an inhomogeneous universe, and a small but non-zero fraction of events detected by ground based observatories should be multiply imaged by intervening galaxies or clusters \cite{2}\cite{6}\cite{18}\cite{19}.
-Recent forecasts indicate that the first confident strongly lensed GW detection could occur during the fifth LIGO-Virgo-KAGRA observing run (O5)\cite{19}, while searches incorporating 01-O4a events forecast a substantial probability of reaching at least $3\sigma$ significance in O5\cite{20}.
-At the same time, simulations based on the Hubble Space Telescope (HST) quality imaging show that resolved electromagnetic (EM) strong lensing data can constrain the lens potential at the sub-percent level in a favourable GW+EM systems \cite{21}.
-Motivated by these results, this work develops a Bayesian framework in which a catalogued lens with resolved strong lensing information ($H_1$) is used to increase the confidence of a candidate lensed GW pair.
-The central forecast to be tested is that targeted HST follow-up can, for favourable $H_1$ systems, sharpen the lens prediction sufficiently to raise the strong lensing detection confidence toward $5\sigma$. We derive the full $H_1$ evidence, (insert natalie) and (insert harry). The remaining hypotheses describe a catalogued lens without resolved images ($H_2$), an uncatalogued lens ($H_3)$, and two independent unlensed BBHs ($H_U$).\\
+Strong gravitational lensing of gravitational waves is an expected consequence of the propagation of compact binary signals through an inhomogeneous universe, and a small but non-zero fraction of events detected by ground based observatories should be multiply imaged by intervening galaxies or clusters \cite{2}\cite{6}\cite{18}\cite{19}.
+Recent forecasts indicate that the first confident strongly lensed gravitational wave detection could occur during the fifth LIGO-Virgo-KAGRA observing run (O5)\cite{19}, while searches incorporating O1-O4a events forecast a substantial probability of reaching at least $3\sigma$ significance in O5\cite{20}.
+At the same time, simulations tailored to the wide field capabilities of the Euclid telescope demonstrate that high resolution imaging can successfully indentify and localize the strongly lensed host galaxies of merging binary black holes, significantly narrowing down the gravitatioanl wave sky localization area \cite{27}.
+Motivated by these results, this work develops a Bayesian framework in which a catalogued lens with resolved strong lensing information is used to increase the confidence of a candidate lensed GW pair.
+We derive the full resolved strong lensing evidence, reconstruct the binary black hole population for prior odds, gravitational wave only bayes factor and joint analysis of the evidence, producing a joint bayes factor. The remaining hypotheses describe a catalogued lens without resolved images, an uncatalogued lens and two independent unlensed binary black holes.
+The central forecast to be tested is that targeted (EM) follow-up can, for favourable resolved strong lensing systems, sharpen the lens prediction sufficiently to raise the strong lensing detection confidence toward $5\sigma$.\\
 Keywords: gravitational waves; gravitational lensing: strong; Bayesian inference; electromagnetic catalogues; binary black holes; multi-messenger astronomy.
 
 \section{Introduction}
@@ -79,8 +80,6 @@ A galaxy or cluster capable of producing strong lensing may be visable in wide f
 The EM data may range from a simple galaxy detection with photometry and redshift information to a resolved strong lensing system with arcs or multiple images of an unrelated background source.
 Such data can constrain the lens mass distribution, position, redshift and velocity scale, and therefore predict distributions for the same lensing observables, such as relative time delay and magnification ratio, that are inferred from the GW pair.
 Recent work on lens reconstruction and catalogue informed priors further demonstrates that EM information can break degeneracies that remain in GW only analyses and can materially alter lensing odds \cite{15}\cite{16}\cite{17}.
-\section{Background}
-
 
 \section{Methodology}
 \subsection{Simulated GW events and Bayesian Parameter Estimation}
@@ -94,13 +93,18 @@ Intuitively, ...\\
 Mathematically, ...\\
 Population reconstruction on a simulated distribution of BBHs is performed using FIGARO, which uses a non-parametric approach to model probability densities using a Dirlchlet Process Gaussian Mixture Model. (More detailed descriptions). 
 Many draws, uncertainties; does not reflect intrinsic population\\
+Reweighting and rejection sampling using merger rate density...\\
 Used to compute prior odds, Bayes factor, ...
 
 \subsection{Prior Odds Estimation}
 % Natalie's part
 definition, formula (cite Otto's paper), how each component is calculated (ler)
 
-\subsection{Bayesian hypothesis space}
+\subsection{Bayes Factor Computation}
+% Natalie's (and probably Harry's) part
+PO2.0
+
+\section{Bayesian hypothesis space}
 %sams part
 Consider two GW detections, $d_{GW}={d_{GW,1},d_{GW,2}}$, together with EM observations dEM drawin from a catalogue of potential foreground lenses. 
 We divide the lensing interpretation into three mutually exclusive observational cases and compare their union with an unlensed alternative.
@@ -131,13 +135,14 @@ p(H_i|d) = Z_i \frac{p(H_i)}{p(d)}, Z_i \equiv p(d|H_i).
 \end{equation}
 The posterior odds of lensing relative to the unlsened hypothesis are consequently
 \begin{equation}
+\label{eq:posteriorodds}
 \frac{p(H_L|d)}{p(H_U|d)} = \frac{[Z_1p(H_1) + Z_2p(H_2) + Z_3p(H_3)]}{Z_Up(H_U)}
 \end{equation}
-Equation (above) makes the role of the hypothesis prior explicit. 
+Eq.~\eqref{eq:posteriorodds} makes the role of the hypothesis prior explicit. 
 The Bayes factor quantifies how the data update the relative support for the models, while the prior odds encode the expected rarity of strong lensing and the probability that a responsible lens belongs to each catalogue class. 
-This distinction is important because prior odds and search selection can change substantially as the GW catalogue grows [7,9,14].
+This distinction is important because prior odds and search selection can change substantially as the GW catalogue grows \cite{7}\cite{9}\cite{14}.
 
-\subsection{Parameterisation and Conditional Structure}
+\section{Parameterisation and Conditional Structure}
 \subsection{Binary Black Hole Source Parameters}
 Let $\theta_{BBH}$ denote the physical parameters of the compact binary source.
 A representative set is
@@ -148,10 +153,10 @@ The exact waveform parameterisation mat instead use detector frame masses, lumin
 Under any lensed hypothesis, the intrinsic source parameters are shared by the images, whereas under $H_U$ the two detections have independent parameter sets $\theta_{BBH,1}$ and $\theta_{BBH,2}$.
 Apparent luminosity distances are image dependent because magnification rescales the observed strain amplitude.
 
-\subsubsection{Lens and Source Plane Parameters}
+\subsection{Lens and Source Plane Parameters}
 The lens is described by a model dependent parameter vector
 \begin{equation}
-\theta_{lens}={z_l,\sigma_v,q,\phi_l,\Omega_l,\gamma_{ext},\phi_{ext},...}
+\theta_{lens}=\{z_l,\sigma_v,q,\phi_l,\Omega_l,\gamma_{ext},\phi_{ext},...\}
 \end{equation}
 where $z_l$ is the lens redshift, $\sigma_v$ s velocity dispersion or equivalent madd scale parameter, $q$ the projected axis ratio, $\phi_l$ the lens orientation, $\Omega_l$ the lens position, and $\gamma_{ext}$ and $\phi_{ext}$ describe external shear.
 The source position $\beta$ relative to the caustic must also be included.
@@ -160,7 +165,7 @@ The source position $\beta$ relative to the caustic must also be included.
 The GW pair constrains a lower dimensional set of relations between the images.
 We denote these by
 \begin{equation}
-\psi_{GW}={\Delta t, \mu_r, \Delta n, \Omega, ...}
+\psi_{GW}=\{\Delta t, \mu_r, \Delta n, \Omega, ...\}
 \end{equation}
 where $\Delta t$ is the relative arrive time delay, $\mu_r$ is a relative magnification ratio, $\Delta n$ denotes the relative mMorse index, and $\Omega$ represents common sky localisation.
 These quantities are not independent free parameters in a physical lens model; they are generated by the lens equation and Fermat potenital,
@@ -174,7 +179,7 @@ EM observations require nuisance parameters $\nu_{EM}$ describing measurement an
 Depending on the catalogue and imaging data, $\nu_{EM}$ may include the point spread function, photometruc calibration, specral energy distribution parameters, stellar mass to light ratio, background subtraction, photometric redshift calibration and other instrument or population level terms.
 These parameter should be maginalised rather than fixed when their uncertainty is non negligible, beause overly narrow EM constraints can artificially increase the GW-EM consistency factor.
 
-\subsection{Unlensed Hypothesis}
+\section{Unlensed Hypothesis}
 %sam
 Under $H_U$ the detections correspond to two independent BBH mergers.
 The GW evidence is
@@ -193,7 +198,7 @@ Z_U = Z_{GW,U} Z_{EM,field}, Z_{EM,field} = p(d_{EM}|H_{EM,field})
 This term is essential whenever the lensed hypotheses recieve evidence from the existence or properties of a catalogue galaxy.
 Omitting the corresponding field galaxy probability from $H_U$ would systematically favour catalogues lens hypotheses simply because a galaxy was searched for and found.
 
-\sub:xsection{$H_1$: catalogued lens wit resolved strong lensing information}
+\section{$H_1$: catalogued lens wit resolved strong lensing information}
 %sam
 \subsection{Resolved EM data and parameter set}
 %sam
@@ -222,6 +227,7 @@ p(d_{GW},d_{EM,c}|\Theta_1,H_1) = p(d_{GW}|\theta_{BBH},\theta_{lens},\beta_{GW}
 %sam
 For a catalogue candidate c, the primary model selection quantity is the full joint evidence
 \begin{equation}
+\label{eq:H1evidence}
 Z_{1,c} = \int p(d_{GW}|\theta_{BBH},\theta_{lens},\beta_{GW},H_1)p(d_{EM,c}|\theta_{lens},\theta_{EMsrc},\beta_{EMsrc},\nu_{EM},H_1)\pi_1(\Theta_1)d\Theta_1
 \end{equation}
 A useful schematic prior factorisation is
@@ -230,27 +236,247 @@ A useful schematic prior factorisation is
 \end{equation}
 where $S_1$ denotes the required GW detection, catalogue and resolved lens selection conditioning.
 This factorisation is schematic: correlations implied by a population model or a particular lens modelling analysis should be retained rather than forced into independent factors.
+The evidence integrates over both scientifically interesting and nuisance parameters. Consequently, uncertainties in the resolved EM source model and image reconstruction contribute to the posterior volume and cannot in general be removed by fixing them at their maximum likelihood values.
+Formulations of the full joint evidence for $H_2$ and $H_3$ can be found in the appendix.
+
+\subsection{GW observables and the EM predictive distribution}
+The GW pair constrains a reduced set of lensing observables
+\begin{equation}
+\psi = \{\Delta t,\mu_r,\Delta n,\Omega,...\}
+\end{equation}
+giving a posterior $p(\psi|d_{GW},H_1)$.
+The resolved EM observations instead constrain the lens potential.
+Propagating the EM constrained lens posterior through the lens equation gives a predictive distribution for the GW observables:
+\begin{equation}
+p(\psi|d_{EM,c},H_1) = \int p(\psi|\theta_{lens},z_s,\beta_{GW},H_1)p(\theta_{lens},z_s,\beta_{GW}|d_{EM,c},H_1)d\theta_{lens}dz_sd\beta_{GW}
+\end{equation}
+The BBH source redshift and source plane position remain latentunless independent measured.
+The resolved EM source may occupy a different source plane position and have different redshift; its role is to constrain $\theta_{lens}$, which is then used to predict the lensing observables of the GW source.\\
+\\The corresponding prior corrected consistency statistic is
+\begin{equation}
+\label{eq:H1consistency}
+C_1 = \int [\frac{p(\psi|d_{GW}H_1)p(\psi|d_{EM,c},H_1)}{\pi(\psi|H_1)}]d\psi
+\end{equation}
+A large $C_1$ indicates that the resolved EM reconstruction predicts time delays, magnification relations and image properties compatible with the GW pair.
+A small value indicates tension.
+When the full evidence in Eq.~\eqref{eq:H1evidence} is evaluated directly, this consistency is already encoded through the shared lens parameters; $C_1$ is therefore most safely interpreted as a reduced space diagnostic unless an explicit non overlapping factorisation is derived.
+
+\subsection{Multiple resolved lens candidates}
+If more than one resolved strong lensing system is compatiable with the GW localisation, the lens indentity should be marginalised rather than fixed in advance:
+\begin{equation}
+Z_1 = \sum_{c=1}^{N_{cat}}p(c|H_1)Z_{1,c}
+\end{equation}
+
+\section{Reduced GW-EM consistency under $H_1$}
+
+\subsection{Prior corrected posterior overlap}
+The reduced consistency statistic defined in Eq.~\eqref{eq:H1consistency} isolates the part of the inference that directly compares the GW inferred image relation with the prediction of the resolved EM lens reconstruction.
+Its prior denominator removes the common prior contribution that would otherwise be counted twice when multiplying posteriors.\\
+\\For $H_1$, this diagnostic is particularly informative bevause the resolved strong lensing configuration can make $p(\psi|d_{EM},H_1)$ substantially narrower than the corresponding $H_2$ distribution.
+The same EM precision therefore produces stronger discrimination: agreement can yield a concentrated overlap, while a narrow but displaced prediction can suppress $C_1$ rapidly.
+
+\subsection{Relation to the full evidence}
+The full evidence $Z_1$ remains the reference model selection quantity.
+The overlap $C_1$ should not be multiplied onto an already complete evaluation of Eq.~\eqref{eq:H1evidence} unless the likelihood and prior structure has been explicitly rearranged into non overlapping factors.
+In a direct joint calculation, GW-EM compatibility is already present because $\theta_{lens}$ is shared between both likelihoods.
+
+\section{Computational evaluation of $H_1$}
+The integrals can be manipulated and approximated using laplace to get a form more suitable for computational analysis.
+Using the joint maximum and laplace approximation the full evidence for $H_1$ can be written, in log form as,
+\begin{equation}
+\label{laplaceH1evidence}
+\ln(Z_{1,c}) \approx \ell_1(\hat\Theta_1)+(\frac{k_1}{2})\ln(2\pi)-(\frac{1}{2})\ln(|A_1|)
+\end{equation}
+Eq.~\eqref{laplaceH1evidence} separates the evidence into a best fit contribution, $\ell_1(\hat\Theta_1)$, and a local posterior volume contribution determined by $k_1$ and $|A_1|$.
+The resolved EM data can alter both pieces: they may increase or decrease the joint peak according to GW-EM agreement and can substantially change the curvature in lens parameter directions. This is in the appendix along side applying it to the consistency integral to get Mahalanobis distance.
 
 \section{Result}
 \subsection{Reconstructed Population}
 % Natalie's part
-(Will replace the following with the new plot when script finishes running)
-\begin{figure}[ht]
+\begin{figure}[h!]
     \centering
-    \includegraphics[width=0.8\textwidth]{figures/reconstructed_population.png}
-    \caption{Corner plot of the reconstructed binary black hole population in component masses ($m_1, m_2$), effective spin ($\chi_\text{eff}$), and redshift using the hierarchical DPGMM implementation in FIGARO. The diagonal panels show the one-dimensional marginal distributions, while the off-diagonal panels show the corresponding two-dimensional joint distributions.}
+    \includegraphics[width=0.45\textwidth]{figures/unlensed_2d.pdf}
+    \includegraphics[width=0.463\textwidth]{figures/population_reweighted_m_1_m_2.pdf}
+    \caption{Corner plots of the reconstructed binary black hole population in component masses $m_1$ and $m_2$ using the hierarchical DPGMM implementation in FIGARO. The diagonal panels show the one-dimensional marginal distributions, while the off-diagonal panels show the corresponding two-dimensional joint distributions.}
     \label{fig:reconstructed_population}
 \end{figure}
+
 
 \subsection{Prior Odds}
 % Natalie's part
 rates, rate ratio, prior odds.
+
+\subsection{Bayes Factor}
+% Natalie's (and probably Harry's) part
+(Will replace the following plot once code finishes running)
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/log10_BLU_histogram.pdf}
+    \caption{}
+    \label{fig:log_bayes_factor_gw}
+\end{figure}
+
 
 
 \section{Conclusion}
 
 \bibliography{references}% common bib file
 
-\section{Appendix}
+\begin{appendices}
 
+\section{$H_2$: catalogued lens without resolved strong lensing EM images}
+$H_2$ retains the same common source lensing interpretation as $H_1$ but removes the strong lensing constraint.
+The EM catalogue constrains the foreground galaxy itself through quantities such as $z_l,\sigma_v,q$ and photometry.
+The parameter vector is correspondingly smaller,
+\begin{equation}
+\Theta_2 = \{\theta_{BBH},\theta_{lens},\beta,\nu_{EM}\}
+\end{equation}
+and the evidence is
+\begin{equation}
+Z_{2,c} = \int p(d_{GW}|\theta_{BBH},\theta_{lens},\beta,H_2)p(d_{EM,c}|\theta_{lens},\nu_{EM},H_2)\pi_2(\Theta_2)d\Theta_2
+\end{equation}
+The EM constrained lens posterior can again be propagated into $p(\psi|d_{EM},H_2)$, and its consistency with $p(\psi|d_{GW},H_2)$ can be measured by $C_2$.
+Relative to $H_1$, the predictive distribution is generally expected to be broader because the gravitatioanl potential is constrained indirectly through galaxy properties rather than through a resolved image configuration.
+
+\section{$H_3$: uncatalogued lens}
+Under $H_3$ the GW pair is lensed, but the responsible foreground lens is absent from the catalogue.
+Let
+\begin{equation}
+C_{cat}(\theta_{lens}) = P(\text{lens appears in catalogue}|\theta_{lens})
+\end{equation}
+so that $1-C_{cat}(\theta_{lens})$ is the probability that a lens with those properties is missed.
+With
+\begin{equation}
+\Theta_3 = \{\theta_{BBH},\theta_{lens},\beta\}
+\end{equation}
+the evidence is
+\begin{equation}
+Z_3 = \int p(d_{GW}|\theta_{BBH},\theta_{lens},\beta,H_3)[1-C_{cat}(\theta_{lens})]\pi_{BBH}(\theta_{BBH})\pi_{lens,pop}(\theta_{lens})\pi_{\beta}(\beta)d\Theta_3
+\end{equation}
+$H_3$ therefore replaces a candidate specific EM likelihood with an astrophysical lens population prior weighted by catalogue non detection.
+It would retained in the framework to ensure that the total lensed hypothesis does not implicitly assume that every physically relevant lens must already be catalogued.
+
+\section{Laplace approximation to the full $H_1$ evidence}
+Define the $H_1$ integrand
+\begin{equation}
+I_1(\Theta_1) = p(d_{GW}|\Theta_1,H_1)p(d_{EM,c}|\Theta_1,H_1)\pi_1(\Theta_1)
+\end{equation}
+so that
+\begin{equation}
+Z_{1,c} = \int I_1(\Theta_1)d\Theta_1
+\end{equation}
+For Nnumerical stability, computations are performed in log space:
+\begin{equation}
+\ell_1(\Theta_1) = \ln(p(d_{GW}|\Theta_1,H_1))+\ln(p(d_{EM,c}|\Theta_1,H_1)+\ln\pi_1(\Theta_1)
+\end{equation}
+\begin{equation}
+\label{lnevidence}
+Z_{1,c} = \int e^{[\ell_1(\Theta_1)]}d\Theta_1
+\end{equation}
+The maximum a posteriori point is
+\begin{equation}
+\hat\Theta_1 = \text{arg max}_{\Theta_1}\ell_1(\Theta_1)
+\end{equation}
+Near $\hat\Theta_1$, expand the log integrand to second order.
+Since the gradient vanishes at an interior maximum, the local form is
+\begin{equation}
+\ell_1(\Theta_1) \approx \ell_1(\hat\Theta_1) - \frac{1}{2}(\Theta_1-\hat\Theta_1)^TA_1(\Theta_1-\hat\Theta_1)
+\end{equation}
+with negative Hessian
+\begin{equation}
+A_1 = -\nabla\nabla\ell_1(\Theta_1)|_{\hat\Theta_1}
+\end{equation}
+Substitutes into Eq.~\eqref{lnevidence} gives a multivariate Gaussian integral:
+\begin{equation}
+Z_{1,c} \approx e^{[\ell_1(\hat\Theta_1)]}(2\pi)^{\frac{k_1}{2}}|A_1|^{-\frac{1}{2}}
+\end{equation}
+where $k_1$ is the number of free continuous parameters.
+In log form,
+\begin{equation}
+\ln(Z_{1,c}) \approx \ell_1(\hat\Theta_1)+(\frac{k_1}{2})\ln(2\pi)-(\frac{1}{2})\ln(|A_1|)
+\end{equation}
+
+\section{Gaussian approximation and Fisher matrix in the consistency statistic}
+Recall the reduced consistency statistic
+\begin{equation}
+C_1 = \int \frac{p(\psi|d_{GW},H_1)p(\psi|d_{EM},H_1)}{\pi(\psi|H_1)} d\psi
+\end{equation}
+Posterior overlap statistics of this general form are widely used in Bayesian searches for strongly lensed GW event pairs \cite{22}, while later lensing frameworks perform more complete joint parameter inference and evidence calculations \cite{23}\cite{9}.\\
+\\Assume that the GW and EM distributions are locally well approximated by $k_{\psi}$ dimensional Gaussian densities,
+\begin{equation}
+p(\psi|d_{GW},H_1) \simeq \mathcal{N}(\psi;\mu_{GW},\Sigma_{GW})
+\end{equation}
+\begin{equation}
+p(\psi|d_{EM},H_1) \simeq \mathcal{N}(\psi;\mu_{EM},\Sigma_{EM})
+\end{equation}
+If the prior varies slowly across the region in which both distributions have appreciable support, it may be approximated locally by a constant $\pi(\psi|H_1) \simeq \pi_0$.
+The consistency statistic then becomes
+\begin{equation}
+C_1 \simeq \frac{1}{\pi_0} \int \mathcal{N}(\psi;\mu_{GW},\Sigma_{GW}) \mathcal{N}(\psi;\mu_{EM},\Sigma_{EM}) d\psi
+\end{equation}
+The product integral of two normalised multivariate Gaussian densities is
+\begin{equation}
+\int \mathcal{N}(\psi;\mu_1,\Sigma_1) \mathcal{N}(\psi;\mu_2,\Sigma_2) = \mathcal{N}(\mu_1;\mu_2,\Sigma_1+\Sigma_2)
+\end{equation}
+Therefore
+\begin{equation}
+C_1 \simeq \frac{1}{\pi_0} \mathcal{N}(\mu_{GW};\mu_{EM},\Sigma_{GW}+\Sigma_{EM})
+\end{equation}
+Writing the Gaussian density explitly gives
+\begin{equation}
+C_1 \simeq \frac{e^{-\frac{D^2}{2}}}{\pi_0(2\pi)^{\frac{k_{\psi}}{2}}|\Sigma_{GW}+\Sigma_{EM}|^{\frac{1}{2}}}
+\end{equation}
+with
+\begin{equation}
+D^2=(\mu_{GW}-\mu_{EM})^T(\Sigma_{GW}+\Sigma_{EM})^{-1}(\mu_{GW}-\mu_{EM})
+\end{equation}
+This is the squared Mahalanobis distance \cite{24} between the two posterior means, evaluated usnig their combined covariance.\\
+\\
+Fisher information provides a complementary description of measurement precision.
+For a likelihood $L(d|\psi)$ the expected Fisher matrix is defined by \cite{25}
+\begin{equation}
+F_{ij}=-\left\langle \frac{\partial^2 \ln L}{\partial \psi_i \partial \psi_j} \right\rangle
+\end{equation}
+under the usual regularity assumptions.
+Near a well constrined maximum, the log likelihood may be expanded as
+\begin{equation}
+\ln(L(\psi)) \simeq \ln(L(\hat\psi))-\frac{1}{2}(\psi-\hat\psi)^TF(\psi-\hat\psi)
+\end{equation}
+In the asymptotic Gaussian limit, and when prior curvature is negligible,
+\begin{equation}
+\Sigma \simeq F^{-1}
+\end{equation}
+This approximation is standard in GW parameter estimation, but its domain of validity must be checked carefully: finite SNR ratio, weakly measured parameters, boundaries, degeneracies and informative priors can all make the Fisher approximation inaccurate \cite{26}.\\
+\\
+For the reduced consistency problem,
+\begin{equation}
+\Sigma_{GW} \simeq F_{GW}^{-1},    \Sigma_{EM} \simeq F_{EM}^{-1}.
+\end{equation}
+The total covarience becomes
+\begin{equation}
+\Sigma_{tot} \simeq F_{GW}^{-1}+F_{EM}^{-1}.
+\end{equation}
+Thus the Mahalanobis distance may be written directly in terms of the two information matrices,
+\begin{equation}
+D^2 = \Delta\mu^T(F_{GW}^{-1}+F_{EM}^{-1})^{-1}\Delta\mu
+\end{equation}
+Substitution into the Gaussian overlap gives.
+\begin{equation}
+C_1 \simeq \frac{e^{-\frac{1}{2}\Delta\mu^T(F_{GW}^{-1}+F_{EM}^{-1})^{-1}\Delta\mu}}{\pi_0(2\pi)^{\frac{k_{\psi}}{2}}|F_{GW}^{-1}+F_{EM}^{-1}|^{\frac{1}{2}}}
+\end{equation}
+Taking the logartithm yields a numerically convenient decomposition,
+\begin{equation}
+\ln(C_1) \simeq -\ln(\pi_0)-\frac{k_{\psi}}{2}\ln(2\pi)-\frac{1}{2}\ln(|F_{GW}^{-1}+F_{EM}^{-1}|)-\frac{1}{2}D^2
+\end{equation}
+The last two terms have distinct interpretations:
+\begin{enumerate}
+	\item $-\frac{D^2}{2}$ is the mismatch term. It penalises separation between the GW and EM predictions in units set by the combined uncertainty.
+	\item $-\frac{1}{2}\ln(|F_{GW}^{-1}+F_{EM}^{-1}|)$ is the precision volume term. It increases as the joint uncertainty volume becomes smaller.
+\end{enumerate}
+This decomposition makes clear why resolved strong lensing EM information can be highly discriminating under $H_1$.
+If the EM lens reconstruction is precise, $F_{EM}$ has large eigenvalues and $F_{EM}^{-1}$ is small.
+Agreement with the GW posterior can then produce a sharply concentrated overlap.
+Conversely, a precise EM prediction that is offset from the GW inference can make $D^2$ large and suppress $C_1$ exponentially.
+
+\end{appendices}
 \end{document}
