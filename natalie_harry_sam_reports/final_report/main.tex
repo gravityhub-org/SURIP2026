@@ -330,9 +330,18 @@ In the source light/lens light/lens mass parameterisation, the full Hessian cont
 In particular, degeneracies between source light and lens mass, and between lens light and lens mass, should be retained rather tha ignored by approximating the blocks independently.
 
 \section{Joint Bayes factor and posterior odds}
+
 \subsection{GWEMFISH and Laplace's Approximation: A physicist's life (and time) saver}
+
+Lens reconstruction will usually take very long (from hours to days) if it was ran on a traditional Markov Chain Monte Carlo program. To overcome this issue and ensure that the lens reconstruction can be computed quicky, we use GWEMFish, which utilizes Laplace approximation, to ensure that each computation is tubo-fast. 
+-more details or any references to other sections on how this works
+
 \subsection{Lens searches and the localization problem}
+It is known that GWs poor localization compared to other EM counterparts (normally around $5-25 deg^2$). In a region of sky of that size, it is predicted by (referece) that the Euclid telescope could detect up to around 600 lensing galaxies. This means that we can't immediately know which galaxy the GW signal originates. This is analogous to the birthday problem where we would need to perform searches with the lensing candidates in the localized region of sky to match the GW signal to the correct lens. Previous studies (refereces) have concluded that the correct lens would equate to being able to localize the GW correctly.
+
+
 \subsection{From an ominiscient point of view: the joint Bayes factor}
+
 
 
 
