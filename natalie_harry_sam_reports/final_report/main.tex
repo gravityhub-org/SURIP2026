@@ -27,6 +27,7 @@
 \usepackage{listings}%
 \usepackage[english]{babel}
 \usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric}
 \usetikzlibrary{shapes.geometric, arrows.meta, positioning}
 %% as per the requirement new theorem styles can be included as shown below
 \theoremstyle{thmstyleone}%
@@ -66,6 +67,14 @@ Keywords: gravitational waves; gravitational lensing: strong; Bayesian inference
 \textbf{$3\sigma$ to $5\sigma$ is a jump of 4500 more confident, which relates to the ratio of Bayes' factors for GW to GW+EM being 4500 but not sure if this is the same for the posterior odds as this would then assume the prior odds to be the same for GW only and joint, which we dont know if they are}
 
 \section{Introduction}
+The field of gravitational waves (GWs) astronomy has rapidly transitioned from the first detection just about a decade ag to a large population of hundreds of detected compact-binary mergers. 
+So far, the LIGO-Virgo-KAGRA (LVK) collaboration has repoted neraly 400 confirmed GW signals from compact binary coalescences,providing a an increasingly large sample with which we can use to search for rare astrophysical phonomena.
+
+One of such phenomenon is strong gravitational lensing of GWs, which is expected to occur when a GW signal passes through the gravitational potential of an intervening galaxy or cluster. Despite the growing number of detected GW events, no confident detection of strong lensing has yet been reported. 
+Current forecasts suggest that strong lensed GW detections might be detected in the next observing run O5.
+
+
+
 %sam did this
 Gravitational waves propagate along null geodesics and are therefore subject to gravitational lensing in the same geometric-optics sense as electromagnetic radiation \cite{2}\cite{1}. 
 For galaxy-scale lenses, a single compact-binary coalescence can produce multiple detectable images separated by minutes to months, depending on the lens potential and source geometry.
@@ -331,10 +340,170 @@ In particular, degeneracies between source light and lens mass, and between lens
 
 \section{Joint Bayes factor and posterior odds}
 
+\begin{figure}[htbp]
+\centering
+
+\begin{tikzpicture}[
+font=\small,
+>=Latex,
+node distance=1.0cm and 1.0cm,
+data/.style={
+rectangle,
+rounded corners=4pt,
+draw=black,
+thick,
+align=center,
+text width=3.6cm,
+minimum height=1.1cm,
+fill=green!10
+},
+process/.style={
+rectangle,
+rounded corners=4pt,
+draw=black,
+thick,
+align=center,
+text width=3.6cm,
+minimum height=1.2cm,
+fill=blue!10
+},
+inference/.style={
+rectangle,
+rounded corners=4pt,
+draw=black,
+thick,
+align=center,
+text width=3.6cm,
+minimum height=1.25cm,
+fill=orange!15
+},
+result/.style={
+rectangle,
+rounded corners=4pt,
+draw=black,
+very thick,
+align=center,
+text width=3.6cm,
+minimum height=1.2cm,
+fill=red!10
+},
+arrow/.style={
+->,
+thick
+}
+]
+
+% =====================================================
+% ROW 1: LEFT -> RIGHT
+% =====================================================
+
+\node[data] (lvk) {
+\textbf{LVK Detection}\\[2pt]
+Identify a candidate quadruply imaged GW event
+};
+
+\node[process, right=of lvk] (gwinference) {
+\textbf{GW Parameter Inference}\\[2pt]
+Infer source parameters and lensing observables
+};
+
+\node[data, right=of gwinference] (localization) {
+\textbf{GW Sky Localization}\\[2pt]
+Localization region of approximately\\
+$5$--$100~\mathrm{deg}^2$
+};
+
+% =====================================================
+% ROW 2: RIGHT -> LEFT
+% =====================================================
+
+\node[process, below=of localization] (ranking) {
+\textbf{Candidate Filtering and Ranking}\\[2pt]
+Compare lens parameters and GW lensing observables
+};
+
+\node[inference, left=of ranking] (fastanalysis) {
+\textbf{Fast GW--EM Consistency Analysis}\\[2pt]
+GWEMFISH + approximate inference\\
+(e.g.\ Laplace approximation)
+};
+
+\node[data, left=of fastanalysis] (euclid) {
+\textbf{Euclid Strong-Lens Catalog}\\[2pt]
+Select strong-lensing systems within the GW localization region
+};
+
+% =====================================================
+% ROW 3: LEFT -> RIGHT
+% =====================================================
+
+\node[data, below=of euclid] (followup) {
+\textbf{Promising Candidates + EM Follow-up}\\[2pt]
+Reduce to a few candidates and obtain\\
+high-resolution imaging (e.g.\ HST)
+};
+
+\node[inference, right=of followup] (lensmodel) {
+\textbf{Detailed Lens Modeling}\\[2pt]
+Improved reconstruction of the lens mass distribution
+};
+
+\node[inference, right=of lensmodel] (joint) {
+\textbf{Full Joint GW + EM Inference}\\[2pt]
+Full MCMC or Nested Sampling
+};
+
+% =====================================================
+% FINAL RESULT
+% =====================================================
+
+\node[result, below=of joint] (resultnode) {
+\textbf{Best GW--EM Lens Association}\\[2pt]
+Identify the most probable electromagnetic lens counterpart
+};
+
+% =====================================================
+% ARROWS
+% =====================================================
+
+% Row 1
+\draw[arrow] (lvk) -- (gwinference);
+\draw[arrow] (gwinference) -- (localization);
+
+% Transition Row 1 -> Row 2
+\draw[arrow] (localization) -- (ranking);
+
+% Row 2: RIGHT -> LEFT
+\draw[arrow] (ranking) -- (fastanalysis);
+\draw[arrow] (fastanalysis) -- (euclid);
+
+% Transition Row 2 -> Row 3
+\draw[arrow] (euclid) -- (followup);
+
+% Row 3: LEFT -> RIGHT
+\draw[arrow] (followup) -- (lensmodel);
+\draw[arrow] (lensmodel) -- (joint);
+
+% Final
+\draw[arrow] (joint) -- (resultnode);
+
+\end{tikzpicture}
+
+\caption{
+Conceptual workflow for identifying the electromagnetic lens counterpart
+of a quadruply imaged gravitational-wave event.
+}
+
+\label{fig:realistic_pipeline}
+
+\end{figure}
+
 \subsection{GWEMFISH and Laplace's Approximation: A physicist's life (and time) saver}
 
 Lens reconstruction will usually take very long (from hours to days) if it was ran on a traditional Markov Chain Monte Carlo program. To overcome this issue and ensure that the lens reconstruction can be computed quicky, we use GWEMFish, which utilizes Laplace approximation, to ensure that each computation is tubo-fast. 
 -more details or any references to other sections on how this works
+
+Using Laplace's approximation, we can approximate the evidence for each lens candidate in the GW localization region. This allows us to quickly compute the Bayes factor for each candidate and rank them based on their likelihood of being the correct lens. With this, we can much more easily narrow down the candidates and focus on the most promising ones for further analysis and follow-up observations, such as performing a full MCMC or Nested Sampling and follow up using a telescope with higher resolution such as the HST.
 
 \subsection{Lens searches and the localization problem}
 It is known that GWs poor localization compared to other EM counterparts (normally around $5-25 deg^2$). In a region of sky of that size, it is predicted by (referece) that the Euclid telescope could detect up to around 600 lensing galaxies. This means that we can't immediately know which galaxy the GW signal originates. This is analogous to the birthday problem where we would need to perform searches with the lensing candidates in the localized region of sky to match the GW signal to the correct lens. Previous studies (refereces) have concluded that the correct lens would equate to being able to localize the GW correctly.
