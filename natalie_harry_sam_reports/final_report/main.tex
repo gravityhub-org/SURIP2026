@@ -87,13 +87,23 @@ Recent work on lens reconstruction and catalogue informed priors further demonst
 
 \subsection{Population Reconstruction}
 % Natalie's part
-importance, posterior samples, non-parametric, (H)DPGMM, FIGARO, uncertainties (blue region), limitations (not intrinsic)\\
-The population distribution of binary black hole (BBH) parameters is crucial for determining whether two similar gravitational wave (GW) signals come from the same source, or belong to two pairs of BBH with very similar properties.\\
-Intuitively, ...\\
+The population distribution of binary black hole (BBH) parameters is crucial for determining whether two similar gravitational wave (GW) signals come from the 
+same source, or belong to two pairs of BBH with very similar properties.\\
+Intuitively, two GW signals are more likely to be coincidentally similar rather than being lensed if the inferred BBH parameters lie in a densely populated region 
+of the parameter space.
 Mathematically, ...\\
-Population reconstruction on a simulated distribution of BBHs is performed using FIGARO, which uses a non-parametric approach to model probability densities using a Dirlchlet Process Gaussian Mixture Model. (More detailed descriptions). 
-Many draws, uncertainties; does not reflect intrinsic population\\
-Reweighting and rejection sampling using merger rate density...\\
+Population reconstruction on a simulated distribution of BBHs is performed using FIGARO, which uses a non-parametric approach to model probability densities using 
+a Dirlchlet Process Gaussian Mixture Model (DPGMM). The population density is assumed to be a sum of Gaussian components, but the number of components is determined 
+by the data instead of being fixed in advance. As each GW event is represented by a posterior distribution from parameter estimation of a GW signal, which can be 
+obtained from posterior samples through DPGMM, we implement the hierarchical DPGMM (HDPGMM) in FIGARO for population reconstruction.\\
+It is important to note that the reconstructed population does not reflect the intrinsic population, as the reconstruction is based on posterior samples of detected 
+events. In order to eliminate selection effects and create an unbiased population, we perform rejection sampling during generation of samples from the reconstructed 
+observational population, with acceptance probability approximated to be a function of chirp mass.\\
+The astrophysical BBH merger rate density
+\[\frac{R_\text{GW}(z)}{\text{Gpc}^{-3}\text{yr}^{-1}} = \frac{a_1 e^{a_2 z}}{e^{a_3 z}+a_4},\]
+where $a_1=6600$, $a_2=1.6$, $a_3=2.1$, and $a_4=30$ for population-I/II stars\cite{6}.\\
+The number of detectable events for a given chirp mass ...
+The reweighting factor is given by ...
 Used to compute prior odds, Bayes factor, ...
 
 \subsection{Prior Odds Estimation}
