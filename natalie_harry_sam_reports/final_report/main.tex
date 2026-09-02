@@ -27,6 +27,7 @@
 \usepackage{listings}%
 \usepackage[english]{babel}
 \usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric}
 \usetikzlibrary{shapes.geometric, arrows.meta, positioning}
 %% as per the requirement new theorem styles can be included as shown below
 \theoremstyle{thmstyleone}%
@@ -62,24 +63,34 @@ At the same time, simulations tailored to the wide field capabilities of the Euc
 Motivated by these results, this work develops a Bayesian framework in which a catalogued lens with resolved strong lensing information is used to increase the confidence of a candidate lensed GW pair.
 We derive the full resolved strong lensing evidence, reconstruct the binary black hole population for prior odds, gravitational wave only bayes factor and joint analysis of the evidence, producing a joint bayes factor. The remaining hypotheses describe a catalogued lens without resolved images, an uncatalogued lens and two independent unlensed binary black holes.
 The central forecast to be tested is that targeted (EM) follow-up can, for favourable resolved strong lensing systems, sharpen the lens prediction sufficiently to raise the strong lensing detection confidence toward $5\sigma$.\\
-Keywords: gravitational waves; gravitational lensing: strong; Bayesian inference; electromagnetic catalogues; binary black holes; multi-messenger astronomy.
+Keywords: gravitational waves; gravitational lensing: strong; Bayesian inference; electromagnetic catalogues; binary black holes; multi-messenger astronomy.\\
+\textbf{$3\sigma$ to $5\sigma$ is a jump of 4500 more confident, which relates to the ratio of Bayes' factors for GW to GW+EM being 4500 but not sure if this is the same for the posterior odds as this would then assume the prior odds to be the same for GW only and joint, which we dont know if they are}
 
 \section{Introduction}
+The field of gravitational waves (GWs) astronomy has rapidly transitioned from the first detection just about a decade ag to a large population of hundreds of detected compact-binary mergers. 
+So far, the LIGO-Virgo-KAGRA (LVK) collaboration has repoted neraly 400 confirmed GW signals from compact binary coalescences,providing a an increasingly large sample with which we can use to search for rare astrophysical phonomena.
+
+One of such phenomenon is strong gravitational lensing of GWs, which is expected to occur when a GW signal passes through the gravitational potential of an intervening galaxy or cluster. Despite the growing number of detected GW events, no confident detection of strong lensing has yet been reported. 
+Current forecasts suggest that strong lensed GW detections might be detected in the next observing run O5 \cite{20}.
+
+
+
 %sam did this
-Gravitational waves propagate along null geodiscs and are therefore subject to gravitatioanl lensing in the sam manner as electromagnetic radiation in the geometric optics limit \cite{1}\cite{2}. 
-For galaxy scale lenses, a single compact binary coalescence can produce multiple detectable images separated by minutes to months, depending on the lens potential and source geometry. 
-To leasing order, the images share the same intrinsic binary paramters while differing in arrival time, amplitude through the lensing magnification, and an image type dependent phase contribution \cite{3}\cite{4}\cite{5}\cite{6}. 
+Gravitational waves propagate along null geodesics and are therefore subject to gravitational lensing in the same geometric-optics sense as electromagnetic radiation \cite{2}\cite{1}. 
+For galaxy-scale lenses, a single compact-binary coalescence can produce multiple detectable images separated by minutes to months, depending on the lens potential and source geometry.
+To leading order, the images share the same intrinsic binary parameters while differing in arrival time, amplitude through the lensing magnification and an image-type-dependent phase contribution \cite{6}\cite{3}\cite{4}\cite{5}.
 This repeated signal structure motivates searches for pairs or multiples of GW events that are mutually consistent under a common source hypothesis.\\
-\\The central statistical difficulty is that an unlensed population can also produce event pairs with overlapping posterior distibutions.
-A robust lensing claim must therefore compare a common source moel against a model in which the detections arise from independent binaries.
-Bayesian model selection provides a natural framework because it combines likelihood agreement, prior information, population expectations and parameter space volume into a single evidence ratio \cite{7}\cite{8}\cite{9}.
-Early work proposed posterior overlap statistics for lensed GW indentification \cite{3}, while subsequent analyses incorporated lensing time-delay distributions, astrophysical populations, selections effects and full join parameter estimation \cite{7}\cite{8}\cite{9}\cite{10}.
+\\The central statistical difficulty is that an unlensed population can also produce event pairs with overlapping posterior distributions. 
+A robust lensing claim must therefore compare a common-source model against a model in which the detections arise from independent binaries.
+Bayesian model selection provides a natural framework because it combines likelihood agreement, prior information, population expectations and parameter-space volume into a single evidence ratio \cite{7}\cite{8}\cite{9}\cite{10}.
 Searches of LIGO-Virgo-KAGRA data have so far found no compelling population level evidence for strong lensing, reinforcing the need for careful prior odds and follow up tests \cite{12}\cite{13}\cite{14}.\\
-\\A major source source of additional information is the electromagnetic foreground.
-A galaxy or cluster capable of producing strong lensing may be visable in wide field imaging or spectroscopic catalogues even when the binary black hole (BBH) source itself has no EM counterpart.
-The EM data may range from a simple galaxy detection with photometry and redshift information to a resolved strong lensing system with arcs or multiple images of an unrelated background source.
-Such data can constrain the lens mass distribution, position, redshift and velocity scale, and therefore predict distributions for the same lensing observables, such as relative time delay and magnification ratio, that are inferred from the GW pair.
-Recent work on lens reconstruction and catalogue informed priors further demonstrates that EM information can break degeneracies that remain in GW only analyses and can materially alter lensing odds \cite{15}\cite{16}\cite{17}.
+\\A major source of additional information is the electromagnetic foreground. 
+A galaxy or cluster capable of producing strong lensing may be visible in imaging or spectroscopic catalogues even when the BBH source itself has no detectable EM counterpart.
+The available EM information can range from simple measurements of the foreground galaxy to a resolved strong-lensing system containing arcs, multiple images or an Einstein ring from an unrelated background source.
+These two types of information constrain different parts of the lens model.
+The foreground galaxy light constrains the luminous structure and population properties of the deflector, while resolved lensed source light constrains the mapping produced by the lens mass distribution.\\
+\\For this reason, the parameterisation adopted here separates the EM lens model into source light parameters, lens light parameters and lens mass parameters.
+This is preferable to grouping all EM quantities into a single generic lens vector because it makes clear which parameter blocks are directly measured and which are only inferred indirectly under each hypothesis.
 
 \section{Methodology}
 \subsection{Simulated GW events and Bayesian Parameter Estimation}
@@ -153,38 +164,83 @@ The Bayes factor quantifies how the data update the relative support for the mod
 This distinction is important because prior odds and search selection can change substantially as the GW catalogue grows \cite{7}\cite{9}\cite{14}.
 
 \section{Parameterisation and Conditional Structure}
+
 \subsection{Binary Black Hole Source Parameters}
+
 Let $\theta_{BBH}$ denote the physical parameters of the compact binary source.
 A representative set is
 \begin{equation}
 \theta_{BBH}=\{m_1,m_2,\chi_1,\chi_2,z_s,\Omega_s,\iota,\phi_{pol},...\}.
 \end{equation}
-The exact waveform parameterisation mat instead use detector frame masses, luminosity distance and spin coordinates.
 Under any lensed hypothesis, the intrinsic source parameters are shared by the images, whereas under $H_U$ the two detections have independent parameter sets $\theta_{BBH,1}$ and $\theta_{BBH,2}$.
 Apparent luminosity distances are image dependent because magnification rescales the observed strain amplitude.
 
-\subsection{Lens and Source Plane Parameters}
-The lens is described by a model dependent parameter vector
+\subsection{Source light parameters}
+
+The source light block describes the resolved electromagnetic background source whose images or arcs are used to constrain the foreground lens.
+It does not represent an electromagnetic counterpart to the BBH.
+A generic source light parameter vector may be written
 \begin{equation}
-\theta_{lens}=\{z_l,\sigma_v,q,\phi_l,\Omega_l,\gamma_{ext},\phi_{ext},...\}
+\theta_{SL} = \{\Omega_{s,EM},F_s,R_{eff,s},n_s,q_s,\phi_s,colour/SED_s,...\}
 \end{equation}
-where $z_l$ is the lens redshift, $\sigma_v$ s velocity dispersion or equivalent madd scale parameter, $q$ the projected axis ratio, $\phi_l$ the lens orientation, $\Omega_l$ the lens position, and $\gamma_{ext}$ and $\phi_{ext}$ describe external shear.
-The source position $\beta$ relative to the caustic must also be included.
+Here $\Omega_{s,EM}$ is the unlensed source-plane centroid, $F_s$ is the source flux or surface-brightness normalisation, $R_{eff,s}$ is an effective radius, $n_s$ is a Sersic indec, $q_s$ is the projected axis ratio and $\psi_s$ is the source orientation.
+A pixelised or basis function source reconstruction may be used instead, in that case $\theta_{SL}$ represents the corresponding source light coefficients and regularisation hyperparameters.\\
+\\The source light is required only when the resolved strong lensing EM data are modelled (under $H_1$).
+It is absent from $H_2$ because no resolved lensed source is availible, and absent from $H_3$ because no foreground lens candidate is indentified.
+
+\subsection{Lens light parameters}
+
+The lens light block describes the luminous distribution of the foreground deflector and the observables that determine whether it is present in the catalogue.
+A representative parameter vector is
+\begin{equation}
+\theta_{LL} = \{\Omega_l,F_l,R_{eff,l},n_l,q_l,\psi_l,colour/SED_l,z_l,...\}
+\end{equation}
+These parameters describe the centroid, brightness, size, Sersic profile, axis ratio, position angle, spectral energy distribution information and redshift of the foregoround galaxy.
+Depending on the data set, the parameters may also contain velocity dispersion measurements or population level nuisance quantities associated with photomoetric redshift and stellar population inference.\\
+\\Under $H_1$ and $H_2$, $\theta_{LL}$ is constrained directly by the catalogue or imaging data.
+Under $H_3$, $\theta_{LL}$ is not observed but can be retained as a latent population variable because catalogue completeness depends primarily on the brightness, size, redshift and surface brightness properties of the foregrouhd galaxy.
+
+\subsection{Lens mass parameters}
+
+The lens mass block describes the gravitational potential responsible for producing the multiple GW images.
+A model dependent vector may be written
+\begin{equation}
+\theta_{LM} = \{\theta_E \text{or} \sigma_v,\gamma^{'},q_m,\phi_m,\Omega_m,\gamma_{ext},\phi_{ext},\kappa_{ext},...\}
+\end{equation}
+Here $\theta_E \text{or} \sigma_v$ sets the mass scale, $\gamma^{'}$ is a density slope parameter where relevant, $q_m \text{and} \phi_m$ describe a projected mass ellipticity and orientation, $\Omega_m$ is the mass centroid, and $\gamma_{ext}, \phi_{ext} \text{and} \kappa_{ext}$ describe line of sight or enviornmental perturbations.
+The precise contents depend on whether the adopted model is, for example, a singular isothermal ellipsoid, an elliptical power law mass distribution or a more flexible composite model.\\
+\\The lens mass parameters are the central bridge between GW and EM analyses.
+The GW pair constrains combination of $\theta_{LM}$ through the image relations, while the EM data constrain $\theta_{LM}$ either directly through resolved strong lensing morphology under $H_1$ or indirectly through tis relation to $\theta_{LL}$ under $H_2$.
+
+\subsection{Relation between the parameter blocks}
+
+The lens model parameter space is therefore organised as
+\begin{equation}
+\Theta_{lens model} = \{\theta_{SL},\theta_{LL},\theta_{LM},\nu_{EM}\}
+\end{equation}
+with the most important caveat that the available blocks depend on the hypothesis. 
+The lens light and lens mass blocks need not be statistically independent.
+A physically motivated population prior may instead take the form
+\begin{equation}
+\pi(\theta_{LL},\theta_{LM})=\pi(\theta_{LM}|\theta_{LL})\pi(\theta_{LL})
+\end{equation}
+or the reverse conditioning, depending on how stellar light, velocity dispersion, halo mass and mass to light relations are modelled.
+Treating this correlation explicitly is especially important under $H_2$, where the lens light supplies the principle EM route to constraining lens mass.
 
 \subsection{Image Level Lensing Observables}
-The GW pair constrains a lower dimensional set of relations between the images.
-We denote these by
+
+The GW pair constrains a lower dimensional set of relations between the images,
 \begin{equation}
 \psi_{GW}=\{\Delta t, \mu_r, \Delta n, \Omega, ...\}
 \end{equation}
-where $\Delta t$ is the relative arrive time delay, $\mu_r$ is a relative magnification ratio, $\Delta n$ denotes the relative mMorse index, and $\Omega$ represents common sky localisation.
-These quantities are not independent free parameters in a physical lens model; they are generated by the lens equation and Fermat potenital,
+where $\Delta t$ is the relative arrive time delay, $\mu_r$ is a relative magnification ratio, $\Delta n$ denotes the relative Morse index, and $\Omega$ represents common sky localisation.
+These quantities are generated by the lens equation and Fermat potenital rather than being independent parameters,
 \begin{equation}
-\psi=f(\theta_{lens},z_s,\beta;cosmology).
+\psi=f(\theta_{LM},z_s,\beta;cosmology).
 \end{equation}
-This mapping is the bridge between the GW and EM analyses: the GW data constrain $\psi$ directly or semi-directly, while EM observations constrain $\theta_{lens}$ and thereby induce a predictive distribution for $\psi$.
 
 \subsection{Electromagnetic Nuisance Parameters}
+
 EM observations require nuisance parameters $\nu_{EM}$ describing measurement and modelling uncertainties.
 Depending on the catalogue and imaging data, $\nu_{EM}$ may include the point spread function, photometruc calibration, specral energy distribution parameters, stellar mass to light ratio, background subtraction, photometric redshift calibration and other instrument or population level terms.
 These parameter should be maginalised rather than fixed when their uncertainty is non negligible, beause overly narrow EM constraints can artificially increase the GW-EM consistency factor.
@@ -208,7 +264,7 @@ Z_U = Z_{GW,U} Z_{EM,field}, Z_{EM,field} = p(d_{EM}|H_{EM,field})
 This term is essential whenever the lensed hypotheses recieve evidence from the existence or properties of a catalogue galaxy.
 Omitting the corresponding field galaxy probability from $H_U$ would systematically favour catalogues lens hypotheses simply because a galaxy was searched for and found.
 
-\section{$H_1$: catalogued lens wit resolved strong lensing information}
+\section{$H_1$: catalogued lens with resolved strong lensing information}
 %sam
 \subsection{Resolved EM data and parameter set}
 %sam
@@ -216,62 +272,57 @@ Under $H_1$, the two GW detections are strongly lensed images of the same BBH an
 (not sure about this but had a thought) The resolved EM source need not be the BBH counterpart; it provides an independednt probe of the same foreground gravitational potential.
 The EM data may therefore be separated schematically into measurements of the lens galaxy and measurements of the resolved strong lensing configuration.
 \begin{equation}
-d_{EM,c} = \{d_{gal,c},d_{SL,c}\}
+d_{EM,c} = \{d_{LL,c},d_{SL,c}\}
 \end{equation}
-Here $d_{gal,c}$ may contain quantities such as lens position, redshift, photometry, and velocity dispersion, while $d_{SL,c}$ may contain resolved image positions, arc, an Einstein ring or pixel level surface brightness data.
-The exact observables depend on the survey and lens modelling procedure.\\
+where $d_{LL,c}$ denotes measurements of the foreground lens light, while $d_{SL,c}$ denotes the resolved image positions, arc, an Einstein ring or pixel level surface brightness data.\\
 \\
 The parameter vector is
 \begin{equation}
-\Theta_1 = \{\theta_{BBH},\theta_{lens},\beta_{GW},\theta_{EMsrc},\beta_{EMsrc},\nu_{EM}\}
+	\Theta_1 = \{\theta_{BBH},\beta_{GW},\theta_{SL},\theta_{LL},\theta_{LM},\nu_{EM}\}
 \end{equation}
-The parameters $\Theta_{BBH}$ describe the common BBH source, $\theta_{lens}$ describes the foreground mass model, and $\beta_{GW}$ is the BBH source plane position.
-The parameters $\theta_{EMsrc}$ and $\beta_{EMsrc}$ describe the independently lansed background EM source, while $\nu_{EM}$ contains observational nuisance parameters such as the point spread function, calibration, sky background and noise model.
-The central coupling is that the same $\theta_{lens}$ appears in both the GW and EM likelihoods.\\
-\\Conditional on $\Theta_1$, the joint data model is
-\begin{equation}
-p(d_{GW},d_{EM,c}|\Theta_1,H_1) = p(d_{GW}|\theta_{BBH},\theta_{lens},\beta_{GW},H_1)p(d_{EM,c}|\theta_{lens},\theta_{EMsrc},\beta_{EMsrc},\nu_{EM},H_1)
-\end{equation}
+The central coupling is $\theta_{LM}$.
+The GW likelihood depends on $\theta_{LM}$ through the relative image properties, while the resolved EM likelihood constrains $\theta_{LM}$ through the mapping between $\theta_{SL}$ and the observed lensed surface brightness.
+The lens light parameters $\theta_{LL}$ model the foreground luminous component and can also imform physcially motivated priors on $\theta_{LM}$.
 
 \subsection{Full joint evidence and prior}
 %sam
-For a catalogue candidate c, the primary model selection quantity is the full joint evidence
+\begin{equation}
+p(d_{GW},d_{EM,c}|\Theta_1,H_1) = p(d_{GW}|\theta_{BBH},\theta_{LM},\beta_{GW},H_1)p(d_{EM,c}|\theta_{SL},\theta_{LL},\theta_{LM},\nu_{EM},H_1).
+\end{equation}
+The full evidence for candidate c is
 \begin{equation}
 \label{eq:H1evidence}
-Z_{1,c} = \int p(d_{GW}|\theta_{BBH},\theta_{lens},\beta_{GW},H_1)p(d_{EM,c}|\theta_{lens},\theta_{EMsrc},\beta_{EMsrc},\nu_{EM},H_1)\pi_1(\Theta_1)d\Theta_1
+Z_{1,c} = \int p(d_{GW}|\theta_{BBH},\theta_{LM},\beta_{GW},H_1)p(d_{EM,c}|\theta_{SL},\theta_{LL},\theta_{LM},\nu_{EM},H_1)\pi_1(\Theta_1)d\Theta_1.
 \end{equation}
 A useful schematic prior factorisation is
 \begin{equation}
-\pi_1(\Theta_1)=\pi_{BBH}\pi_{lens}\pi_{\beta,GW}\pi_{\nu,EM}S_1
+\pi_1(\Theta_1)=\pi_{BBH}\pi_{\beta_{GW}}\pi_{SL}\pi(\theta_{LL},\theta_{LM})\pi_{\nu_{EM}}S_1.
 \end{equation}
-where $S_1$ denotes the required GW detection, catalogue and resolved lens selection conditioning.
-This factorisation is schematic: correlations implied by a population model or a particular lens modelling analysis should be retained rather than forced into independent factors.
-The evidence integrates over both scientifically interesting and nuisance parameters. Consequently, uncertainties in the resolved EM source model and image reconstruction contribute to the posterior volume and cannot in general be removed by fixing them at their maximum likelihood values.
-Formulations of the full joint evidence for $H_2$ and $H_3$ can be found in the appendix.
+The joint prior $\pi(\theta_{LL},\theta_{LM})$ allows correlations between galaxy light and mass to be retained.
+$S_1$ denotes the required GW detection, catalogue and resolved lens selection conditioning.
+ The evidence intergrated over both the scientifically interesting lens mass parameters and the source light, lens light and nuisance parameters required by the EM reconstruction.
 
 \subsection{GW observables and the EM predictive distribution}
-The GW pair constrains a reduced set of lensing observables
+
+The resolved EM data determine a posterior for the lens mass after marginalising over source light, lens light and EM nuisance parameters:
 \begin{equation}
-\psi = \{\Delta t,\mu_r,\Delta n,\Omega,...\}
+p(\theta_{LM}|d_{EM,c},H_1) \propto \int p(d_{EM,c}|\theta_{SL},\theta_{LL},\theta_{LM},\nu_{EM},H_1)\pi_1d\theta_{SL}d\theta_{LL}d\nu_{EM}
 \end{equation}
-giving a posterior $p(\psi|d_{GW},H_1)$.
-The resolved EM observations instead constrain the lens potential.
-Propagating the EM constrained lens posterior through the lens equation gives a predictive distribution for the GW observables:
+Propagating this mass posterior through the lens equation gives the predictive distribution
 \begin{equation}
-p(\psi|d_{EM,c},H_1) = \int p(\psi|\theta_{lens},z_s,\beta_{GW},H_1)p(\theta_{lens},z_s,\beta_{GW}|d_{EM,c},H_1)d\theta_{lens}dz_sd\beta_{GW}
+p(\psi|d_{EM,c},H_1) = \int p(\psi|\theta_{LM},z_s,\beta_{GW},H_1)p(\theta_{LM},z_s,\beta_{GW}|d_{EM,c},H_1)d\theta_{LM}dz_sd\beta_{GW}
 \end{equation}
-The BBH source redshift and source plane position remain latentunless independent measured.
-The resolved EM source may occupy a different source plane position and have different redshift; its role is to constrain $\theta_{lens}$, which is then used to predict the lensing observables of the GW source.\\
-\\The corresponding prior corrected consistency statistic is
+The corresponding prior corrected consistency statistic is
 \begin{equation}
 \label{eq:H1consistency}
-C_1 = \int [\frac{p(\psi|d_{GW}H_1)p(\psi|d_{EM,c},H_1)}{\pi(\psi|H_1)}]d\psi
+C_1 = \int \frac{p(\psi|d_{GW}H_1)p(\psi|d_{EM,c},H_1)}{\pi(\psi|H_1)}d\psi
 \end{equation}
 A large $C_1$ indicates that the resolved EM reconstruction predicts time delays, magnification relations and image properties compatible with the GW pair.
 A small value indicates tension.
-When the full evidence in Eq.~\eqref{eq:H1evidence} is evaluated directly, this consistency is already encoded through the shared lens parameters; $C_1$ is therefore most safely interpreted as a reduced space diagnostic unless an explicit non overlapping factorisation is derived.
+When the full evidence in Eq.~\eqref{eq:H1evidence} is evaluated directly, this consistency is already encoded through $\theta_{LM}$; $C_1$ is therefore most safely interpreted as a reduced space diagnostic unless an explicit non overlapping factorisation is derived.
 
 \subsection{Multiple resolved lens candidates}
+
 If more than one resolved strong lensing system is compatiable with the GW localisation, the lens indentity should be marginalised rather than fixed in advance:
 \begin{equation}
 Z_1 = \sum_{c=1}^{N_{cat}}p(c|H_1)Z_{1,c}
@@ -279,18 +330,13 @@ Z_1 = \sum_{c=1}^{N_{cat}}p(c|H_1)Z_{1,c}
 
 \section{Reduced GW-EM consistency under $H_1$}
 
-\subsection{Prior corrected posterior overlap}
-The reduced consistency statistic defined in Eq.~\eqref{eq:H1consistency} isolates the part of the inference that directly compares the GW inferred image relation with the prediction of the resolved EM lens reconstruction.
+The reduced consistency statistic isolates the direct comparison between the GW inferred image relations and the prediction from the resolved EM lens reconstruction.
 Its prior denominator removes the common prior contribution that would otherwise be counted twice when multiplying posteriors.\\
-\\For $H_1$, this diagnostic is particularly informative bevause the resolved strong lensing configuration can make $p(\psi|d_{EM},H_1)$ substantially narrower than the corresponding $H_2$ distribution.
-The same EM precision therefore produces stronger discrimination: agreement can yield a concentrated overlap, while a narrow but displaced prediction can suppress $C_1$ rapidly.
-
-\subsection{Relation to the full evidence}
-The full evidence $Z_1$ remains the reference model selection quantity.
-The overlap $C_1$ should not be multiplied onto an already complete evaluation of Eq.~\eqref{eq:H1evidence} unless the likelihood and prior structure has been explicitly rearranged into non overlapping factors.
-In a direct joint calculation, GW-EM compatibility is already present because $\theta_{lens}$ is shared between both likelihoods.
+\\In the present parameterisation, the key reaon $H_1$ can be highly constraining is that the resolved source light morphology $\theta_{SL}$ is lensed by the same $\theta_{LM}$ that generates the GW image relations.
+Marginalising over $\theta_{SL}$ and $\theta_{LL}$ can still leave a comparatively narrow posterior on $\theta_{LM}$, provided the strong lensing configuration is informative.
 
 \section{Computational evaluation of $H_1$}
+
 The integrals can be manipulated and approximated using laplace to get a form more suitable for computational analysis.
 Using the joint maximum and laplace approximation the full evidence for $H_1$ can be written, in log form as,
 \begin{equation}
@@ -298,14 +344,176 @@ Using the joint maximum and laplace approximation the full evidence for $H_1$ ca
 \ln(Z_{1,c}) \approx \ell_1(\hat\Theta_1)+(\frac{k_1}{2})\ln(2\pi)-(\frac{1}{2})\ln(|A_1|)
 \end{equation}
 Eq.~\eqref{laplaceH1evidence} separates the evidence into a best fit contribution, $\ell_1(\hat\Theta_1)$, and a local posterior volume contribution determined by $k_1$ and $|A_1|$.
-The resolved EM data can alter both pieces: they may increase or decrease the joint peak according to GW-EM agreement and can substantially change the curvature in lens parameter directions. This is in the appendix along side applying it to the consistency integral to get Mahalanobis distance.
+The resolved EM data can alter both the peak term and the local posterior volume.
+In the source light/lens light/lens mass parameterisation, the full Hessian contains cross block curvature.
+In particular, degeneracies between source light and lens mass, and between lens light and lens mass, should be retained rather tha ignored by approximating the blocks independently.
 
 \section{Joint Bayes factor and posterior odds}
+
+\begin{figure}[htbp]
+\centering
+
+\begin{tikzpicture}[
+font=\small,
+>=Latex,
+node distance=1.0cm and 1.0cm,
+data/.style={
+rectangle,
+rounded corners=4pt,
+draw=black,
+thick,
+align=center,
+text width=3.6cm,
+minimum height=1.1cm,
+fill=green!10
+},
+process/.style={
+rectangle,
+rounded corners=4pt,
+draw=black,
+thick,
+align=center,
+text width=3.6cm,
+minimum height=1.2cm,
+fill=blue!10
+},
+inference/.style={
+rectangle,
+rounded corners=4pt,
+draw=black,
+thick,
+align=center,
+text width=3.6cm,
+minimum height=1.25cm,
+fill=orange!15
+},
+result/.style={
+rectangle,
+rounded corners=4pt,
+draw=black,
+very thick,
+align=center,
+text width=3.6cm,
+minimum height=1.2cm,
+fill=red!10
+},
+arrow/.style={
+->,
+thick
+}
+]
+
+% =====================================================
+% ROW 1: LEFT -> RIGHT
+% =====================================================
+
+\node[data] (lvk) {
+\textbf{LVK Detection}\\[2pt]
+Identify a candidate quadruply imaged GW event
+};
+
+\node[process, right=of lvk] (gwinference) {
+\textbf{GW Parameter Inference}\\[2pt]
+Infer source parameters and lensing observables
+};
+
+\node[data, right=of gwinference] (localization) {
+\textbf{GW Sky Localization}\\[2pt]
+Localization region of approximately\\
+$5$--$100~\mathrm{deg}^2$
+};
+
+% =====================================================
+% ROW 2: RIGHT -> LEFT
+% =====================================================
+
+\node[process, below=of localization] (ranking) {
+\textbf{Candidate Filtering and Ranking}\\[2pt]
+Compare lens parameters and GW lensing observables
+};
+
+\node[inference, left=of ranking] (fastanalysis) {
+\textbf{Fast GW--EM Consistency Analysis}\\[2pt]
+GWEMFISH + approximate inference\\
+(e.g.\ Laplace approximation)
+};
+
+\node[data, left=of fastanalysis] (euclid) {
+\textbf{Euclid Strong-Lens Catalog}\\[2pt]
+Select strong-lensing systems within the GW localization region
+};
+
+% =====================================================
+% ROW 3: LEFT -> RIGHT
+% =====================================================
+
+\node[data, below=of euclid] (followup) {
+\textbf{Promising Candidates + EM Follow-up}\\[2pt]
+Reduce to a few candidates and obtain\\
+high-resolution imaging (e.g.\ HST)
+};
+
+\node[inference, right=of followup] (lensmodel) {
+\textbf{Detailed Lens Modeling}\\[2pt]
+Improved reconstruction of the lens mass distribution
+};
+
+\node[inference, right=of lensmodel] (joint) {
+\textbf{Full Joint GW + EM Inference}\\[2pt]
+Full MCMC or Nested Sampling
+};
+
+% =====================================================
+% FINAL RESULT
+% =====================================================
+
+\node[result, below=of joint] (resultnode) {
+\textbf{Best GW--EM Lens Association}\\[2pt]
+Identify the most probable electromagnetic lens counterpart
+};
+
+% =====================================================
+% ARROWS
+% =====================================================
+
+% Row 1
+\draw[arrow] (lvk) -- (gwinference);
+\draw[arrow] (gwinference) -- (localization);
+
+% Transition Row 1 -> Row 2
+\draw[arrow] (localization) -- (ranking);
+
+% Row 2: RIGHT -> LEFT
+\draw[arrow] (ranking) -- (fastanalysis);
+\draw[arrow] (fastanalysis) -- (euclid);
+
+% Transition Row 2 -> Row 3
+\draw[arrow] (euclid) -- (followup);
+
+% Row 3: LEFT -> RIGHT
+\draw[arrow] (followup) -- (lensmodel);
+\draw[arrow] (lensmodel) -- (joint);
+
+% Final
+\draw[arrow] (joint) -- (resultnode);
+
+\end{tikzpicture}
+
+\caption{
+Conceptual workflow for identifying the electromagnetic lens counterpart
+of a quadruply imaged gravitational-wave event.
+}
+
+\label{fig:realistic_pipeline}
+
+\end{figure}
 
 \subsection{GWEMFISH and Laplace's Approximation: A physicist's life (and time) saver}
 
 Lens reconstruction will usually take very long (from hours to days) if it was ran on a traditional Markov Chain Monte Carlo program. To overcome this issue and ensure that the lens reconstruction can be computed quicky, we use GWEMFish, which utilizes Laplace approximation, to ensure that each computation is tubo-fast. 
 -more details or any references to other sections on how this works
+
+Using Laplace's approximation, we can approximate the evidence for each lens candidate in the GW localization region. This allows us to quickly compute the Bayes factor for each candidate and rank them based on their likelihood of being the correct lens. With this, we can much more easily narrow down the candidates and focus on the most promising ones for further analysis and follow-up observations, such as performing a full MCMC or Nested Sampling and follow up using a telescope with higher resolution such as the HST.
 
 \subsection{Lens searches and the localization problem}
 It is known that GWs poor localization compared to other EM counterparts (normally around $5-25 deg^2$). In a region of sky of that size, it is predicted by (referece) that the Euclid telescope could detect up to around 600 lensing galaxies. This means that we can't immediately know which galaxy the GW signal originates. This is analogous to the birthday problem where we would need to perform searches with the lensing candidates in the localized region of sky to match the GW signal to the correct lens. Previous studies (refereces) have concluded that the correct lens would equate to being able to localize the GW correctly.
@@ -356,36 +564,147 @@ rates, rate ratio, prior odds.
 \begin{appendices}
 
 \section{$H_2$: catalogued lens without resolved strong lensing EM images}
-$H_2$ retains the same common source lensing interpretation as $H_1$ but removes the strong lensing constraint.
-The EM catalogue constrains the foreground galaxy itself through quantities such as $z_l,\sigma_v,q$ and photometry.
-The parameter vector is correspondingly smaller,
+
+\textbf{Available parameter blocks}
+
+$H_2$ retains the common source lensing interpretation but removes the resolved source light information.
+The foreground galaxy is catalogued and its lens light parametersare constrained by imaging, photometry and spectroscopy, but no resolved background source is available from which to reconstruct the lens mass directly.
 \begin{equation}
-\Theta_2 = \{\theta_{BBH},\theta_{lens},\beta,\nu_{EM}\}
+\Theta_2 = \{\theta_{BBH},\beta_{GW},\theta_{LL},\theta_{LM},\nu_{EM}\}
 \end{equation}
-and the evidence is
+The absence of $\theta_{SL}$ is the defining parameter space difference from $H_1$.
+Lens mass is constrained only through the GW data and through the population or scaling relation connecting $\theta_{LL} \text{to} \theta_{LM}$.\\
+\\
+\textbf{Full evidence}\\
+\\
 \begin{equation}
-Z_{2,c} = \int p(d_{GW}|\theta_{BBH},\theta_{lens},\beta,H_2)p(d_{EM,c}|\theta_{lens},\nu_{EM},H_2)\pi_2(\Theta_2)d\Theta_2
+p(d_{GW},d_{EM,c}|\Theta_2,H_2) = p(d_{GW}|\theta_{BBH},\theta_{LM},\beta_{GW},H_2)p(d_{EM,c}|\theta_{LL},\nu_{EM},H_2)
+\end{equation}	
+Because the catalogue likelihood primarily constrains $\theta_{LL}$, the connection to $\theta_{LM}$ is carried by the joint prior $\pi(\theta_{LL},\theta_{LM})$, rather than by a resolved lensing likelihood.
+The full evidence is
+\begin{equation}
+\label{H2evidence}
+Z_{2,c} = \int p(d_{GW}|\theta_{BBH},\theta_{LM},\beta_{GW},H_2)p(d_{EM,c}|\theta_{LL},\nu_{EM},H_2)\pi_2(\Theta_2)d\Theta_2
 \end{equation}
-The EM constrained lens posterior can again be propagated into $p(\psi|d_{EM},H_2)$, and its consistency with $p(\psi|d_{GW},H_2)$ can be measured by $C_2$.
-Relative to $H_1$, the predictive distribution is generally expected to be broader because the gravitatioanl potential is constrained indirectly through galaxy properties rather than through a resolved image configuration.
+with a schematic prior
+\begin{equation}
+\pi_2(\Theta_2) = \pi_{BBH}\pi_{\beta_{GW}}\pi(\theta_{LL},\theta_{LM}\pi_{\nu_{EM}}S_2
+\end{equation}
+This form is preferable to treating the EM likelihood as if it measured $\theta_{LM}$ directly.
+Any inference from luminosity, effective radius, redshift or velocity dispersion to lens mass should enter through the appropriate conditional population model.\\
+\\
+\textbf{EM induced lens mass and image observable distributions}\\
+\\
+The catalogue information induces a lens mass posterior by marginalising over the measured lens light parameters:
+\begin{equation}
+p(\theta_{LM}|d_{EM,c},H_2) \propto \int p(d_{EM,c}|\theta_{LL},\nu_{EM},H_2)\pi(\theta_{LL},\theta_{LM})\pi_{\nu_{EM}}d\theta_{LL}d\nu_{EM}
+\end{equation}
+This distribution can then be propagated to the GW image observables:
+\begin{equation}	
+p(\psi|d_{EM,c},H_2) = \int p(\psi|\theta_{LM},z_s,\beta_{GW},H_2) p(\theta_{LM},z_s,\beta_{GW}|d_{EM,c},H_2) d\theta_{LM}dz_sd\beta_{GW}
+\end{equation}
+Relative to $H_1$, this disribution is generally broader because $\theta_{LM}$ is inferred indirectly from lens light rather than from a resolved source light configuration.\\
+\\
+\textbf{Reduced consistency statistic}\\
+\\
+\begin{equation}
+C_2 = \int \frac{p(\psi|d_{GW},H_2)p(\psi|d_{EM,c},H_2)}{\pi(\psi|H_2)}d\psi
+\end{equation}
+	As under $H_1$, $C_2$ is best regarded as a diagnotstic when the full joint evidence is already evaluated, because the common lens mass information is then already included in Eq.~\eqref{H2evidence}.\\
+\\
+\textbf{Laplace approximation}\\
+\\
+\begin{equation}
+\ell_2(\Theta_2) = \ln(p(d_{GW}|\Theta_2,H_2)) + \ln(p(d_{EM,c}|\Theta_2,H_2)) + \ln(\pi_2(\Theta_2))
+\end{equation}
+\begin{equation}
+\hat\Theta_2 = \text{arg max}_{\Theta_2}\ell_2(\Theta_2)
+\end{equation}
+\begin{equation}
+A_2 = -\nabla\nabla\ell_2(\Theta_2)|_{\hat\Theta_2}
+\end{equation}
+\begin{equation}
+\ln(Z_{2,c}) \simeq \ell_2(\hat\Theta_2)+(\frac{k_2}{2})\ln(2\pi)-(\frac{1}{2}\ln(|A_2|)
+\end{equation}
+The curvature matrix $A_2$ contains cross information between $\theta_{LL} \text{and} \theta_{LM}$ through their population relation.
+Because no $\theta_{SL}$ block is present, the EM data does not provide the strong image geometry constraints available under $H_1$.
+The resulting posterior in the lens mass directions will therefore normally be broader and more prior dependent.\\
+\\
+\textbf{Restriction of $H_2$}\\
+\\
+$H_2$ is restricted to systems in which the responsible lens is present in the catalogue but no resolved strong lensing EM configuration is used.
+If a resolved lensed source is available, the system belongs ot $H_1$, if the responsible foreground lens is absent from the catalogue, it belongs to $H_3$.\\
+\\
+The principle physical limitation is that lens light does not uniquely determine lens mass.
+The relation $\pi(\theta_{LM}|\theta_{LL})$ must therefore include intrinsic scatter and relevent uncertainties.
+Treating the lens light measurement as a deteministic mass estimate would artificially narrow the $H_2$ evidence.\\
+\\
+The source redishift and GW source plane position remain latent unless measure independetly.
+The Laplace approximation also requires an approximately single mode, locally Gaussian posterior.
+Weak lens mass constraints and light to mass degeneracies can make this assumption poor.
 
 \section{$H_3$: uncatalogued lens}
-Under $H_3$ the GW pair is lensed, but the responsible foreground lens is absent from the catalogue.
-Let
+
+\textbf{Latent lens light and lens mass population}\\
+\\
+Under $H_3$, the GW pair is lensed but the responsible foreground lens is not present in the catalogue.
+No condidate specific light source or lens light likelihood exists.
+Nevertheless, retaining a latent $\theta_{LL}$ bloack is usedful because catalogue detection depends on the luminous properties of the deflector, while the lensing signal depends on $\theta_{LM}$.
 \begin{equation}
-C_{cat}(\theta_{lens}) = P(\text{lens appears in catalogue}|\theta_{lens})
+\Theta_3=\{\theta_{BBH},\beta_{GW},\theta_{LL},\theta_{LM}\}
 \end{equation}
-so that $1-C_{cat}(\theta_{lens})$ is the probability that a lens with those properties is missed.
-With
+The catalogue completeness function is written
 \begin{equation}
-\Theta_3 = \{\theta_{BBH},\theta_{lens},\beta\}
+C_{cat}(\theta_{LL},\theta_{LM} = P(\text{lens appears in catalogue}|\theta_{LL},\theta_{LM})
 \end{equation}
-the evidence is
+where dependence on $\theta_{LM}$ may be retained when survey selection is correlated with mass through velocity disperiosn, halo mass or enviromental properties.
+In the simplest implementation the completenedd may depend only on the observable lens light block.
+\\
+\\
+\textbf{Full evidence}\\
+\\
+The $H_3$ evidence becomes
 \begin{equation}
-Z_3 = \int p(d_{GW}|\theta_{BBH},\theta_{lens},\beta,H_3)[1-C_{cat}(\theta_{lens})]\pi_{BBH}(\theta_{BBH})\pi_{lens,pop}(\theta_{lens})\pi_{\beta}(\beta)d\Theta_3
+Z_3 = \int p(d_{GW}|\theta_{BBH},\theta_{LM},\beta_{GW},H_3)[1-C_{cat}(\theta_{LL},\theta_{LM})]\pi_{BBH}\pi_{\beta_{GW}}\pi(\theta_{LL},\theta_{LM})d\Theta_3
 \end{equation}
-$H_3$ therefore replaces a candidate specific EM likelihood with an astrophysical lens population prior weighted by catalogue non detection.
-It would retained in the framework to ensure that the total lensed hypothesis does not implicitly assume that every physically relevant lens must already be catalogued.
+This form makes the parameter space structure explicit.
+The GW likelihood selects lens mass configurations capable of producing the observed image relations, the joint lens light.lens mass population prior supplies physically plausiable deflectors, and the non-detection factor supresses systems whose light properties imply that they should have appeared in the catalogue.
+\\
+\\
+\textbf{Log integrand and laplace approximation}\\
+\\
+\begin{equation}
+\ell_3(\Theta_3) = \ln(p(d_{GW}|\theta_{BBH},\theta_{LM},\beta_{GW},H_3)) + \ln([1-C_{cat}(\theta_{LL},\theta_{LM})]) + \ln(\pi_{BBH}) + \ln(\pi_{\beta_{GW}}) + \ln(\pi(\theta_{LL},\theta_{LM}))
+\end{equation}
+\begin{equation}
+\hat\Theta_3 = \text{arg max}_{\Theta_3}\ell_3(\Theta_3)
+\end{equation}
+\begin{equation}
+A_3 = -\nabla\nabla\ell_3(\Theta_3)|_{\hat\Theta_3}
+\end{equation}
+\begin{equation}
+\ln(Z_3) \simeq \ell_3(\hat\Theta_3) + (\frac{k_3}{2})\ln(2\pi) - (\frac{1}{2})\ln(|A_3|)
+\end{equation}
+The catalogue non-detection term can alter both the height of the dominant mode and the curvature of the posterior.
+A lens mass solution that fits the GW well can still be suppressed if its correlated lens light properties make non-detection improbable.
+\\
+\\
+\textbf{Why there is no source light consistency factor under $H_3$}\\
+\\
+There is no condidate specific resolved background source under $H_3$, and therefore no surce light block $\theta_{SL}$ and no EM reconstruction from which to contrsuct $p(\psi|d_{EM,c},H_3)$.
+The role played by $C_1 \text{and} C_2$ is replaced by marginalisation over the latent lens light/lens mass population and the catalogue non-detection probability.
+\\
+\\
+\textbf{Restriction of $H_3$}\\
+\\
+$H_3$ applies only when the responsible lens is absent from the adopted catalogue.
+The completeness model must therefore refer to exactly the same survery footprint, depth and object selection criteria used to define $H_1 \text{and} H_2$.\\
+\\
+The joint population model $\pi(\theta_{LL},\theta_{LM})$ is essential.
+If lens light is omitted completely, the catalogue non-detection probability must be expressed indirectly as a function of mass, which can hide substantial astrophyscial uncertainty.
+Retaining $\theta_{LL}$ as a latent variable makes the selection model more transparent.\\
+\\
+The laplace approximation can fail when catalogue completeness changes sharply near a survey threshold, when the light to mass population relation is strongly non-Gaussian or when several lens mass configurations provide comparable fits to the GW data.
 
 \section{Laplace approximation to the full $H_1$ evidence}
 Define the $H_1$ integrand
