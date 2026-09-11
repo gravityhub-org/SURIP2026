@@ -103,14 +103,16 @@ same source, or belong to two pairs of BBH with very similar properties.\\
 Intuitively, two GW signals are more likely to be coincidentally similar rather than being lensed if the inferred BBH parameters lie in a densely populated region 
 of the parameter space. On the other, similar signals indicating BBH properties that are rarer in the population are more likely to be lensed.
 % Mathematically, ...\\
+
 \subsubsection{Reconstruction of observed population}
 Population reconstruction on a simulated distribution of BBHs is performed using FIGARO, which uses a non-parametric approach to model probability densities using 
 a Dirlchlet Process Gaussian Mixture Model (DPGMM). The population density is assumed to be a sum of Gaussian components, but the number of components is determined 
 by the data instead of being fixed in advance. As each GW event is represented by a posterior distribution from parameter estimation of a GW signal, which can be 
 obtained from posterior samples through DPGMM, we implement the hierarchical DPGMM (HDPGMM) in FIGARO for population reconstruction.
+
 \subsubsection{Correction for selection effects}
 It is important to note that the reconstructed population does not reflect the intrinsic population, as the reconstruction is based on posterior samples of detected 
-events. In order to eliminate selection effects and create an unbiased population, we perform rejection sampling during generation of samples from the reconstructed 
+events. In order to eliminate selection effects and create an astrophysical population, we perform rejection sampling during generation of samples from the reconstructed 
 observational population, with acceptance probability approximated to be a function of chirp mass.\\
 The astrophysical BBH merger rate density is
 \[\frac{R_\text{GW}(z)}{\text{Gpc}^{-3}\text{yr}^{-1}} = \frac{a_1 e^{a_2 z}}{e^{a_3 z}+a_4},\]
@@ -132,8 +134,12 @@ Hence, the reweighting factor can be written as
 \[w(M_c) \propto \frac{1}{N_\text{detected}(M_c)},\]
 which is then converted to acceptance probability $a(M_c)$ afterwards for rejection sampling:
 \[a(M_c) = \frac{w(M_c)}{w_\text{max}}.\]
-Rejection sampling is then performed during draws from the observed population to ensure that the new catalogue forms an unbiased population, which is then used to 
+Rejection sampling is then performed during draws from the observed population to ensure that the new catalogue forms an astrophysical population, which is then used to 
 compute the prior odds and Bayes factor.
+
+\subsubsection{Reconstruction of the strongly lensed population}
+
+
 
 \subsection{Prior odds estimation}
 % Natalie's part
