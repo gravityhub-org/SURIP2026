@@ -93,35 +93,61 @@ The foreground galaxy light constrains the luminous structure and population pro
 This is preferable to grouping all EM quantities into a single generic lens vector because it makes clear which parameter blocks are directly measured and which are only inferred indirectly under each hypothesis.
 
 \section{Methodology}
-\subsection{Simulated GW events and Bayesian Parameter Estimation}
+\subsection{Simulated GW events and Bayesian parameter estimation}
 (Consult Ankur)
 
-\subsection{Population Reconstruction}
+\subsection{Population reconstruction}
 % Natalie's part
 The population distribution of binary black hole (BBH) parameters is crucial for determining whether two similar gravitational wave (GW) signals come from the 
 same source, or belong to two pairs of BBH with very similar properties.\\
 Intuitively, two GW signals are more likely to be coincidentally similar rather than being lensed if the inferred BBH parameters lie in a densely populated region 
-of the parameter space.
-Mathematically, ...\\
+of the parameter space. On the other, similar signals indicating BBH properties that are rarer in the population are more likely to be lensed.
+% Mathematically, ...\\
+\subsubsection{Reconstruction of observed population}
 Population reconstruction on a simulated distribution of BBHs is performed using FIGARO, which uses a non-parametric approach to model probability densities using 
 a Dirlchlet Process Gaussian Mixture Model (DPGMM). The population density is assumed to be a sum of Gaussian components, but the number of components is determined 
 by the data instead of being fixed in advance. As each GW event is represented by a posterior distribution from parameter estimation of a GW signal, which can be 
-obtained from posterior samples through DPGMM, we implement the hierarchical DPGMM (HDPGMM) in FIGARO for population reconstruction.\\
+obtained from posterior samples through DPGMM, we implement the hierarchical DPGMM (HDPGMM) in FIGARO for population reconstruction.
+\subsubsection{Correction for selection effects}
 It is important to note that the reconstructed population does not reflect the intrinsic population, as the reconstruction is based on posterior samples of detected 
 events. In order to eliminate selection effects and create an unbiased population, we perform rejection sampling during generation of samples from the reconstructed 
 observational population, with acceptance probability approximated to be a function of chirp mass.\\
-The astrophysical BBH merger rate density
+The astrophysical BBH merger rate density is
 \[\frac{R_\text{GW}(z)}{\text{Gpc}^{-3}\text{yr}^{-1}} = \frac{a_1 e^{a_2 z}}{e^{a_3 z}+a_4},\]
 where $a_1=6600$, $a_2=1.6$, $a_3=2.1$, and $a_4=30$ for population-I/II stars\cite{6}.\\
-The number of detectable events for a given chirp mass ...
-The reweighting factor is given by ...
-Used to compute prior odds, Bayes factor, ...
+The number of detectable events for a given chirp mass is given by
+\[N_\text{detected}(M_c) = \int_0^{z_\text{horizon}(M_c)}\frac{dV_c}{dz}\frac{R(z)}{1+z}dz,\]
+with $\frac{dV_c}{dz}$ being the comoving volume.\\
+In importance sampling, the importance ratio, or the weight, is given by 
+\[w(x) \propto \frac{p(x)}{q(x)}, \ x_i\sim q(x),\]
+where $p(x)$ and $q(x)$ are the target population and biased population respectively.\\
+In our case, it can written as
+\[w(M_c) \propto \frac{P_\text{intrinsic}(M_c)}{P_\text{FIGARO}(M_c)}, \ M_c\sim P_\text{FIGARO}(M_c),\]
+which is equivalent to
+\[w(M_c) \propto \frac{P(M_c)}{P(M_c | \text{detected})}.\]
+Applying Bayes theorem, 
+\[P(M_c | \text{detected}) = \frac{P(\text{detected} | M_c) P(M_c)}{P(\text{detected})},\]
+where $P(\text{detected})$, the probability of detection, is constant, and \[P(\text{detected} | M_c) = \frac{N_\text{detected}(M_c)}{N_\text{all}}\]
+Hence, the reweighting factor can be written as
+\[w(M_c) \propto \frac{1}{N_\text{detected}(M_c)},\]
+which is then converted to acceptance probability $a(M_c)$ afterwards for rejection sampling:
+\[a(M_c) = \frac{w(M_c)}{w_\text{max}}.\]
+Rejection sampling is then performed during draws from the observed population to ensure that the new catalogue forms an unbiased population, which is then used to 
+compute the prior odds and Bayes factor.
 
-\subsection{Prior Odds Estimation}
+\subsection{Prior odds estimation}
 % Natalie's part
-definition, formula (cite Otto's paper), how each component is calculated (ler)
-
-\subsection{Bayes Factor Computation}
+The prior odds is defined to be the ratio of the probability that a given
+set of events are all strongly lensed images of the same source to that of the converse, rather than the
+ratio of the probability that a given individual event is lensed to the probability that it is not\cite{28}. 
+As we have corrected for selection effects in the population reconstruction, the prior odds can be calculated using 
+\[
+P_U^L = \frac{P(H_L)}{P(H_U)} \approx P(H_L) \approx N_{\text{img}}! 
+\frac{\langle N_L \rangle}{\langle N \rangle ^{N_{\text{img}}}},
+\]
+where $N_{\text{img}}$ is the number of images, $\langle N_L \rangle = R_L T$, and $\langle N \rangle = (R_U+N_{\text{img}}R_L)T$\cite{28}.
+% how each component is calculated (ler), different hypotheses
+\subsection{Bayes factor computation}
 % Natalie's (and probably Harry's) part
 PO2.0
 
@@ -534,7 +560,18 @@ It is known that GWs poor localization compared to other EM counterparts (normal
     \caption{Corner plots of the reconstructed binary black hole population in component masses $m_1$ and $m_2$ using the hierarchical DPGMM implementation in FIGARO. The diagonal panels show the one-dimensional marginal distributions, while the off-diagonal panels show the corresponding two-dimensional joint distributions.}
     \label{fig:reconstructed_population}
 \end{figure}
-
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/z_hor_vs_chirp_mass.pdf}
+    \caption{}
+    \label{fig:z_hor_vs_chirp_mass}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/log_weight_vs_chirp_mass.pdf}
+    \caption{}
+    \label{fig:log_weight_vs_chirp_mass}
+\end{figure}
 
 \subsection{Prior Odds}
 % Natalie's part
