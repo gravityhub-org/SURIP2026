@@ -108,7 +108,7 @@ of the parameter space. On the other, similar signals indicating BBH properties 
 Population reconstruction on a simulated distribution of BBHs is performed using FIGARO, which uses a non-parametric approach to model probability densities using 
 a Dirlchlet Process Gaussian Mixture Model (DPGMM). The population density is assumed to be a sum of Gaussian components, but the number of components is determined 
 by the data instead of being fixed in advance. As each GW event is represented by a posterior distribution from parameter estimation of a GW signal, which can be 
-obtained from posterior samples through DPGMM, we implement the hierarchical DPGMM (HDPGMM) in FIGARO for population reconstruction.
+obtained from posterior samples through DPGMM, we implement the hierarchical DPGMM (HDPGMM) in FIGARO for population reconstruction (see Fig.~\ref{fig:reconstructed_population}, left panel, for the reconstructed population). 
 
 \subsubsection{Correction for selection effects}
 It is important to note that the reconstructed population does not reflect the intrinsic population, as the reconstruction is based on posterior samples of detected 
@@ -134,12 +134,21 @@ Hence, the reweighting factor can be written as
 \[w(M_c) \propto \frac{1}{N_\text{detected}(M_c)},\]
 which is then converted to acceptance probability $a(M_c)$ afterwards for rejection sampling:
 \[a(M_c) = \frac{w(M_c)}{w_\text{max}}.\]
-Rejection sampling is then performed during draws from the observed population to ensure that the new catalogue forms an astrophysical population, which is then used to 
-compute the prior odds and Bayes factor.
+Rejection sampling is then performed during draws from the observed population
+to ensure that the new catalogue forms an astrophysical population, which is
+then used to compute the prior odds and Bayes factor. 
+The astrophysical population is generally favoring lower masses due to the
+selection, as well as high redshifts, a trend that is critical to capture when
+imposing strong lensing on this population (see
+Fig.~\ref{fig:reconstructed_population}, right panel, for the reconstructed
+population).
 
 \subsubsection{Reconstruction of the strongly lensed population}
 
-
+% Natalie: To fill: 
+% - How we lens the population
+% - two-image, three-image, four-image cases
+% - Figure: (effective luminosity distances and log arrival times) + caption
 
 \subsection{Prior odds estimation}
 % Natalie's part
