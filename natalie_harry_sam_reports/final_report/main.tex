@@ -144,11 +144,12 @@ Fig.~\ref{fig:reconstructed_population}, right panel, for the reconstructed
 population).
 
 \subsubsection{Reconstruction of the strongly lensed population}
-
 % Natalie: To fill: 
 % - How we lens the population
 % - two-image, three-image, four-image cases
 % - Figure: (effective luminosity distances and log arrival times) + caption
+To reconstruct the strongly lensed population, we use the LVK (LIGO-Virgo-KAGRA) Event (compact-binary mergers) Rate calculator and simulator (LeR)\cite{28}. Samples are drawn from the reweighted unlensed population, and each of them is lensed by a foreground galaxy chosen by LeR. The lens equation is solved to generate lensing parameters, which are saved as a dictionary. We then use the detectable events to construct the lensed population using FIGARO.\\
+The number of lensed images depends on the source position relative to the caustics, which are boundaries in the source plane separating regions with different image multiplicities. Sources located between the outer and inner caustics generally produce two images, while those inside the inner diamond-shaped caustic produce four images. For sufficiently elliptical lenses, the diamond caustic may extend beyond the outer caustic, allowing three-image configurations. To allow further investigation and comparison between different cases, we reconstruct the population for 2-image, 3-image, and 4-image cases separately.\\
 
 \subsection{Prior odds estimation}
 % Natalie's part
@@ -160,10 +161,11 @@ As we have corrected for selection effects in the population reconstruction, the
 P_U^L = \frac{P(H_L)}{P(H_U)} \approx P(H_L) \approx N_{\text{img}}! 
 \frac{\langle N_L \rangle}{\langle N \rangle ^{N_{\text{img}}}},
 \]
-where $N_{\text{img}}$ is the number of images, $\langle N_L \rangle = R_L T$, and $\langle N \rangle = (R_U+N_{\text{img}}R_L)T$\cite{28}.
+where $N_{\text{img}}$ is the number of images, $\langle N_L \rangle = R_L T$, and $\langle N \rangle = (R_U+N_{\text{img}}R_L)T$\cite{28}.\\
+For each number of images, we weigh the rate by the probability of that number of images occurring, which is determined by the lensing cross-section. The prior odds for each case are then calculated as follows:
 % how each component is calculated (ler), different hypotheses
 \subsection{Bayes factor computation}
-% Natalie's (and probably Harry's) part
+% Natalie's part
 PO2.0
 
 \section{Bayesian hypothesis space}
@@ -565,20 +567,10 @@ It is known that GWs poor localization compared to other EM counterparts (normal
 
 
 
+
 \section{Result}
 \subsection{Reconstructed Population}
 % Natalie's part
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.45\textwidth]{figures/unlensed_2d.pdf}
-    \includegraphics[width=0.463\textwidth]{figures/population_reweighted_m_1_m_2.pdf}
-    \caption{
-    	Reconstructed observed (left panel) and astrophysical (right panel) binary black hole population in component masses $m_1$ and $m_2$ using the hierarchical DPGMM implementation in FIGARO inferred from simulated population of gravitational-wave signals mimicking observing run O4. 
-	The diagonal panels show the one-dimensional marginal distributions, while the off-diagonal panels show the corresponding two-dimensional joint distributions. 
-	The observed population is biased towards higher masses due to selection effects, while the astrophysical population is corrected for these effects and represents the true underlying distribution of binary black hole mergers, extending to higher redshifts and lower masses that are relevant to strong gravitational-wave lensing, which occurs for binaries at high redshift.
-	}
-    \label{fig:reconstructed_population}
-\end{figure}
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.9\textwidth]{figures/z_hor_vs_chirp_mass.pdf}
@@ -591,26 +583,72 @@ It is known that GWs poor localization compared to other EM counterparts (normal
     \caption{}
     \label{fig:log_weight_vs_chirp_mass}
 \end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.45\textwidth]{figures/unlensed_2d.pdf}
+    \includegraphics[width=0.463\textwidth]{figures/population_reweighted_m_1_m_2.pdf}
+    \caption{
+    	Reconstructed observed (left panel) and astrophysical (right panel) binary black hole population in component masses $m_1$ and $m_2$ using the hierarchical DPGMM implementation in FIGARO inferred from simulated population of gravitational-wave signals mimicking observing run O4. 
+	The diagonal panels show the one-dimensional marginal distributions, while the off-diagonal panels show the corresponding two-dimensional joint distributions. 
+	The observed population is biased towards higher masses due to selection effects, while the astrophysical population is corrected for these effects and represents the true underlying distribution of binary black hole mergers, extending to higher redshifts and lower masses that are relevant to strong gravitational-wave lensing, which occurs for binaries at high redshift.
+	}
+    \label{fig:reconstructed_population}
+\end{figure}
+%\begin{figure}[h!]
+%    \centering
+%    \includegraphics[width=0.9\textwidth]{figures/unlensed_3d.pdf}
+%    \caption{}
+%    \label{fig:unlensed_3d}
+%\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.45\textwidth]{figures/unlensed_3d_log.pdf}
+    \includegraphics[width=0.463\textwidth]{figures/population_reweighted_m_1_m_2_log.pdf}
+    \caption{
+    	Reconstructed observed (left panel) and astrophysical (right panel) binary black hole population in log10 of component masses $m_1$ and $m_2$ using the hierarchical DPGMM implementation in FIGARO inferred from simulated population of gravitational-wave signals mimicking observing run O4. 
+	The diagonal panels show the one-dimensional marginal distributions, while the off-diagonal panels show the corresponding two-dimensional joint distributions. 
+	The observed population is biased towards higher masses due to selection effects, while the astrophysical population is corrected for these effects and represents the true underlying distribution of binary black hole mergers, extending to higher redshifts and lower masses that are relevant to strong gravitational-wave lensing, which occurs for binaries at high redshift.
+	}
+    \label{fig:reconstructed_population_log}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/lensed_relative_luminosity_distance_3d.pdf}
+    \caption{}
+	\label{fig:lensed_3d_lum_distance}
+\end{figure}
 
 \subsection{Prior Odds}
 % Natalie's part
 rates, rate ratio, prior odds.
 
 \subsection{Bayes Factor and Comparison}
-% Natalie's and Harry's part
+% Natalie's part
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.9\textwidth]{figures/log10_BLU_histogram.pdf}
     \caption{}
-    \label{fig:log_bayes_factor_gw}
+    \label{fig:log_bayes_factor_gw_2}
 \end{figure}
-
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/log10_BLU_histogram_3.pdf}
+    \caption{}
+    \label{fig:log_bayes_factor_gw_3}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/log10_BLU_histogram_4.pdf}
+    \caption{}
+    \label{fig:log_bayes_factor_gw_4}
+\end{figure}
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.9\textwidth]{figures/comparison_figure(placeholder).png}
     \caption{}
     \label{fig:bayes_factor_comparison}
 \end{figure}
+
 
 
 \section{Conclusion}

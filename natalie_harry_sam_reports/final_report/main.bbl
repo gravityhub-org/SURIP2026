@@ -1,0 +1,390 @@
+%% BioMed_Central_Bib_Style_v1.01
+
+\begin{thebibliography}{23}
+% BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
+\ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
+\ifx \binits  \undefined \def \binits#1{#1}\fi
+\ifx \bauthor  \undefined \def \bauthor#1{#1}\fi
+\ifx \batitle  \undefined \def \batitle#1{#1}\fi
+\ifx \bjtitle  \undefined \def \bjtitle#1{#1}\fi
+\ifx \bvolume  \undefined \def \bvolume#1{\textbf{#1}}\fi
+\ifx \byear  \undefined \def \byear#1{#1}\fi
+\ifx \bissue  \undefined \def \bissue#1{#1}\fi
+\ifx \bfpage  \undefined \def \bfpage#1{#1}\fi
+\ifx \blpage  \undefined \def \blpage #1{#1}\fi
+\ifx \burl  \undefined \def \burl#1{\textsf{#1}}\fi
+\ifx \doiurl  \undefined \def \doiurl#1{\url{https://doi.org/#1}}\fi
+\ifx \betal  \undefined \def \betal{\textit{et al.}}\fi
+\ifx \binstitute  \undefined \def \binstitute#1{#1}\fi
+\ifx \binstitutionaled  \undefined \def \binstitutionaled#1{#1}\fi
+\ifx \bctitle  \undefined \def \bctitle#1{#1}\fi
+\ifx \beditor  \undefined \def \beditor#1{#1}\fi
+\ifx \bpublisher  \undefined \def \bpublisher#1{#1}\fi
+\ifx \bbtitle  \undefined \def \bbtitle#1{#1}\fi
+\ifx \bedition  \undefined \def \bedition#1{#1}\fi
+\ifx \bseriesno  \undefined \def \bseriesno#1{#1}\fi
+\ifx \blocation  \undefined \def \blocation#1{#1}\fi
+\ifx \bsertitle  \undefined \def \bsertitle#1{#1}\fi
+\ifx \bsnm \undefined \def \bsnm#1{#1}\fi
+\ifx \bsuffix \undefined \def \bsuffix#1{#1}\fi
+\ifx \bparticle \undefined \def \bparticle#1{#1}\fi
+\ifx \barticle \undefined \def \barticle#1{#1}\fi
+\bibcommenthead
+\ifx \bconfdate \undefined \def \bconfdate #1{#1}\fi
+\ifx \botherref \undefined \def \botherref #1{#1}\fi
+\ifx \url \undefined \def \url#1{\textsf{#1}}\fi
+\ifx \bchapter \undefined \def \bchapter#1{#1}\fi
+\ifx \bbook \undefined \def \bbook#1{#1}\fi
+\ifx \bcomment \undefined \def \bcomment#1{#1}\fi
+\ifx \oauthor \undefined \def \oauthor#1{#1}\fi
+\ifx \citeauthoryear \undefined \def \citeauthoryear#1{#1}\fi
+\ifx \endbibitem  \undefined \def \endbibitem {}\fi
+\ifx \bconflocation  \undefined \def \bconflocation#1{#1}\fi
+\ifx \arxivurl  \undefined \def \arxivurl#1{\textsf{#1}}\fi
+\csname PreBibitemsHook\endcsname
+
+%%% 1
+\bibitem[\protect\citeauthoryear{Li et~al.}{2018}]{2}
+\begin{barticle}
+\bauthor{\bsnm{Li}, \binits{S.-S.}},
+\bauthor{\bsnm{Mao}, \binits{S.}},
+\bauthor{\bsnm{Zhao}, \binits{Y.}},
+\bauthor{\bsnm{Lu}, \binits{Y.}}:
+\batitle{Gravitational lensing of gravitatioanl waves: a statistical
+  perspective}.
+\bjtitle{Monthly Notices of the Royal Astronomical Society}
+\bvolume{476},
+\bfpage{2220}--\blpage{2229}
+(\byear{2018})
+\end{barticle}
+\endbibitem
+
+%%% 2
+\bibitem[\protect\citeauthoryear{Oguri}{2018}]{6}
+\begin{barticle}
+\bauthor{\bsnm{Oguri}, \binits{M.}}:
+\batitle{Effect of gravitational lensing on the distribution of gravitational
+  waves from distant binary black hole mergers}.
+\bjtitle{Monthly Notices of the Royal Astronomical Society}
+\bvolume{480},
+\bfpage{3842}--\blpage{3855}
+(\byear{2018})
+\end{barticle}
+\endbibitem
+
+%%% 3
+\bibitem[\protect\citeauthoryear{Barsode et~al.}{2025}]{18}
+\begin{barticle}
+\bauthor{\bsnm{Barsode}, \binits{A.}},
+\bauthor{\bsnm{Goyal}, \binits{S.}},
+\bauthor{\bsnm{Ajith}, \binits{P.}}:
+\batitle{Fast and efficient bayesian method to search for strongly lensed
+  gravitational waves}.
+\bjtitle{Astrophysical Journal}
+\bvolume{980},
+\bfpage{258}
+(\byear{2025})
+\doiurl{10.3847/1538-4357/adae10}
+\end{barticle}
+\endbibitem
+
+%%% 4
+\bibitem[\protect\citeauthoryear{Barsode et~al.}{2026a}]{19}
+\begin{barticle}
+\bauthor{\bsnm{Barsode}, \binits{A.}},
+\bauthor{\bsnm{Maity}, \binits{K.N.}},
+\bauthor{\bsnm{Ajith}, \binits{P.}}:
+\batitle{Lensing, not luck! detection prospects of strongly lensed
+  gravitational waves}.
+\bjtitle{Astrophysical Journal}
+\bvolume{998},
+\bfpage{294}
+(\byear{2026})
+\doiurl{10.3847/1538-4357/ae38c1}
+\end{barticle}
+\endbibitem
+
+%%% 5
+\bibitem[\protect\citeauthoryear{Barsode et~al.}{2026b}]{20}
+\begin{botherref}
+\oauthor{\bsnm{Barsode}, \binits{A.}},
+\oauthor{\bsnm{Maity}, \binits{K.N.}},
+\oauthor{\bsnm{Ajith}, \binits{P.}}:
+Search for strong lensing of gravitatioanl waves int he binary black hole
+  events from o1-o4a.
+arXiv preprint
+(2026)
+{\href{https://arxiv.org/abs/2607.08466}{{arXiv:2607.08466}}}
+\end{botherref}
+\endbibitem
+
+%%% 6
+\bibitem[\protect\citeauthoryear{Wempe et~al.}{2024}]{27}
+\begin{botherref}
+\oauthor{\bsnm{Wempe}, \binits{E.}},
+\oauthor{\bsnm{Koopmans}, \binits{L.V.E.}},
+\oauthor{\bsnm{Wierda}, \binits{A.R.A.C.}},
+\oauthor{\bsnm{Hannuksela}, \binits{O.T.}},
+\oauthor{\bsnm{Broeck}, \binits{C.V.D.}}:
+On the detection and precise localization of merging black hole events through
+  strong gravitational lensing.
+arXiv preprint
+(2024)
+{\href{https://arxiv.org/abs/2204.08732}{{arXiv:2204.08732}}}
+\end{botherref}
+\endbibitem
+
+%%% 7
+\bibitem[\protect\citeauthoryear{Takahashi and Nakamura}{2003}]{1}
+\begin{barticle}
+\bauthor{\bsnm{Takahashi}, \binits{R.}},
+\bauthor{\bsnm{Nakamura}, \binits{T.}}:
+\batitle{Wave effects in gravitational lensing of gravitational waves from
+  chirping binaries}.
+\bjtitle{Astrophysical Journal}
+\bvolume{595},
+\bfpage{1039}--\blpage{1051}
+(\byear{2003})
+\end{barticle}
+\endbibitem
+
+%%% 8
+\bibitem[\protect\citeauthoryear{Haris et~al.}{2018}]{3}
+\begin{botherref}
+\oauthor{\bsnm{Haris}, \binits{K.}},
+\oauthor{\bsnm{Mehta}, \binits{A.K.}},
+\oauthor{\bsnm{Kumar}, \binits{S.}},
+\oauthor{\bsnm{Venumadhav}, \binits{T.}},
+\oauthor{\bsnm{Ajith}, \binits{P.}}:
+Identifying strongly lensed gravitational wave signals from binary black hole
+  mergers.
+arXiv preprint
+(2018)
+{\href{https://arxiv.org/abs/1807.07062}{{arXiv:1807.07062}}}
+\end{botherref}
+\endbibitem
+
+%%% 9
+\bibitem[\protect\citeauthoryear{Hannuksela and et~al.}{2019}]{4}
+\begin{barticle}
+\bauthor{\bsnm{Hannuksela}, \binits{O.A.}},
+\bauthor{\bsnm{al.}}:
+\batitle{Search for gravitational lensing signatures in ligo-virgo binary black
+  hole events}.
+\bjtitle{Astrophysical Journal Letters}
+\bvolume{874},
+\bfpage{2}
+(\byear{2019})
+\end{barticle}
+\endbibitem
+
+%%% 10
+\bibitem[\protect\citeauthoryear{Ezquiaga et~al.}{2021}]{5}
+\begin{barticle}
+\bauthor{\bsnm{Ezquiaga}, \binits{J.M.}},
+\bauthor{\bsnm{Holz}, \binits{D.E.}},
+\bauthor{\bsnm{Hu}, \binits{W.}},
+\bauthor{\bsnm{Lagos}, \binits{M.}},
+\bauthor{\bsnm{Wald}, \binits{R.M.}}:
+\batitle{Phase effects from from strong gravitational lesning of gravitatioanl
+  waves}.
+\bjtitle{Physics Review D}
+\bvolume{103},
+\bfpage{064047}
+(\byear{2021})
+\end{barticle}
+\endbibitem
+
+%%% 11
+\bibitem[\protect\citeauthoryear{Lo and Hernandez}{2021}]{7}
+\begin{barticle}
+\bauthor{\bsnm{Lo}, \binits{R.K.L.}},
+\bauthor{\bsnm{Hernandez}, \binits{I.M.}}:
+\batitle{Bayesian statistical framework for indentifying strongly lensed
+  gravitatioanl wave signals}.
+\bjtitle{Physical Review D}
+\bvolume{103},
+\bfpage{123015}
+(\byear{2021})
+\end{barticle}
+\endbibitem
+
+%%% 12
+\bibitem[\protect\citeauthoryear{Janquart et~al.}{2022}]{8}
+\begin{barticle}
+\bauthor{\bsnm{Janquart}, \binits{J.}},
+\bauthor{\bsnm{Hannuksela}, \binits{O.A.}},
+\bauthor{\bsnm{Haris}, \binits{K.}},
+\bauthor{\bsnm{Broeck}, \binits{C.V.D.}}:
+\batitle{Golum: a fast and precise methodology to search for, and analyze,
+  strongly lensed gravitatioanl wave events}.
+\bjtitle{Monthly Notices of the Astronomical Society}
+\bvolume{515},
+\bfpage{3989}--\blpage{3996}
+(\byear{2022})
+\end{barticle}
+\endbibitem
+
+%%% 13
+\bibitem[\protect\citeauthoryear{Janquart et~al.}{2023}]{9}
+\begin{barticle}
+\bauthor{\bsnm{Janquart}, \binits{J.}},
+\bauthor{\bsnm{Haris}, \binits{K.}},
+\bauthor{\bsnm{Hannuksela}, \binits{O.A.}},
+\bauthor{\bsnm{Broeck}, \binits{C.V.D.}}:
+\batitle{The return of golum: improving distributed joint parameter estimation
+  for strongly lensed gravitational waves}.
+\bjtitle{Monthly Notices of the Royal Astronomical Society}
+\bvolume{526},
+\bfpage{3088}--\blpage{3098}
+(\byear{2023})
+\end{barticle}
+\endbibitem
+
+%%% 14
+\bibitem[\protect\citeauthoryear{Janquart and et~al.}{2023}]{10}
+\begin{barticle}
+\bauthor{\bsnm{Janquart}, \binits{J.}},
+\bauthor{\bsnm{al.}}:
+\batitle{Follow up analyses to the o3 ligo-virgo-kagra lensing searches}.
+\bjtitle{Monthly Notices of the Royal Astronomical Society}
+\bvolume{526},
+\bfpage{3832}--\blpage{3860}
+(\byear{2023})
+\end{barticle}
+\endbibitem
+
+%%% 15
+\bibitem[\protect\citeauthoryear{{LIGO Scientific Collaboration} and {Virgo
+  Collaboration}}{2021}]{12}
+\begin{barticle}
+\bauthor{\bsnm{{LIGO Scientific Collaboration}}},
+\bauthor{\bsnm{{Virgo Collaboration}}}:
+\batitle{Search for lensing signatures in the gravitational wave observations
+  from the first half of ligo-virgo's third observing run}.
+\bjtitle{Astrophysical Journal}
+\bvolume{923},
+\bfpage{14}
+(\byear{2021})
+\end{barticle}
+\endbibitem
+
+%%% 16
+\bibitem[\protect\citeauthoryear{{LIGO Scientific Collaboration}
+  et~al.}{2024}]{13}
+\begin{barticle}
+\bauthor{\bsnm{{LIGO Scientific Collaboration}}},
+\bauthor{\bsnm{{Virgo Collaboration}}},
+\bauthor{\bsnm{{KAGRA Collaboration}}}:
+\batitle{Search for gravitational lensing signatures in the full third
+  observing run of the ligo-virgo network}.
+\bjtitle{Astrophysical Journal}
+\bvolume{970},
+\bfpage{191}
+(\byear{2024})
+\end{barticle}
+\endbibitem
+
+%%% 17
+\bibitem[\protect\citeauthoryear{{LIGO Scientific Collaboration}
+  et~al.}{2025}]{14}
+\begin{botherref}
+\oauthor{\bsnm{{LIGO Scientific Collaboration}}},
+\oauthor{\bsnm{{Virgo Collaboration}}},
+\oauthor{\bsnm{{KAGRA Collaboration}}}:
+Gwtc-4.0: Searches for gravitational wave lesning signatures.
+arXiv preprint
+(2025)
+{\href{https://arxiv.org/abs/2512.16347}{{arXiv:2512.16347}}}
+\end{botherref}
+\endbibitem
+
+%%% 18
+\bibitem[\protect\citeauthoryear{Hannuksela et~al.}{2026}]{28}
+\begin{barticle}
+\bauthor{\bsnm{Hannuksela}, \binits{O.A.}},
+\bauthor{\bsnm{Haris}, \binits{K.}},
+\bauthor{\bsnm{Janquart}, \binits{J.}},
+\bauthor{\bsnm{Narola}, \binits{H.}},
+\bauthor{\bsnm{Phurailatpam}, \binits{H.}},
+\bauthor{\bsnm{Creighton}, \binits{J.D.E.}},
+\bauthor{\bsnm{Broeck}, \binits{C.V.D.}}:
+\batitle{Strong gravitational-wave lensing posterior odds}.
+\bjtitle{Astrophysical Journal}
+\bvolume{1002},
+\bfpage{42}
+(\byear{2026})
+\doiurl{10.3847/1538-4357/ae5816}
+\end{barticle}
+\endbibitem
+
+%%% 19
+\bibitem[\protect\citeauthoryear{Haris et~al.}{2018}]{22}
+\begin{botherref}
+\oauthor{\bsnm{Haris}, \binits{K.}},
+\oauthor{\bsnm{Mehta}, \binits{A.K.}},
+\oauthor{\bsnm{Kumar}, \binits{S.}},
+\oauthor{\bsnm{Venumadhav}, \binits{T.}},
+\oauthor{\bsnm{Ajith}, \binits{P.}}:
+Identifying strongly lensed gravitational wave signals from binar black hole
+  mergers.
+arXiv preprint
+(2018)
+{\href{https://arxiv.org/abs/1807.07062}{{arXiv:1807.07062}}}
+\end{botherref}
+\endbibitem
+
+%%% 20
+\bibitem[\protect\citeauthoryear{Janquart et~al.}{2021}]{23}
+\begin{barticle}
+\bauthor{\bsnm{Janquart}, \binits{J.}},
+\bauthor{\bsnm{Hannuksela}, \binits{O.A.}},
+\bauthor{\bsnm{Haris}, \binits{K.}},
+\bauthor{\bsnm{Broeck}, \binits{C.V.D.}}:
+\batitle{A fast and precise methodology to search fro and analyse strongly
+  lensed gravitatioanl wave events}.
+\bjtitle{Monthly Notices of the Royal Astronomical Society}
+\bvolume{506},
+\bfpage{5430}--\blpage{5438}
+(\byear{2021})
+\end{barticle}
+\endbibitem
+
+%%% 21
+\bibitem[\protect\citeauthoryear{Mahalanobis}{1936}]{24}
+\begin{barticle}
+\bauthor{\bsnm{Mahalanobis}, \binits{C.P.}}:
+\batitle{On the generalised distance in statistics}.
+\bjtitle{Proceedings of the National Institue of Sciences of India}
+\bvolume{2},
+\bfpage{49}--\blpage{55}
+(\byear{1936})
+\end{barticle}
+\endbibitem
+
+%%% 22
+\bibitem[\protect\citeauthoryear{Fisher}{1922}]{25}
+\begin{barticle}
+\bauthor{\bsnm{Fisher}, \binits{A.R.}}:
+\batitle{On the mathematical foundations of theoretical statistics}.
+\bjtitle{Philosophical Transactions of the Royal Society of London A}
+\bvolume{222},
+\bfpage{309}--\blpage{368}
+(\byear{1922})
+\end{barticle}
+\endbibitem
+
+%%% 23
+\bibitem[\protect\citeauthoryear{Vallisneri}{2008}]{26}
+\begin{barticle}
+\bauthor{\bsnm{Vallisneri}, \binits{M.}}:
+\batitle{Use and abuse of the fisher information matrix in the assessment of
+  gravitational wave parameter estimation prospects}.
+\bjtitle{Physical Review D}
+\bvolume{77},
+\bfpage{042001}
+(\byear{2008})
+\end{barticle}
+\endbibitem
+
+\end{thebibliography}
