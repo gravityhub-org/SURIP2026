@@ -1,6 +1,6 @@
-PWD /Users/natalieyyyyy/SURIP2026/natalie_harry_sam_reports/final_report
+PWD /Users/natalieyyyyy/Projects/SURIP2026/natalie_harry_sam_reports/final_report
 INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/data/miktex/data/le/pdftex/pdflatex.fmt
-INPUT main.tex
+INPUT /Users/natalieyyyyy/Projects/SURIP2026/natalie_harry_sam_reports/final_report/main.tex
 OUTPUT main.log
 INPUT ./sn-jnl.cls
 INPUT sn-jnl.cls
@@ -436,30 +436,30 @@ INPUT ./figures/population_reweighted_m_1_m_2_log.pdf
 INPUT ./figures/population_reweighted_m_1_m_2_log.pdf
 INPUT ./figures/population_reweighted_m_1_m_2_log.pdf
 INPUT ./figures/population_reweighted_m_1_m_2_log.pdf
-INPUT ./figures/lensed_relative_luminosity_distance_3d.pdf
-INPUT ./figures/lensed_relative_luminosity_distance_3d.pdf
-INPUT ./figures/lensed_relative_luminosity_distance_3d.pdf
-INPUT ./figures/lensed_relative_luminosity_distance_3d.pdf
-INPUT ./figures/lensed_relative_luminosity_distance_3d.pdf
-INPUT ./figures/lensed_relative_luminosity_distance_3d.pdf
-INPUT ./figures/log10_BLU_histogram.pdf
-INPUT ./figures/log10_BLU_histogram.pdf
-INPUT ./figures/log10_BLU_histogram.pdf
-INPUT ./figures/log10_BLU_histogram.pdf
-INPUT ./figures/log10_BLU_histogram.pdf
-INPUT ./figures/log10_BLU_histogram.pdf
-INPUT ./figures/log10_BLU_histogram_3.pdf
-INPUT ./figures/log10_BLU_histogram_3.pdf
-INPUT ./figures/log10_BLU_histogram_3.pdf
-INPUT ./figures/log10_BLU_histogram_3.pdf
-INPUT ./figures/log10_BLU_histogram_3.pdf
-INPUT ./figures/log10_BLU_histogram_3.pdf
-INPUT ./figures/log10_BLU_histogram_4.pdf
-INPUT ./figures/log10_BLU_histogram_4.pdf
-INPUT ./figures/log10_BLU_histogram_4.pdf
-INPUT ./figures/log10_BLU_histogram_4.pdf
-INPUT ./figures/log10_BLU_histogram_4.pdf
-INPUT ./figures/log10_BLU_histogram_4.pdf
+INPUT ./figures/lensed_population_l2_dL_dt.pdf
+INPUT ./figures/lensed_population_l2_dL_dt.pdf
+INPUT ./figures/lensed_population_l2_dL_dt.pdf
+INPUT ./figures/lensed_population_l2_dL_dt.pdf
+INPUT ./figures/lensed_population_l2_dL_dt.pdf
+INPUT ./figures/lensed_population_l2_dL_dt.pdf
+INPUT ./figures/lensed_population_l3_dL_dt.pdf
+INPUT ./figures/lensed_population_l3_dL_dt.pdf
+INPUT ./figures/lensed_population_l3_dL_dt.pdf
+INPUT ./figures/lensed_population_l3_dL_dt.pdf
+INPUT ./figures/lensed_population_l3_dL_dt.pdf
+INPUT ./figures/lensed_population_l3_dL_dt.pdf
+INPUT ./figures/lensed_population_l4_dL_dt.pdf
+INPUT ./figures/lensed_population_l4_dL_dt.pdf
+INPUT ./figures/lensed_population_l4_dL_dt.pdf
+INPUT ./figures/lensed_population_l4_dL_dt.pdf
+INPUT ./figures/lensed_population_l4_dL_dt.pdf
+INPUT ./figures/lensed_population_l4_dL_dt.pdf
+INPUT ./figures/bayes_factor_and_posterior_odds_comparison.pdf
+INPUT ./figures/bayes_factor_and_posterior_odds_comparison.pdf
+INPUT ./figures/bayes_factor_and_posterior_odds_comparison.pdf
+INPUT ./figures/bayes_factor_and_posterior_odds_comparison.pdf
+INPUT ./figures/bayes_factor_and_posterior_odds_comparison.pdf
+INPUT ./figures/bayes_factor_and_posterior_odds_comparison.pdf
 INPUT ./figures/comparison_figure(placeholder).png
 INPUT ./figures/comparison_figure(placeholder).png
 INPUT ./figures/comparison_figure(placeholder).png
@@ -467,6 +467,12 @@ INPUT ./figures/comparison_figure(placeholder).png
 INPUT ./figures/comparison_figure(placeholder).png
 INPUT ./figures/comparison_figure(placeholder).png
 INPUT ./figures/comparison_figure(placeholder).png
+INPUT ./figures/log_bayes_factor_vs_component_masses_all_images.pdf
+INPUT ./figures/log_bayes_factor_vs_component_masses_all_images.pdf
+INPUT ./figures/log_bayes_factor_vs_component_masses_all_images.pdf
+INPUT ./figures/log_bayes_factor_vs_component_masses_all_images.pdf
+INPUT ./figures/log_bayes_factor_vs_component_masses_all_images.pdf
+INPUT ./figures/log_bayes_factor_vs_component_masses_all_images.pdf
 INPUT ./main.bbl
 INPUT ./main.bbl
 INPUT main.bbl
@@ -489,8 +495,6 @@ INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/font
 INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi5.pfb
 INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi5.pfb
-INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi6.pfb
-INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi6.pfb
 INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi7.pfb
 INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi7.pfb
 INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi8.pfb
@@ -523,7 +527,7 @@ INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/font
 INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy6.pfb
 INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy7.pfb
-INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy8.pfb
-INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy8.pfb
+INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy9.pfb
+INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy9.pfb
 INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/helvetic/uhvr8a.pfb
 INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/helvetic/uhvr8a.pfb

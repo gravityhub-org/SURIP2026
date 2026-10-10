@@ -565,9 +565,6 @@ It is known that GWs poor localization compared to other EM counterparts (normal
 \subsection{From an ominiscient point of view: the joint Bayes factor}
 
 
-
-
-
 \section{Result}
 \subsection{Reconstructed Population}
 % Natalie's part
@@ -613,34 +610,56 @@ It is known that GWs poor localization compared to other EM counterparts (normal
 \end{figure}
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.9\textwidth]{figures/lensed_relative_luminosity_distance_3d.pdf}
+    \includegraphics[width=0.6\textwidth]{figures/lensed_population_l2_dL_dt.pdf}
     \caption{}
-	\label{fig:lensed_3d_lum_distance}
+	\label{fig:lensed_population_l2}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/lensed_population_l3_dL_dt.pdf}
+    \caption{}
+    \label{fig:lensed_population_l3}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/lensed_population_l4_dL_dt.pdf}
+    \caption{}
+    \label{fig:lensed_population_l4}
 \end{figure}
 
 \subsection{Prior Odds}
 % Natalie's part
-rates, rate ratio, prior odds.
+rates, rate ratio, prior odds.\\
+% # Calculating unlensed rate...
+% # Using provided unlensed_param dict...
+% # total unlensed rate (yr^-1): 274.7513986080608
+% # number of simulated unlensed detectable events: 30
+% # number of simulated all unlensed events: 10000
+% # storing detectable params in ./ler_data/unlensed_param_detectable.json
+% # Calculating lensed rate...
+% # Using provided lensed_param dict...
+% # total lensed rate (yr^-1): 0.4112873092031136
+% # number of simulated lensed detectable events: 37
+% # number of simulated all lensed events: 10000
+% # storing detectable params in ./ler_data/lensed_param_detectable.json
+Results:\\
+2-image lensed rate: 0.21 detectable events per year\\
+2-image rate ratio: 0.00077\\
+2-image prior odds: 5.6e-06\\
+3-image lensed rate: 0.04 detectable events per year\\
+3-image rate ratio: 0.00016\\
+3-image prior odds: 1.3e-08\\
+4-image lensed rate: 0.16 detectable events per year\\
+4-image rate ratio: 0.00057\\
+4-image prior odds: 6.6e-10\\
 
 \subsection{Bayes Factor and Comparison}
 % Natalie's part
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.9\textwidth]{figures/log10_BLU_histogram.pdf}
+    \includegraphics[width=0.9\textwidth]{figures/bayes_factor_and_posterior_odds_comparison.pdf}
     \caption{}
-    \label{fig:log_bayes_factor_gw_2}
-\end{figure}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.9\textwidth]{figures/log10_BLU_histogram_3.pdf}
-    \caption{}
-    \label{fig:log_bayes_factor_gw_3}
-\end{figure}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.9\textwidth]{figures/log10_BLU_histogram_4.pdf}
-    \caption{}
-    \label{fig:log_bayes_factor_gw_4}
+    \label{fig:log_bayes_factor_posterior_odds_gw}
 \end{figure}
 \begin{figure}[h!]
     \centering
@@ -648,7 +667,12 @@ rates, rate ratio, prior odds.
     \caption{}
     \label{fig:bayes_factor_comparison}
 \end{figure}
-
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/log_bayes_factor_vs_component_masses_all_images.pdf}
+    \caption{}
+    \label{fig:scatter_log_bayes_factor_masses_gw}
+\end{figure}
 
 
 \section{Conclusion}
