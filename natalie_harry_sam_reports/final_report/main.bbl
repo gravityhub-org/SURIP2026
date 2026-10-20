@@ -1,6 +1,6 @@
 %% BioMed_Central_Bib_Style_v1.01
 
-\begin{thebibliography}{23}
+\begin{thebibliography}{24}
 % BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -300,6 +300,21 @@ arXiv preprint
 \endbibitem
 
 %%% 18
+\bibitem[\protect\citeauthoryear{Rinaldi and Pozzo}{2022}]{29}
+\begin{barticle}
+\bauthor{\bsnm{Rinaldi}, \binits{S.}},
+\bauthor{\bsnm{Pozzo}, \binits{W.D.}}:
+\batitle{{(H)DPGMM: a hierarchy of Dirichlet process Gaussian mixture models
+  for the inference of the black hole mass function}}.
+\bjtitle{Monthly Notices of the Royal Astronomical Society}
+\bvolume{509}(\bissue{4}),
+\bfpage{5454}--\blpage{5466}
+(\byear{2022})
+\doiurl{10.1093/mnras/stab3224}
+\end{barticle}
+\endbibitem
+
+%%% 19
 \bibitem[\protect\citeauthoryear{Hannuksela et~al.}{2026}]{28}
 \begin{barticle}
 \bauthor{\bsnm{Hannuksela}, \binits{O.A.}},
@@ -318,7 +333,7 @@ arXiv preprint
 \end{barticle}
 \endbibitem
 
-%%% 19
+%%% 20
 \bibitem[\protect\citeauthoryear{Haris et~al.}{2018}]{22}
 \begin{botherref}
 \oauthor{\bsnm{Haris}, \binits{K.}},
@@ -334,7 +349,7 @@ arXiv preprint
 \end{botherref}
 \endbibitem
 
-%%% 20
+%%% 21
 \bibitem[\protect\citeauthoryear{Janquart et~al.}{2021}]{23}
 \begin{barticle}
 \bauthor{\bsnm{Janquart}, \binits{J.}},
@@ -350,7 +365,7 @@ arXiv preprint
 \end{barticle}
 \endbibitem
 
-%%% 21
+%%% 22
 \bibitem[\protect\citeauthoryear{Mahalanobis}{1936}]{24}
 \begin{barticle}
 \bauthor{\bsnm{Mahalanobis}, \binits{C.P.}}:
@@ -362,7 +377,7 @@ arXiv preprint
 \end{barticle}
 \endbibitem
 
-%%% 22
+%%% 23
 \bibitem[\protect\citeauthoryear{Fisher}{1922}]{25}
 \begin{barticle}
 \bauthor{\bsnm{Fisher}, \binits{A.R.}}:
@@ -374,7 +389,7 @@ arXiv preprint
 \end{barticle}
 \endbibitem
 
-%%% 23
+%%% 24
 \bibitem[\protect\citeauthoryear{Vallisneri}{2008}]{26}
 \begin{barticle}
 \bauthor{\bsnm{Vallisneri}, \binits{M.}}:

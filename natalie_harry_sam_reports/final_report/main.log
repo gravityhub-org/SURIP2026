@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2026.7.9)  10 OCT 2026 18:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2026.7.9)  20 OCT 2026 09:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -969,69 +969,14 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [3]
-Underfull \hbox (badness 10000) in paragraph at lines 151--153
-
- []
-
-
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [4]
-LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 179.
-
-
-LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <4.015> not available
-(Font)              size <5> substituted on input line 179.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 182--182
-[]\OT1/cmr/m/n/8.03 Two de-tec-tions are
+Underfull \hbox (badness 10000) in paragraph at lines 169--189
+\OT1/cmr/m/n/10 To re-con-struct the strongly lensed pop-u-la-tion, we use the LVK
  []
-
-
-Underfull \hbox (badness 1337) in paragraph at lines 182--182
-\OT1/cmr/m/n/8.03 lensed im-ages of the
- []
-
-
-Underfull \hbox (badness 1097) in paragraph at lines 182--182
-[]\OT1/cmr/m/n/8.03 The rep-son-si-ble lens is cat-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 183--183
-[]\OT1/cmr/m/n/8.03 Two de-tec-tions are
- []
-
-
-Underfull \hbox (badness 1337) in paragraph at lines 183--183
-\OT1/cmr/m/n/8.03 lensed im-ages of the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 184--184
-[]\OT1/cmr/m/n/8.03 Two de-tec-tions are
- []
-
-
-Underfull \hbox (badness 1337) in paragraph at lines 184--184
-\OT1/cmr/m/n/8.03 lensed im-ages of the
- []
-
-
-Underfull \hbox (badness 8000) in paragraph at lines 184--184
-[]\OT1/cmr/m/n/8.03 The re-spon-si-ble fore-ground
- []
-
-
-Underfull \hbox (badness 4832) in paragraph at lines 185--185
-[]\OT1/cmr/m/n/8.03 The de-tec-tions arise
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
@@ -1043,25 +988,60 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [6
-pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.226 \begin{equation}
-                      ]
-Underfull \hbox (badness 10000) in paragraph at lines 228--233
+ [6]
+LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 297.
 
+
+LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <4.015> not available
+(Font)              size <5> substituted on input line 297.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 300--300
+[]\OT1/cmr/m/n/8.03 Two de-tec-tions are
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 240--245
-
+Underfull \hbox (badness 1337) in paragraph at lines 300--300
+\OT1/cmr/m/n/8.03 lensed im-ages of the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 252--257
-
+Underfull \hbox (badness 1097) in paragraph at lines 300--300
+[]\OT1/cmr/m/n/8.03 The rep-son-si-ble lens is cat-
  []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 301--301
+[]\OT1/cmr/m/n/8.03 Two de-tec-tions are
+ []
+
+
+Underfull \hbox (badness 1337) in paragraph at lines 301--301
+\OT1/cmr/m/n/8.03 lensed im-ages of the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 302--302
+[]\OT1/cmr/m/n/8.03 Two de-tec-tions are
+ []
+
+
+Underfull \hbox (badness 1337) in paragraph at lines 302--302
+\OT1/cmr/m/n/8.03 lensed im-ages of the
+ []
+
+
+Underfull \hbox (badness 8000) in paragraph at lines 302--302
+[]\OT1/cmr/m/n/8.03 The re-spon-si-ble fore-ground
+ []
+
+
+Underfull \hbox (badness 4832) in paragraph at lines 303--303
+[]\OT1/cmr/m/n/8.03 The de-tec-tions arise
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
@@ -1073,26 +1053,18 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [8]
-Overfull \hbox (25.94125pt too wide) detected at line 297
-[][][]\OML/cmm/m/it/10.03749 Z[] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10.03749 p\OT1/cmr/m/n/10 (\OML/cmm/m/it/10.03749 d[]\OMS/cmsy/m/n/10.03749 j\OML/cmm/m/it/10.03749 ^^R[]; H[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10.03749 p\OT1/cmr/m/n/10 (\OML/cmm/m/it/10.03749 d[]\OMS/cmsy/m/n/10.03749 j\OML/cmm/m/it/10.03749 ^^R[]; H[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10.03749 ^^Y[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10.03749 ^^R[]; ^^R[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10.03749 d^^R[]d^^R[]
+ [8
+pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.335 \end{equation}
+                    ]
+Underfull \hbox (badness 10000) in paragraph at lines 346--351
+
  []
 
-LaTeX Font Info:    Calculating math sizes for size <14.05249> on input line 310.
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 310.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 310.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 310.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 319--323
+Underfull \hbox (badness 10000) in paragraph at lines 358--363
 
  []
 
@@ -1102,8 +1074,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 319--323
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [9]
-Overfull \hbox (11.9077pt too wide) detected at line 334
-[][][]\OML/cmm/m/it/10.03749 p\OT1/cmr/m/n/10 (\OML/cmm/m/it/10.03749 d[]; d[]\OMS/cmsy/m/n/10.03749 j\OT1/cmr/m/n/10 ^^B[]\OML/cmm/m/it/10.03749 ; H[]\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10.03749 p\OT1/cmr/m/n/10 (\OML/cmm/m/it/10.03749 d[]\OMS/cmsy/m/n/10.03749 j\OML/cmm/m/it/10.03749 ^^R[]; ^^R[]; ^^L[]; H[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10.03749 p\OT1/cmr/m/n/10 (\OML/cmm/m/it/10.03749 d[]\OMS/cmsy/m/n/10.03749 j\OML/cmm/m/it/10.03749 ^^R[]; ^^R[]; ^^R[]; ^^W[]; H[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10.03749 :
+Underfull \hbox (badness 10000) in paragraph at lines 370--375
+
  []
 
 
@@ -1112,38 +1084,26 @@ Overfull \hbox (11.9077pt too wide) detected at line 334
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [10]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 374.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 374.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 374.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 376--380
-
+Overfull \hbox (25.94125pt too wide) detected at line 415
+[][][]\OML/cmm/m/it/10.03749 Z[] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10.03749 p\OT1/cmr/m/n/10 (\OML/cmm/m/it/10.03749 d[]\OMS/cmsy/m/n/10.03749 j\OML/cmm/m/it/10.03749 ^^R[]; H[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10.03749 p\OT1/cmr/m/n/10 (\OML/cmm/m/it/10.03749 d[]\OMS/cmsy/m/n/10.03749 j\OML/cmm/m/it/10.03749 ^^R[]; H[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10.03749 ^^Y[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10.03749 ^^R[]; ^^R[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10.03749 d^^R[]d^^R[]
  []
 
+LaTeX Font Info:    Calculating math sizes for size <14.05249> on input line 428.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 381.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 381.
+(hyperref)                removing `math shift' on input line 428.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 381.
+(hyperref)                removing `subscript' on input line 428.
 
 
-Overfull \hbox (14.79356pt too wide) in paragraph at lines 543--544
- [][] 
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 428.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 437--441
+
  []
 
 
@@ -1152,83 +1112,8 @@ Overfull \hbox (14.79356pt too wide) in paragraph at lines 543--544
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11]
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [12
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.561 \subsection
-                 {Lens searches and the localization problem}]
-<figures/z_hor_vs_chirp_mass.pdf, id=311, 568.04218pt x 423.50221pt>
-File: figures/z_hor_vs_chirp_mass.pdf Graphic file (type pdf)
-<use figures/z_hor_vs_chirp_mass.pdf>
-Package pdftex.def Info: figures/z_hor_vs_chirp_mass.pdf  used on input line 573.
-(pdftex.def)             Requested size: 334.79773pt x 249.60564pt.
-<figures/log_weight_vs_chirp_mass.pdf, id=312, 568.04218pt x 423.50221pt>
-File: figures/log_weight_vs_chirp_mass.pdf Graphic file (type pdf)
-<use figures/log_weight_vs_chirp_mass.pdf>
-Package pdftex.def Info: figures/log_weight_vs_chirp_mass.pdf  used on input line 579.
-(pdftex.def)             Requested size: 334.79773pt x 249.60564pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<figures/unlensed_2d.pdf, id=313, 517.73515pt x 550.88739pt>
-File: figures/unlensed_2d.pdf Graphic file (type pdf)
-<use figures/unlensed_2d.pdf>
-Package pdftex.def Info: figures/unlensed_2d.pdf  used on input line 585.
-(pdftex.def)             Requested size: 167.39886pt x 178.12004pt.
-<figures/population_reweighted_m_1_m_2.pdf, id=314, 526.01334pt x 544.22542pt>
-File: figures/population_reweighted_m_1_m_2.pdf Graphic file (type pdf)
-<use figures/population_reweighted_m_1_m_2.pdf>
-Package pdftex.def Info: figures/population_reweighted_m_1_m_2.pdf  used on input line 586.
-(pdftex.def)             Requested size: 172.23505pt x 178.19983pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<figures/unlensed_3d_log.pdf, id=315, 771.53442pt x 800.54129pt>
-File: figures/unlensed_3d_log.pdf Graphic file (type pdf)
-<use figures/unlensed_3d_log.pdf>
-Package pdftex.def Info: figures/unlensed_3d_log.pdf  used on input line 602.
-(pdftex.def)             Requested size: 167.39886pt x 173.68878pt.
-<figures/population_reweighted_m_1_m_2_log.pdf, id=316, 805.42642pt x 802.0751pt>
-File: figures/population_reweighted_m_1_m_2_log.pdf Graphic file (type pdf)
-<use figures/population_reweighted_m_1_m_2_log.pdf>
-Package pdftex.def Info: figures/population_reweighted_m_1_m_2_log.pdf  used on input line 603.
-(pdftex.def)             Requested size: 172.23505pt x 171.51265pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<figures/lensed_population_l2_dL_dt.pdf, id=317, 520.13469pt x 552.3788pt>
-File: figures/lensed_population_l2_dL_dt.pdf Graphic file (type pdf)
-<use figures/lensed_population_l2_dL_dt.pdf>
-Package pdftex.def Info: figures/lensed_population_l2_dL_dt.pdf  used on input line 613.
-(pdftex.def)             Requested size: 223.20227pt x 237.03783pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<figures/lensed_population_l3_dL_dt.pdf, id=318, 1043.74757pt x 1045.16902pt>
-File: figures/lensed_population_l3_dL_dt.pdf Graphic file (type pdf)
-<use figures/lensed_population_l3_dL_dt.pdf>
-Package pdftex.def Info: figures/lensed_population_l3_dL_dt.pdf  used on input line 619.
-(pdftex.def)             Requested size: 334.79773pt x 335.25832pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<figures/lensed_population_l4_dL_dt.pdf, id=319, 1551.18523pt x 1535.71936pt>
-File: figures/lensed_population_l4_dL_dt.pdf Graphic file (type pdf)
-<use figures/lensed_population_l4_dL_dt.pdf>
-Package pdftex.def Info: figures/lensed_population_l4_dL_dt.pdf  used on input line 625.
-(pdftex.def)             Requested size: 334.79773pt x 331.46205pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 632--655
-
+Overfull \hbox (11.9077pt too wide) detected at line 452
+[][][]\OML/cmm/m/it/10.03749 p\OT1/cmr/m/n/10 (\OML/cmm/m/it/10.03749 d[]; d[]\OMS/cmsy/m/n/10.03749 j\OT1/cmr/m/n/10 ^^B[]\OML/cmm/m/it/10.03749 ; H[]\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10.03749 p\OT1/cmr/m/n/10 (\OML/cmm/m/it/10.03749 d[]\OMS/cmsy/m/n/10.03749 j\OML/cmm/m/it/10.03749 ^^R[]; ^^R[]; ^^L[]; H[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10.03749 p\OT1/cmr/m/n/10 (\OML/cmm/m/it/10.03749 d[]\OMS/cmsy/m/n/10.03749 j\OML/cmm/m/it/10.03749 ^^R[]; ^^R[]; ^^R[]; ^^W[]; H[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10.03749 :
  []
 
 
@@ -1236,33 +1121,144 @@ Underfull \hbox (badness 10000) in paragraph at lines 632--655
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [13
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
+ [12]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 492.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 492.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 492.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 494--498
+
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 499.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 499.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 499.
+
+
+Overfull \hbox (14.79356pt too wide) in paragraph at lines 661--662
+ [][] 
+ []
+
+
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13]
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [14
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.655 
-       <./figures/z_hor_vs_chirp_mass.pdf>]
-<figures/bayes_factor_and_posterior_odds_comparison.pdf, id=363, 568.04218pt x 712.58218pt>
-File: figures/bayes_factor_and_posterior_odds_comparison.pdf Graphic file (type pdf)
-<use figures/bayes_factor_and_posterior_odds_comparison.pdf>
-Package pdftex.def Info: figures/bayes_factor_and_posterior_odds_comparison.pdf  used on input line 660.
-(pdftex.def)             Requested size: 334.79773pt x 419.98492pt.
+l.678 
+      ]
+<figures/z_hor_vs_chirp_mass.pdf, id=332, 568.04218pt x 423.50221pt>
+File: figures/z_hor_vs_chirp_mass.pdf Graphic file (type pdf)
+<use figures/z_hor_vs_chirp_mass.pdf>
+Package pdftex.def Info: figures/z_hor_vs_chirp_mass.pdf  used on input line 691.
+(pdftex.def)             Requested size: 334.79773pt x 249.60564pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/comparison_figure(placeholder).png, id=364, 578.16pt x 361.35pt>
+<figures/log_weight_vs_chirp_mass.pdf, id=333, 568.04218pt x 423.50221pt>
+File: figures/log_weight_vs_chirp_mass.pdf Graphic file (type pdf)
+<use figures/log_weight_vs_chirp_mass.pdf>
+Package pdftex.def Info: figures/log_weight_vs_chirp_mass.pdf  used on input line 701.
+(pdftex.def)             Requested size: 334.79773pt x 249.60564pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figures/unlensed_2d.pdf, id=334, 517.73515pt x 550.88739pt>
+File: figures/unlensed_2d.pdf Graphic file (type pdf)
+<use figures/unlensed_2d.pdf>
+Package pdftex.def Info: figures/unlensed_2d.pdf  used on input line 712.
+(pdftex.def)             Requested size: 167.39886pt x 178.12004pt.
+<figures/population_reweighted_m_1_m_2.pdf, id=335, 526.01334pt x 544.22542pt>
+File: figures/population_reweighted_m_1_m_2.pdf Graphic file (type pdf)
+<use figures/population_reweighted_m_1_m_2.pdf>
+Package pdftex.def Info: figures/population_reweighted_m_1_m_2.pdf  used on input line 713.
+(pdftex.def)             Requested size: 172.23505pt x 178.19983pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figures/unlensed_3d_log.pdf, id=336, 771.53442pt x 800.54129pt>
+File: figures/unlensed_3d_log.pdf Graphic file (type pdf)
+<use figures/unlensed_3d_log.pdf>
+Package pdftex.def Info: figures/unlensed_3d_log.pdf  used on input line 729.
+(pdftex.def)             Requested size: 167.39886pt x 173.68878pt.
+<figures/population_reweighted_m_1_m_2_log.pdf, id=337, 805.42642pt x 802.0751pt>
+File: figures/population_reweighted_m_1_m_2_log.pdf Graphic file (type pdf)
+<use figures/population_reweighted_m_1_m_2_log.pdf>
+Package pdftex.def Info: figures/population_reweighted_m_1_m_2_log.pdf  used on input line 730.
+(pdftex.def)             Requested size: 172.23505pt x 171.51265pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figures/lensed_population_l2_dL_dt.pdf, id=338, 520.13469pt x 552.3788pt>
+File: figures/lensed_population_l2_dL_dt.pdf Graphic file (type pdf)
+<use figures/lensed_population_l2_dL_dt.pdf>
+Package pdftex.def Info: figures/lensed_population_l2_dL_dt.pdf  used on input line 740.
+(pdftex.def)             Requested size: 223.20227pt x 237.03783pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figures/lensed_population_l3_dL_dt.pdf, id=339, 1043.74757pt x 1045.16902pt>
+File: figures/lensed_population_l3_dL_dt.pdf Graphic file (type pdf)
+<use figures/lensed_population_l3_dL_dt.pdf>
+Package pdftex.def Info: figures/lensed_population_l3_dL_dt.pdf  used on input line 752.
+(pdftex.def)             Requested size: 334.79773pt x 335.25832pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figures/lensed_population_l4_dL_dt.pdf, id=340, 1551.18523pt x 1535.71936pt>
+File: figures/lensed_population_l4_dL_dt.pdf Graphic file (type pdf)
+<use figures/lensed_population_l4_dL_dt.pdf>
+Package pdftex.def Info: figures/lensed_population_l4_dL_dt.pdf  used on input line 765.
+(pdftex.def)             Requested size: 334.79773pt x 331.46205pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figures/bayes_factor_and_posterior_odds_comparison.pdf, id=341, 568.04218pt x 712.58218pt>
+File: figures/bayes_factor_and_posterior_odds_comparison.pdf Graphic file (type pdf)
+<use figures/bayes_factor_and_posterior_odds_comparison.pdf>
+Package pdftex.def Info: figures/bayes_factor_and_posterior_odds_comparison.pdf  used on input line 833.
+(pdftex.def)             Requested size: 334.79773pt x 419.98492pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figures/comparison_figure(placeholder).png, id=342, 578.16pt x 361.35pt>
 File: figures/comparison_figure(placeholder).png Graphic file (type png)
 <use figures/comparison_figure(placeholder).png>
-Package pdftex.def Info: figures/comparison_figure(placeholder).png  used on input line 666.
+Package pdftex.def Info: figures/comparison_figure(placeholder).png  used on input line 845.
 (pdftex.def)             Requested size: 334.79773pt x 209.24681pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/log_bayes_factor_vs_component_masses_all_images.pdf, id=366, 712.58218pt x 315.09721pt>
+<figures/log_bayes_factor_vs_component_masses_all_images.pdf, id=344, 712.58218pt x 315.09721pt>
 File: figures/log_bayes_factor_vs_component_masses_all_images.pdf Graphic file (type pdf)
 <use figures/log_bayes_factor_vs_component_masses_all_images.pdf>
-Package pdftex.def Info: figures/log_bayes_factor_vs_component_masses_all_images.pdf  used on input line 672.
+Package pdftex.def Info: figures/log_bayes_factor_vs_component_masses_all_images.pdf  used on input line 851.
 (pdftex.def)             Requested size: 334.79773pt x 148.04762pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1272,295 +1268,311 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [14
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.63 ...m[\protect\citeauthoryear{Oguri}{2018}]{6}
-                                                   <./figures/log_weight_vs_chirp_mass.pdf>]
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [15
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.152 ...ct\citeauthoryear{Haris et~al.}{2018}]{3}
-                                                   <./figures/unlensed_2d.pdf> <./figures/population_reweighted_m_1_m_2.pdf>]
-
-LaTeX Warning: Text page 16 contains only floats.
-
-
+l.74 
+     ]
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [16
-pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.152 ...ct\citeauthoryear{Haris et~al.}{2018}]{3}
-                                                  
-pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.152 ...ct\citeauthoryear{Haris et~al.}{2018}]{3}
-                                                   <./figures/unlensed_3d_log.pdf> <./figures/population_reweighted_m_1_m_2_log.pdf> <./figures/lensed_population_l2_dL_dt.pdf>]
+l.150 
+       <./figures/z_hor_vs_chirp_mass.pdf>]
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [17
-pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.227 
-       <./figures/lensed_population_l3_dL_dt.pdf>]
+l.229 ...citeauthoryear{Janquart et~al.}{2023}]{9}
+                                                   <./figures/log_weight_vs_chirp_mass.pdf>]
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [18
-pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.287 
-       <./figures/lensed_population_l4_dL_dt.pdf>]
+l.316 
+       <./figures/unlensed_2d.pdf> <./figures/population_reweighted_m_1_m_2.pdf>]
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [19
-pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.320 
-       <./figures/bayes_factor_and_posterior_odds_comparison.pdf>]
+l.404 
+       <./figures/unlensed_3d_log.pdf> <./figures/population_reweighted_m_1_m_2_log.pdf>])
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 869.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 869.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 869.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.875 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.875 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.875 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.875 \begin{equation}
+                      
+Underfull \hbox (badness 10000) in paragraph at lines 877--883
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 877--883
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 877--883
+
+ []
+
+
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [20
+pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.883 \begin{equation}
+                       <./figures/lensed_population_l2_dL_dt.pdf>]
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.883 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.883 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.883 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.883 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.888 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.888 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.888 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.888 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.893 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.893 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.893 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.893 \begin{equation}
+                      
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21
+pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.895 \end{equation}
+                     <./figures/lensed_population_l3_dL_dt.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 895--902
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 895--902
+
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.5}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.902 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.5}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.902 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.5}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.902 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.5}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.902 \begin{equation}
+                      
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22
+pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.904 \end{equation}
+                     <./figures/lensed_population_l4_dL_dt.pdf>]
+pdfTeX warning (ext4): destination with the same identifier (name{equation.6}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.906 \begin{equation}
+                      ^^I
+pdfTeX warning (ext4): destination with the same identifier (name{equation.6}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.906 \begin{equation}
+                      ^^I
+pdfTeX warning (ext4): destination with the same identifier (name{equation.6}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.906 \begin{equation}
+                      ^^I
+pdfTeX warning (ext4): destination with the same identifier (name{equation.6}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.906 \begin{equation}
+                      ^^I
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [23
+pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.908 \end{equation}
+                     <./figures/bayes_factor_and_posterior_odds_comparison.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 908--913
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 908--913
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 908--913
+
+ []
+
+
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [24
 pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.364 
-      
+l.913 \begin{equation}
+                      
 pdfTeX warning (ext4): destination with the same identifier (name{figure.11}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.364 
-       <./figures/comparison_figure(placeholder).png> <./figures/log_bayes_factor_vs_component_masses_all_images.pdf>])
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 684.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 684.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 684.
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.690 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.690 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.690 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.690 \begin{equation}
-                      
-Underfull \hbox (badness 10000) in paragraph at lines 692--698
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 692--698
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 692--698
-
- []
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.698 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.698 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.698 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.698 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.703 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.703 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.703 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.703 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.708 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.708 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.708 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.708 \begin{equation}
-                      
-Underfull \hbox (badness 10000) in paragraph at lines 710--717
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 710--717
-
- []
-
-
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [21]
-pdfTeX warning (ext4): destination with the same identifier (name{equation.5}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.717 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.5}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.717 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.5}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.717 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.5}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.717 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.6}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.721 \begin{equation}
-                      ^^I
-pdfTeX warning (ext4): destination with the same identifier (name{equation.6}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.721 \begin{equation}
-                      ^^I
-pdfTeX warning (ext4): destination with the same identifier (name{equation.6}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.721 \begin{equation}
-                      ^^I
-pdfTeX warning (ext4): destination with the same identifier (name{equation.6}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.721 \begin{equation}
-                      ^^I
-Underfull \hbox (badness 10000) in paragraph at lines 723--728
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 723--728
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 723--728
-
- []
-
-
+l.913 \begin{equation}
+                       <./figures/comparison_figure(placeholder).png> <./figures/log_bayes_factor_vs_component_masses_all_images.pdf>]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.7}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.728 \begin{equation}
+l.913 \begin{equation}
                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.7}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.728 \begin{equation}
+l.913 \begin{equation}
                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.7}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.728 \begin{equation}
+l.913 \begin{equation}
                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.7}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.728 \begin{equation}
+l.913 \begin{equation}
                       
-Underfull \hbox (badness 10000) in paragraph at lines 730--735
+Underfull \hbox (badness 10000) in paragraph at lines 915--920
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 730--735
+Underfull \hbox (badness 10000) in paragraph at lines 915--920
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 730--735
+Underfull \hbox (badness 10000) in paragraph at lines 915--920
 
  []
 
@@ -1568,489 +1580,116 @@ Underfull \hbox (badness 10000) in paragraph at lines 730--735
 pdfTeX warning (ext4): destination with the same identifier (name{equation.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.735 \begin{equation}
+l.920 \begin{equation}
                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.735 \begin{equation}
+l.920 \begin{equation}
                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.735 \begin{equation}
+l.920 \begin{equation}
                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.735 \begin{equation}
+l.920 \begin{equation}
                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.9}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.738 \begin{equation}
+l.923 \begin{equation}
                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.9}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.738 \begin{equation}
+l.923 \begin{equation}
                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.9}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.738 \begin{equation}
+l.923 \begin{equation}
                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.9}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.738 \begin{equation}
+l.923 \begin{equation}
                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.10}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.741 \begin{equation}
+l.926 \begin{equation}
                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.10}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.741 \begin{equation}
+l.926 \begin{equation}
                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.10}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.741 \begin{equation}
+l.926 \begin{equation}
                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.10}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.741 \begin{equation}
+l.926 \begin{equation}
                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.744 \begin{equation}
+l.929 \begin{equation}
                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.744 \begin{equation}
+l.929 \begin{equation}
                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.744 \begin{equation}
+l.929 \begin{equation}
                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.744 \begin{equation}
+l.929 \begin{equation}
                       
-Underfull \hbox (badness 10000) in paragraph at lines 746--763
+Underfull \hbox (badness 10000) in paragraph at lines 931--948
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 746--763
+Underfull \hbox (badness 10000) in paragraph at lines 931--948
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 746--763
+Underfull \hbox (badness 10000) in paragraph at lines 931--948
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 746--763
-
- []
-
-
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [22]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 764.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 764.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 764.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 766--771
-
- []
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{equation.12}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.771 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.12}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.771 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.12}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.771 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.12}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.771 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.13}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.775 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.13}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.775 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.13}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.775 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.13}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.775 \begin{equation}
-                      
-Underfull \hbox (badness 10000) in paragraph at lines 777--785
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 777--785
-
- []
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{equation.14}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.785 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.14}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.785 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.14}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.785 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.14}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.785 \begin{equation}
-                      
-Underfull \hbox (badness 10000) in paragraph at lines 787--794
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 787--794
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 787--794
-
- []
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{equation.15}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.794 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.15}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.794 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.15}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.794 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.15}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.794 \begin{equation}
-                      
-Overfull \hbox (97.85194pt too wide) detected at line 796
-[][][]\OML/cmm/m/it/10.03749 `[]\OT1/cmr/m/n/10 (^^B[]) = [](\OML/cmm/m/it/10.03749 p\OT1/cmr/m/n/10 (\OML/cmm/m/it/10.03749 d[]\OMS/cmsy/m/n/10.03749 j\OML/cmm/m/it/10.03749 ^^R[]; ^^R[]; ^^L[]; H[]\OT1/cmr/m/n/10 )) + []([1 \OMS/cmsy/m/n/10.03749 ^^@ \OML/cmm/m/it/10.03749 C[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10.03749 ^^R[]; ^^R[]\OT1/cmr/m/n/10 )]) + [](\OML/cmm/m/it/10.03749 ^^Y[]\OT1/cmr/m/n/10 ) + [](\OML/cmm/m/it/10.03749 ^^Y[]\OT1/cmr/m/n/10 ) + [](\OML/cmm/m/it/10.03749 ^^Y\OT1/cmr/m/n/10 (\OML/cmm/m/it/10.03749 ^^R[]; ^^R[]\OT1/cmr/m/n/10 ))
- []
-
-
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [23]
-pdfTeX warning (ext4): destination with the same identifier (name{equation.16}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.797 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.16}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.797 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.16}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.797 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.16}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.797 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.17}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.800 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.17}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.800 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.17}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.800 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.17}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.800 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.18}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.803 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.18}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.803 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.18}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.803 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.18}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.803 \begin{equation}
-                      
-Underfull \hbox (badness 10000) in paragraph at lines 805--826
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 805--826
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 805--826
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 805--826
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 805--826
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 805--826
+Underfull \hbox (badness 10000) in paragraph at lines 931--948
 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 827.
+(hyperref)                removing `math shift' on input line 949.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 827.
+(hyperref)                removing `subscript' on input line 949.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 827.
+(hyperref)                removing `math shift' on input line 949.
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{equation.19}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.829 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.19}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.829 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.19}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.829 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.19}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.829 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.20}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.833 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.20}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.833 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.20}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.833 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.20}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.833 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.837 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.837 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.837 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.837 \begin{equation}
-                      
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [24]
-pdfTeX warning (ext4): destination with the same identifier (name{equation.22}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.840 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.22}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.840 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.22}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.840 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.22}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.840 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.845 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.845 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.845 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.845 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.24}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.850 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.24}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.850 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.24}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.850 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.24}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.850 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.25}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.854 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.25}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.854 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.25}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.854 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.25}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.854 \begin{equation}
-                      
-Underfull \hbox (badness 10000) in paragraph at lines 871--874
+Underfull \hbox (badness 10000) in paragraph at lines 951--956
 
  []
 
@@ -2060,12 +1699,202 @@ Underfull \hbox (badness 10000) in paragraph at lines 871--874
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [25]
-Underfull \hbox (badness 10000) in paragraph at lines 900--905
+pdfTeX warning (ext4): destination with the same identifier (name{equation.12}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.956 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.12}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.956 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.12}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.956 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.12}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.956 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.13}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.960 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.13}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.960 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.13}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.960 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.13}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.960 \begin{equation}
+                      
+Underfull \hbox (badness 10000) in paragraph at lines 962--970
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 916--920
+Underfull \hbox (badness 10000) in paragraph at lines 962--970
+
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.14}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.970 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.14}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.970 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.14}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.970 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.14}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.970 \begin{equation}
+                      
+Underfull \hbox (badness 10000) in paragraph at lines 972--979
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 972--979
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 972--979
+
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.15}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.979 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.15}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.979 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.15}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.979 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.15}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.979 \begin{equation}
+                      
+Overfull \hbox (97.85194pt too wide) detected at line 981
+[][][]\OML/cmm/m/it/10.03749 `[]\OT1/cmr/m/n/10 (^^B[]) = [](\OML/cmm/m/it/10.03749 p\OT1/cmr/m/n/10 (\OML/cmm/m/it/10.03749 d[]\OMS/cmsy/m/n/10.03749 j\OML/cmm/m/it/10.03749 ^^R[]; ^^R[]; ^^L[]; H[]\OT1/cmr/m/n/10 )) + []([1 \OMS/cmsy/m/n/10.03749 ^^@ \OML/cmm/m/it/10.03749 C[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10.03749 ^^R[]; ^^R[]\OT1/cmr/m/n/10 )]) + [](\OML/cmm/m/it/10.03749 ^^Y[]\OT1/cmr/m/n/10 ) + [](\OML/cmm/m/it/10.03749 ^^Y[]\OT1/cmr/m/n/10 ) + [](\OML/cmm/m/it/10.03749 ^^Y\OT1/cmr/m/n/10 (\OML/cmm/m/it/10.03749 ^^R[]; ^^R[]\OT1/cmr/m/n/10 ))
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.16}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.982 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.16}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.982 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.16}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.982 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.16}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.982 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.17}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.985 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.17}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.985 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.17}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.985 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.17}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.985 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.18}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.988 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.18}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.988 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.18}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.988 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.18}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.988 \begin{equation}
+                      
+Underfull \hbox (badness 10000) in paragraph at lines 990--1011
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 990--1011
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 990--1011
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 990--1011
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 990--1011
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 990--1011
 
  []
 
@@ -2076,10 +1905,193 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [26]
 
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1012.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 1012.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1012.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.19}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1014 \begin{equation}
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.19}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1014 \begin{equation}
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.19}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1014 \begin{equation}
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.19}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1014 \begin{equation}
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.20}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1018 \begin{equation}
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.20}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1018 \begin{equation}
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.20}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1018 \begin{equation}
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.20}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1018 \begin{equation}
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1022 \begin{equation}
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1022 \begin{equation}
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1022 \begin{equation}
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1022 \begin{equation}
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.22}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1025 \begin{equation}
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.22}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1025 \begin{equation}
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.22}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1025 \begin{equation}
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.22}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1025 \begin{equation}
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1030 \begin{equation}
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1030 \begin{equation}
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1030 \begin{equation}
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1030 \begin{equation}
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.24}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1035 \begin{equation}
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.24}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1035 \begin{equation}
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.24}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1035 \begin{equation}
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.24}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1035 \begin{equation}
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.25}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1039 \begin{equation}
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.25}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1039 \begin{equation}
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.25}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1039 \begin{equation}
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.25}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1039 \begin{equation}
+                       
+
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [27] (main.aux)
+ [27]
+Underfull \hbox (badness 10000) in paragraph at lines 1056--1059
+
+ []
+
+
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [28]
+Underfull \hbox (badness 10000) in paragraph at lines 1085--1090
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1101--1105
+
+ []
+
+
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [29]
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [30] (main.aux)
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-06-18>
@@ -2093,17 +2105,17 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 51A7F208D4AE3F2A782BE130BB8A5C54;8974.
  ) 
 Here is how much of TeX's memory you used:
- 26909 strings out of 469424
- 507922 string characters out of 5457290
- 906118 words of memory out of 5000000
- 55290 multiletter control sequences out of 15000+600000
- 651183 words of font info for 133 fonts, out of 8000000 for 9000
+ 26931 strings out of 469424
+ 508226 string characters out of 5457290
+ 918156 words of memory out of 5000000
+ 55304 multiletter control sequences out of 15000+600000
+ 653632 words of font info for 141 fonts, out of 8000000 for 9000
  24 hyphenation exceptions out of 8191
  89i,13n,94p,1044b,846s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx8.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx9.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi12.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi5.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi7.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi8.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi9.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmib10.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr17.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr5.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr6.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr7.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr8.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr9.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy5.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy6.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy7.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy9.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on main.pdf (27 pages, 10472526 bytes).
+</Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx8.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx9.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi12.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi5.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi6.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi7.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi8.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi9.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmib10.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr17.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr5.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr6.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr7.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr8.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr9.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy5.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy6.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy7.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy8.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy9.pfb></Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on main.pdf (30 pages, 10512741 bytes).
 PDF statistics:
- 903 PDF objects out of 1000 (max. 8388607)
- 149 named destinations out of 1000 (max. 500000)
+ 941 PDF objects out of 1000 (max. 8388607)
+ 154 named destinations out of 1000 (max. 500000)
  385 words of extra memory for PDF output out of 10000 (max. 10000000)
 

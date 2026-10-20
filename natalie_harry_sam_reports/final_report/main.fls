@@ -335,6 +335,14 @@ INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/font
 INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map
 INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmbx10.tfm
+INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmbx7.tfm
+INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmbx5.tfm
+INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmmib10.tfm
+INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/amsfonts/cmextra/cmmib7.tfm
+INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/amsfonts/cmextra/cmmib5.tfm
+INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmbsy10.tfm
+INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm
+INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm
 INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmr5.tfm
 INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmr5.tfm
 INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmmi8.tfm
@@ -395,24 +403,6 @@ INPUT ./figures/z_hor_vs_chirp_mass.pdf
 INPUT ./figures/z_hor_vs_chirp_mass.pdf
 INPUT ./figures/z_hor_vs_chirp_mass.pdf
 INPUT ./figures/z_hor_vs_chirp_mass.pdf
-INPUT ./figures/log_weight_vs_chirp_mass.pdf
-INPUT ./figures/log_weight_vs_chirp_mass.pdf
-INPUT ./figures/log_weight_vs_chirp_mass.pdf
-INPUT ./figures/log_weight_vs_chirp_mass.pdf
-INPUT ./figures/log_weight_vs_chirp_mass.pdf
-INPUT ./figures/log_weight_vs_chirp_mass.pdf
-INPUT ./figures/unlensed_2d.pdf
-INPUT ./figures/unlensed_2d.pdf
-INPUT ./figures/unlensed_2d.pdf
-INPUT ./figures/unlensed_2d.pdf
-INPUT ./figures/unlensed_2d.pdf
-INPUT ./figures/unlensed_2d.pdf
-INPUT ./figures/population_reweighted_m_1_m_2.pdf
-INPUT ./figures/population_reweighted_m_1_m_2.pdf
-INPUT ./figures/population_reweighted_m_1_m_2.pdf
-INPUT ./figures/population_reweighted_m_1_m_2.pdf
-INPUT ./figures/population_reweighted_m_1_m_2.pdf
-INPUT ./figures/population_reweighted_m_1_m_2.pdf
 INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmr6.tfm
 INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmmi8.tfm
 INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmmi6.tfm
@@ -424,6 +414,24 @@ INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/font
 INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/amsfonts/symbols/msam7.tfm
 INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT ./figures/log_weight_vs_chirp_mass.pdf
+INPUT ./figures/log_weight_vs_chirp_mass.pdf
+INPUT ./figures/log_weight_vs_chirp_mass.pdf
+INPUT ./figures/log_weight_vs_chirp_mass.pdf
+INPUT ./figures/log_weight_vs_chirp_mass.pdf
+INPUT ./figures/log_weight_vs_chirp_mass.pdf
+INPUT ./figures/unlensed_2d.pdf
+INPUT ./figures/unlensed_2d.pdf
+INPUT ./figures/unlensed_2d.pdf
+INPUT ./figures/unlensed_2d.pdf
+INPUT ./figures/unlensed_2d.pdf
+INPUT ./figures/unlensed_2d.pdf
+INPUT ./figures/population_reweighted_m_1_m_2.pdf
+INPUT ./figures/population_reweighted_m_1_m_2.pdf
+INPUT ./figures/population_reweighted_m_1_m_2.pdf
+INPUT ./figures/population_reweighted_m_1_m_2.pdf
+INPUT ./figures/population_reweighted_m_1_m_2.pdf
+INPUT ./figures/population_reweighted_m_1_m_2.pdf
 INPUT ./figures/unlensed_3d_log.pdf
 INPUT ./figures/unlensed_3d_log.pdf
 INPUT ./figures/unlensed_3d_log.pdf
@@ -495,6 +503,8 @@ INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/font
 INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi5.pfb
 INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi5.pfb
+INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi6.pfb
+INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi6.pfb
 INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi7.pfb
 INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi7.pfb
 INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi8.pfb
@@ -527,6 +537,8 @@ INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/font
 INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy6.pfb
 INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy7.pfb
+INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy8.pfb
+INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy9.pfb
 INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy9.pfb
 INPUT /Users/natalieyyyyy/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/helvetic/uhvr8a.pfb
