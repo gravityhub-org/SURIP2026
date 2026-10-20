@@ -1,0 +1,509 @@
+\documentclass[linenumbers,amsmath,trackchanges]{aastex702}
+
+\newcommand{\vdag}{(v)^\dagger}
+\newcommand\aastex{AAS\TeX}
+\newcommand\latex{La\TeX}
+
+\begin{document}
+\title{Placeholder}
+
+% \author[orcid=0000-0000-0000-0001,sname='North America']{Tundra North America}
+% \altaffiliation{Kitt Peak National Observatory}
+% \affiliation{University of Saskatchewan}
+% \email[show]{fakeemail1@google.com}  
+
+% \author[gname=Savannah,sname=Africa]{S. Africa}
+% \affiliation{South African Astronomical Observatory}
+% \affiliation{University of Cape Town, Department of Astronomy}
+% \email{fakeemail3@google.com}
+
+% \collaboration{all}{The Terra Mater collaboration}
+
+\begin{abstract}
+What's the study about, why's it important, how to do it, what did you find, and why are the findings 
+important?\\
+\end{abstract}
+
+%% https://astrothesaurus.org
+% \keywords{\uat{Galaxies}{573} --- \uat{Cosmology}{343} --- \uat{High Energy astrophysics}{739} --- 
+% \uat{Interstellar medium}{847} --- \uat{Stellar astronomy}{1583} --- \uat{Solar physics}{1476}}
+
+To-do list:
+\begin{itemize}
+    \item Paper writing
+    \begin{itemize}
+        \item Short document with the outline of the paper and the main points to be included in each 
+        section for people's ease of reading
+        \item Methodology section: people should be able to replicate the results with the information 
+        provided in this section; be concise; can direct readers to other papers for details
+        \item Results section: analyse trends if there are any
+        \item Why are the findings important: read Ankur's paper to see what people in this field care about
+    \end{itemize}
+    \item Figures
+    \begin{itemize}
+        \item Fig 1: recompute horizon redshift curve by setting all events to be face-on; cut high-mass 
+        tail as snr is not computed properly which caused biases; check high horizon redshift events to 
+        see some lie outside the horizon redshift curve (inclination?); look up FINDCHIRP paper for the 
+        analytical formula for horizon distance
+        \item Fig 2: delete?
+        \item Fig 3: delete?
+        \item Fig 4: abnormal redshift distribution (negative); change the axis from log mass to mass, 
+        but change the scale to logarithmic to make things more intuitive; may need to use previous 
+        version of population density for plotting this (\text{population\_densities\_3d.npy}); see if 
+        can combine the detected and intrinsic populations to get rid of some white spaces
+        \item Figs 5, 6, 7: check if the systems used for reconstructing the n-image lensed population 
+        are truly $n$-image systems, or if some of them are $m$-image systems where $m>n$ and only $n$ 
+        images are detectable; try to show dLs instead of ratios (same for time delays; higher dimension); 
+        point out and try to explain correlations if they still exist after consistency checks
+    \end{itemize}
+    \item Consistency checks
+    \begin{itemize}
+        \item Models used by LeR to calculate rates and by Ankur to simulate GW signals
+        \item Hypotheses: intrinsic n-image systems or systems having n images detectable; check Otto's
+        prior odds paper, Ankur's PO2 script; can do both and they should give the same conclusion
+        \item Check luminosity distance prior used in PO2: Madau and Dickinson for unlensed, lensed 
+        population for lensed (again, check intrinsic or detectable)
+    \end{itemize}
+    \item Comparison: using uniform prior vs using reconstructed population as prior in PO2 to illustrate 
+    the importance of population reconstruction (check if Ankur has it already - if so, no need to run 
+    script again)
+\end{itemize}
+
+
+\section{Introduction}
+
+\section{Methodology}
+\subsection{Simulated GW events and Bayesian parameter estimation}
+Do I have to elaborate on how we simulated the GW events, or briefly mention it and focus on how we use it?
+
+\subsection{Population reconstruction}
+\label{sec:population_reconstruction}
+% Natalie's part
+The population distribution of binary black hole (BBH) parameters plays a crucial role in determining 
+whether two similar gravitational wave (GW) signals originate from the same source or from two independent 
+mergers exhibiting very similar properties.\\
+In densely populated regions of the parameter space, two unrelated GW events are more likely to exhibit 
+similar inferred parameters purely by coincidence. Conversely, agreement between parameters that are rare 
+in the underlying BBH population provides stronger evidence in favour of the lensing hypothesis.\\
+To account for this population dependence in the Bayesian analysis, we reconstruct the BBH population 
+distribution from simulated GW observations. We first reconstruct the observed population using posterior 
+samples from detected events, then correct for selection effects to recover the underlying astrophysical 
+population. The reconstructed population is subsequently used to generate a strongly lensed BBH population 
+for prior odds estimation and Bayes factor computation.
+
+\subsubsection{Reconstruction of observed population}
+Population reconstruction on a simulated distribution of BBHs is performed using FIGARO, which uses a 
+non-parametric approach to model probability densities using a Dirichlet Process Gaussian Mixture Model 
+(DPGMM). The probability density is represented as a mixture of Gaussian components, with the number of 
+components inferred from the data rather than specified in advance. Since the parameters of individual 
+GW events are inferred with measurement uncertainties, we employ the hierarchical DPGMM (HDPGMM) framework 
+to combine information from individual-event posterior distributions and reconstruct the underlying 
+population density~\citep{RinaldiDelPozzo2022}.\\
+The reconstruction is performed on the joint three-dimensional distribution of the component masses $m_1$, 
+$m_2$, and redshift $z$. For each event, the posterior density is first reconstructed using DPGMM, with 
+multiple density realizations generated to characterize the uncertainty in the density estimate. These 
+individual-event density reconstructions are subsequently combined hierarchically using HDPGMM to infer 
+the population distribution
+(see Fig.~\ref{fig:reconstructed_population}, left panel, for the reconstructed population). 
+
+\subsubsection{Correction for selection effects}
+The reconstructed observed population does not reflect the intrinsic population, as the reconstruction is 
+based on posterior samples of detected events. In order to eliminate selection effects and create an 
+astrophysical population, we perform rejection sampling during generation of samples from the reconstructed 
+observational population, with acceptance probability approximated to be a function of chirp mass.\\
+The astrophysical BBH merger rate density is assumed to follow a redshift-dependent model,
+\[\frac{R_\text{GW}(z)}{\text{Gpc}^{-3}\text{yr}^{-1}} = \frac{a_1 e^{a_2 z}}{e^{a_3 z}+a_4},\]
+where $a_1=6600$, $a_2=1.6$, $a_3=2.1$, and $a_4=30$ for population-I/II stars\citep{Oguri2018}.\\
+The number of detectable events for a given chirp mass is given by
+\[N_\text{detected}(M_c) = \int_0^{z_\text{horizon}(M_c)}\frac{dV_c}{dz}\frac{R(z)}{1+z}dz,\]
+where $\frac{dV_c}{dz}$ is the differential comoving volume element and the factor (1/(1+z)) accounts 
+for cosmological time dilation.\\
+In importance sampling, the importance ratio, or the weight, is given by 
+\[w(x) \propto \frac{p(x)}{q(x)}, \ x_i\sim q(x),\]
+where $p(x)$ and $q(x)$ are the target population and biased population respectively.\\
+In our case, it can written as
+\[w(M_c) \propto \frac{P_\text{intrinsic}(M_c)}{P_\text{FIGARO}(M_c)}, \ M_c\sim P_\text{FIGARO}(M_c),\]
+which is equivalent to
+\[w(M_c) \propto \frac{P(M_c)}{P(M_c | \text{detected})}.\]
+Applying Bayes theorem, 
+\[P(M_c | \text{detected}) = \frac{P(\text{detected} | M_c) P(M_c)}{P(\text{detected})},\]
+where $P(\text{detected})$, the probability of detection, is independent of chirp mass, 
+and \[P(\text{detected} | M_c) = \frac{N_\text{detected}(M_c)}{N_\text{all}}.\]
+Hence, the reweighting factor can be written as
+\[w(M_c) \propto \frac{1}{N_\text{detected}(M_c)},\]
+which is then converted to acceptance probability $a(M_c)$ afterwards for rejection sampling:
+\[a(M_c) = \frac{w(M_c)}{w_\text{max}}.\]
+Rejection sampling is then performed on draws from the observed population to obtain an approximately 
+selection-corrected astrophysical population, which is subsequently used to compute the prior odds and 
+Bayes factors.\\
+The correction generally favours lower-mass systems, which are detectable over smaller cosmological volumes. 
+This trend is important to capture when imposing strong lensing on the reconstructed population (see
+Fig.~\ref{fig:reconstructed_population}, right panel, for the reconstructed
+population).
+
+\subsubsection{Reconstruction of the strongly lensed population}
+% Natalie: To fill: 
+% - How we lens the population
+% - two-image, three-image, four-image cases
+% - Figure: (effective luminosity distances and log arrival times) + caption
+To reconstruct the strongly lensed population, we use the LVK (LIGO–Virgo–KAGRA) Event Rate calculator and 
+simulator (LeR) \cite{}.
+Component masses are drawn from the reconstructed BBH distribution corrected for selection effects, 
+while source redshifts are sampled according to the astrophysical merger-rate distribution. 
+The remaining GW source parameters are sampled from their respective distributions. For each source, 
+a foreground lens galaxy is generated using LeR, with lens redshift, velocity dispersion, ellipticity, 
+orientation, and external shear sampled according to the lens population model. The lens equation is then 
+solved to obtain the image positions, magnifications, and arrival-time delays. The resulting lensing 
+parameters are stored for subsequent analysis, and detectable lensed events are selected using LeR's GW 
+detection-probability calculation.\\
+The number of lensed images depends on the source position relative to the caustics, which are 
+boundaries in the source plane separating regions with different image multiplicities. Sources 
+located between the outer and inner caustics generally produce two images, while those inside the 
+inner diamond-shaped caustic produce four images. For sufficiently elliptical lenses, the diamond 
+caustic may extend beyond the outer caustic, allowing three-image configurations. To allow further 
+investigation and comparison between different cases, we reconstruct the population for 2-image, 
+3-image, and 4-image cases separately. For each image multiplicity, we reconstruct the joint distribution 
+of relative effective luminosity distances and arrival-time delays using FIGARO's DPGMM
+(see Fig.~\ref{fig:lensed_population_l2},~\ref{fig:lensed_population_l3}, and~\ref{fig:lensed_population_l4} 
+for the reconstructed lensed population).
+
+\subsection{Prior odds estimation}
+\label{sec:prior_odds}
+% Natalie's part
+The prior odds are defined as the ratio of the probability that a given set of GW events consists entirely 
+of strongly lensed images of the same source to the probability that this is not the case, rather than the 
+ratio of the probability that an individual event is lensed to the probability that it is not~\citep{Hannuksela2026}. 
+As we have already corrected for selection effects in the population reconstruction, the prior odds are 
+estimated using the detectable merger rates obtained from the reweighted population:
+\[
+P_U^L = \frac{P(H_L)}{P(H_U)} \approx P(H_L) \approx N_{\text{img}}! 
+\frac{\langle N_L \rangle}{\langle N \rangle ^{N_{\text{img}}}},
+\]
+where $N_{\text{img}}$ is the number of images, $\langle N_L \rangle = R_L T$ is the expected number 
+of detectable lensed systems, and $\langle N \rangle = (R_U+N_{\text{img}}R_L)T$ is the expected total 
+number of detected GW signals over an observation time $T$. Here, $R_L$ and $R_U$ denote the detectable 
+lensed-system and unlensed-event rates, respectively~\citep{Hannuksela2026}.\\
+The detectable rates are estimated using LeR from the simulated unlensed and lensed populations 
+described in Section~\ref{sec:population_reconstruction}. To distinguish different image multiplicities, 
+the detectable lensed systems are classified into 2-image, 3-image, and 4-image configurations. For 
+each configuration, we require that all generated images satisfy the detection criterion. The rate 
+corresponding to each configuration is estimated by weighting the total detectable lensed rate by 
+the fraction of systems satisfying both the image-multiplicity and detectability requirements,
+\[
+R_{L,n} = R_L\frac{N_{L,n}^{\text{all\,det}}}{N_L^{\text{det}}},
+\]
+and systems for which only a subset of the generated images is detectable are excluded from the 
+multiplicity-specific rates.\\
+The prior odds for each image multiplicity are then calculated as
+\[
+P_{U,n}^{L} \approx n!\frac{R_{L,n}T}{\left[(R_U+nR_{L,n})T\right]^n}, \qquad n=2,3,4.
+\]
+Since the lensed-event rate is much smaller than the unlensed-event rate, \(R_{L,n}\ll R_U\), this can 
+be approximated as
+\[
+P_{U,n}^{L} \approx n!\frac{R_{L,n}}{R_U^n T^{n-1}}.
+\]
+We adopt an observation time of \(T=1,\mathrm{yr}\) when evaluating the prior odds for the 2-, 3-, and 
+4-image cases.
+
+\subsection{Bayes factor computation}
+% Natalie's part
+We adopt the PO2.0 framework developed by \citet{Barsode2025} to compute the Bayes factor between 
+the strongly lensed and unlensed hypotheses. The Bayes factor is defined as
+\[
+B_U^L = \frac{P(d_1,\ldots,d_N\mid H_L)}{P(d_1,\ldots,d_N\mid H_U)},
+\]
+where \(d_i\) denotes the GW data associated with the \(i\)-th event and \(N\) is the number of 
+candidate images. PO2.0 evaluates the Bayes factor using posterior samples from individual-event 
+parameter estimation, without requiring joint parameter estimation. The calculation incorporates 
+the consistency of the intrinsic binary parameters and sky localization, together with lensing-induced 
+differences in apparent luminosity distance, arrival time, and phase. We refer readers to 
+\citet{Barsode2025} for the detailed formulation.\\
+As suggested by \citet{Barsode2025}, we generalize the original two-event PO2.0 implementation to 
+accommodate \(N\)-image systems. The events are ordered by arrival time, with the earliest-arriving 
+image taken as the reference. The posterior samples of the reference image are transformed according to 
+the relative magnifications and Morse phase differences, and compared with the posterior distributions 
+of the remaining \(N-1\) images. The calculation is extended to include the joint distributions of 
+the relative lensing parameters, and contributions from different Morse phase configurations are 
+combined according to their relative probabilities in the simulated lensed population.\\
+Following Equation B15 of \citet{Barsode2025}, we generalize the time-delay likelihood ratio to 
+\(N\) candidate images. Under the unlensed hypothesis, the arrival times are assumed to be independently 
+and uniformly distributed within an observation period \(T_{\mathrm{obs}}\). For \(N\) events ordered 
+by arrival time, \(t_1<t_2<\cdots<t_N\), the joint probability density is
+\[
+P(t_1,\ldots,t_N\mid H_U)=\frac{N!}{T_{\mathrm{obs}}^N}.
+\]
+Defining the relative time delays as \(\Delta t_j=t_j-t_1\), where \(j=2,\ldots,N\), and marginalizing 
+over the first arrival time \(0<t_1<T_{\mathrm{obs}}-\Delta t_N\), we obtain
+\[
+P(\Delta t_2,\ldots,\Delta t_N\mid H_U) = \frac{N!(T_{\mathrm{obs}}-\Delta t_N)}{T_{\mathrm{obs}}^N}.
+\]
+Since the reconstruction is performed using logarithmic time delays, we define the vector 
+\(\boldsymbol{x}=(x_2,\ldots,x_N)\), where \(x_j=\log_{10}(\Delta t_j/\mathrm{s})\). Applying the 
+corresponding Jacobian, we obtain
+\[
+P(\boldsymbol{x}\mid H_U) = \frac{N!(T_{\mathrm{obs}}-\Delta t_N)}{T_{\mathrm{obs}}^N}
+(\ln 10)^{N-1}\prod_{j=2}^{N}\Delta t_j.
+\]
+The corresponding joint distribution under the lensed hypothesis is estimated using kernel density 
+estimation from the simulated lensed population. The time-delay likelihood ratio is therefore
+\[
+\mathcal R_{LU}^{(N)} = \frac{P(\boldsymbol{x}\mid H_L)}{P(\boldsymbol{x}\mid H_U)}.
+\]
+We adopt \(T_{\mathrm{obs}}=1\,\mathrm{yr}\), consistent with the observation time used for the 
+prior-odds calculation. 
+% To account for the priors adopted during individual-event parameter estimation 
+% with Cogwheel, we construct corresponding prior dictionaries using Bilby's BBHPriorDict. Uniform 
+% detector-frame component-mass priors are imposed together with the chirp-mass and mass-ratio constraints, 
+% while the luminosity-distance prior is taken to be proportional to \(d_L^2\). These reproduce the 
+% principal functional dependencies of the Cogwheel PE priors, although exact equivalence has not been 
+% independently established.\\
+Finally, we automate the calculation over the simulated catalogues of 2-, 3-, and 4-image systems. For 
+each system, the individual-event posterior samples and corresponding PE priors are loaded, preliminary 
+posterior-overlap checks are performed, and the lensed and unlensed evidences are evaluated. For 
+numerical stability, the logarithmic Bayes factors are restricted to the range $[-30,30]$, with systems 
+failing the preliminary posterior-overlap checks assigned $\log_{10} B_U^L = -30$. The resulting Bayes 
+factors are combined with the prior odds calculated in Section~\ref{sec:prior_odds} to obtain the 
+posterior odds.
+
+\section{Result}
+\subsection{Reconstructed Population}
+% Natalie's part
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/z_hor_vs_chirp_mass.pdf}
+    \caption{Horizon redshift $z_{\mathrm{horizon}}$ as a function of chirp mass $\mathcal{M}_c$. The 
+    scattered points represent the simulated detectable binary black hole events, while the solid curve 
+    shows the estimated horizon redshift for each chirp mass. The horizon redshift increases with chirp 
+    mass up to approximately $180\,M_\odot$, before decreasing at higher masses, reflecting the 
+    mass-dependent sensitivity of gravitational-wave detectors.}
+    \label{fig:z_hor_vs_chirp_mass}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/log_weight_vs_chirp_mass.pdf}
+    \caption{Logarithm of the selection-correction weight as a function of chirp mass $\mathcal{M}_c$, 
+    calculated from the expected number of detectable mergers within the horizon redshift. The weight 
+    decreases sharply with increasing chirp mass at lower masses, reaching a minimum around 
+    $180$--$200\,M_\odot$, before increasing gradually at higher masses. Larger weights correspond to 
+    systems with lower detection efficiency and therefore a greater probability of being retained during 
+    the rejection sampling used to reconstruct the astrophysical population.}
+    \label{fig:log_weight_vs_chirp_mass}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.45\textwidth]{figures/unlensed_2d.pdf}
+    \includegraphics[width=0.463\textwidth]{figures/population_reweighted_m_1_m_2.pdf}
+    \caption{
+    	Reconstructed observed (left panel) and astrophysical (right panel) binary black hole population in component masses $m_1$ and $m_2$ using the hierarchical DPGMM implementation in FIGARO inferred from simulated population of gravitational-wave signals mimicking observing run O4. 
+	The diagonal panels show the one-dimensional marginal distributions, while the off-diagonal panels show the corresponding two-dimensional joint distributions. 
+	The observed population is biased towards higher masses due to selection effects, while the astrophysical population is corrected for these effects and represents the true underlying distribution of binary black hole mergers, extending to higher redshifts and lower masses that are relevant to strong gravitational-wave lensing, which occurs for binaries at high redshift.
+	}
+    \label{fig:reconstructed_population}
+\end{figure}
+%\begin{figure}[h!]
+%    \centering
+%    \includegraphics[width=0.9\textwidth]{figures/unlensed_3d.pdf}
+%    \caption{}
+%    \label{fig:unlensed_3d}
+%\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.45\textwidth]{figures/unlensed_3d_log.pdf}
+    \includegraphics[width=0.463\textwidth]{figures/population_reweighted_m_1_m_2_log.pdf}
+    \caption{
+    	Reconstructed observed (left panel) and astrophysical (right panel) binary black hole population in log10 of component masses $m_1$ and $m_2$ using the hierarchical DPGMM implementation in FIGARO inferred from simulated population of gravitational-wave signals mimicking observing run O4. 
+	The diagonal panels show the one-dimensional marginal distributions, while the off-diagonal panels show the corresponding two-dimensional joint distributions. 
+	The observed population is biased towards higher masses due to selection effects, while the astrophysical population is corrected for these effects and represents the true underlying distribution of binary black hole mergers, extending to higher redshifts and lower masses that are relevant to strong gravitational-wave lensing, which occurs for binaries at high redshift.
+	}
+    \label{fig:reconstructed_population_log}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figures/lensed_population_l2_dL_dt.pdf}
+    \caption{Reconstructed strongly lensed binary black hole population for 2-image systems using 
+    FIGARO's DPGMM. The reconstruction is performed on the joint distribution of the logarithmic relative 
+    effective luminosity distance $\log_{10}(d_{L,2}^{\mathrm{eff}}/d_{L,1}^{\mathrm{eff}})$ and 
+    logarithmic arrival-time delay $\log_{10}(\Delta t_2/\mathrm{s})$, with the earliest-arriving
+    image taken as the reference. The diagonal panels show the one-dimensional marginal distributions, 
+    while the off-diagonal panel shows the corresponding two-dimensional joint distribution. The 
+    reconstructed density reproduces the main features of the simulated lensing-parameter distribution.}
+	\label{fig:lensed_population_l2}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/lensed_population_l3_dL_dt.pdf}
+    \caption{Reconstructed strongly lensed binary black hole population for 3-image systems using 
+    FIGARO's DPGMM. The reconstruction is performed on the joint four-dimensional distribution of 
+    logarithmic relative effective luminosity distances $\log_{10}(d_{L,j}^{\mathrm{eff}}/d_{L,1}^
+    {\mathrm{eff}})$ and logarithmic arrival-time delays $\log_{10}(\Delta t_j/\mathrm{s})$, where 
+    $j=2,3$. The images are ordered by arrival time, with the earliest-arriving image taken as the 
+    reference. The diagonal panels show the one-dimensional marginal distributions, while the 
+    off-diagonal panels show the corresponding two-dimensional joint distributions. The reconstructed 
+    density captures the main features and correlations of the simulated lensing parameters.}
+    \label{fig:lensed_population_l3}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/lensed_population_l4_dL_dt.pdf}
+    \caption{Reconstructed strongly lensed binary black hole population for 4-image systems using 
+    FIGARO's DPGMM. The reconstruction is performed on the joint six-dimensional distribution of 
+    logarithmic relative effective luminosity distances $\log_{10}(d_{L,j}^{\mathrm{eff}}/d_{L,1}^
+    {\mathrm{eff}})$ and logarithmic arrival-time delays $\log_{10}(\Delta t_j/\mathrm{s})$, where 
+    $j=2,3,4$. The images are ordered by arrival time, with the earliest-arriving image taken as the 
+    reference. The diagonal panels show the one-dimensional marginal distributions, while the 
+    off-diagonal panels show the corresponding two-dimensional joint distributions. The reconstructed 
+    density captures the main features and correlations of the simulated lensing parameters.}
+    \label{fig:lensed_population_l4}
+\end{figure}
+
+\subsection{Prior Odds}
+% Natalie's part
+%# Results:
+%# Total unlensed rate: 448.76 detectable events per year
+%# Total lensed rate: 0.44 detectable events per year
+%# Rate ratio (lensed/unlensed): 0.00099
+%# 2-image lensed rate: 0.19 detectable events per year
+%# 2-image rate ratio: 0.00042
+%# 2-image prior odds: 1.9e-06
+%# 3-image lensed rate: 0.02 detectable events per year
+%# 3-image rate ratio: 5e-05
+%# 3-image prior odds: 1.5e-09
+%# 4-image lensed rate: 0.07 detectable events per year
+%# 4-image rate ratio: 0.00015
+%# 4-image prior odds: 3.9e-11
+\begin{table}[h!]
+    \centering
+    \caption{
+    Estimated detectable gravitational-wave event rates,
+    lensed-to-unlensed rate ratios, and prior odds for
+    2-image, 3-image, and 4-image systems.
+    The total detectable unlensed-event rate is
+    $R_U=448.76\,\mathrm{yr}^{-1}$, while the total
+    detectable lensed-system rate is
+    $R_L=0.44\,\mathrm{yr}^{-1}$.
+    The multiplicity-specific rates require all generated
+    images to satisfy the GW detection criterion.
+    The prior odds are evaluated for an observation time
+    of $T=1\,\mathrm{yr}$.
+    }
+    \begin{tabular}{lccc}
+        \hline
+        Quantity & 2 images & 3 images & 4 images \\
+        \hline
+        $R_{L,n}\,(\mathrm{yr}^{-1})$
+        & 0.19 & 0.02 & 0.07 \\
+
+        $R_{L,n}/R_U$
+        & $4.2\times10^{-4}$
+        & $5.0\times10^{-5}$
+        & $1.5\times10^{-4}$ \\
+
+        $P_{U,n}^{L}$
+        & $1.9\times10^{-6}$
+        & $1.5\times10^{-9}$
+        & $3.9\times10^{-11}$ \\
+        \hline
+    \end{tabular}
+    \label{tab:prior_odds}
+\end{table}
+
+
+\subsection{Bayes Factor and Comparison}
+% Natalie's part
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/bayes_factor_and_posterior_odds_comparison.pdf}
+    \caption{Distributions of the logarithmic Bayes factors $\log_{10}B_U^L$ (upper panel) and posterior 
+    odds $\log_{10}O_U^L$ (lower panel) for simulated strongly lensed 2-image (blue), 3-image (orange), 
+    and 4-image (green) systems. The dashed vertical lines indicate the corresponding distribution peaks.
+    The Bayes factor distributions shift towards larger values with increasing image multiplicity, 
+    reflecting the additional information provided by multiple lensed images. After incorporating the 
+    prior odds, the posterior odds distributions shift towards lower values due to the low astrophysical 
+    probability of strong lensing.}
+    \label{fig:log_bayes_factor_posterior_odds_gw}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/log_bayes_factor_vs_component_masses_all_images.pdf}
+    \caption{Logarithmic Bayes factors $\log_{10}B_U^L$ as functions of component masses $m_1$ (left 
+    panel) and $m_2$ (right panel) for simulated strongly lensed 2-image (blue), 3-image (orange), and 
+    4-image (green) systems. The Bayes factors are generally larger for systems with higher image 
+    multiplicities, with the highest values predominantly occurring at lower component masses. The 
+    distributions show considerable scatter and overlap between image multiplicities. Values at 
+    $\log_{10}B_U^L=-30$ correspond to the imposed numerical cutoff, including systems failing the 
+    preliminary posterior-overlap checks.}
+    \label{fig:scatter_log_bayes_factor_masses_gw}
+\end{figure}
+
+
+\section{Conclusion}
+
+
+
+
+
+
+
+
+
+
+
+% \section{Software and third party data repository citations} \label{sec:cite}
+
+% The AAS Journals would like to encourage authors to change software and
+% third party data repository references from the current standard of a
+% footnote to a first class citation in the bibliography.  As a bibliographic
+% citation these important references will be more easily captured and credit
+% will be given to the appropriate people.
+
+% The first step to making this happen is to have the data or software in
+% a long term repository that has made these items available via a persistent
+% identifier like a Digital Object Identifier (DOI).  A list of repositories
+% that satisfy this criteria plus each one's pros and cons are given at \break
+% \url{https://github.com/AASJournals/Tutorials/tree/master/Repositories}.
+
+% In the bibliography the format for data or code follows this format: \\
+
+% \noindent author year, title, version, publisher, prefix:identifier\\
+
+% \citet{2015ApJ...805...23C} provides a example of how the citation in the article references the external 
+% code at \doi{10.5281/zenodo.15991}.  Unfortunately, bibtex does not have specific bibtex entries for these 
+% types of references so the ``@misc'' type should be used. The Repository tutorial explains how to code the 
+% ``@misc'' type correctly.  The most recent .bst file, aasjournalv7.bst, will output bibtex ``@misc'' type 
+% properly.
+
+% Authors can also use the website \url{https://www.doi2bib.org/} to create a BIBTeX entry for any DOI. 
+% Please check the output from this site carefully as its output is only as good as the DOI metadata. 
+% Some DOI creators do not provide enough metadata to construct an adequate citation.
+
+%% Please use the acknowledgment and contribution environments. This will 
+%% be anonomyized when the "anonymous" style option is used. 
+\begin{acknowledgments}
+
+\end{acknowledgments}
+
+\begin{contribution}
+
+\end{contribution}
+
+% \facilities{HST(STIS), Swift(XRT and UVOT), AAVSO, CTIO:1.3m, CTIO:1.5m, CXO}
+
+% \software{astropy \citep{2013A&A...558A..33A,2018AJ....156..123A,2022ApJ...935..167A},  
+%           Cloudy \citep{2013RMxAA..49..137F}, 
+%           Source Extractor \citep{1996A&AS..117..393B}
+%           }
+
+\appendix
+\section{Placeholder appendix} \label{sec:appendix}
+
+\bibliography{references}{}
+\bibliographystyle{aasjournalv7.1}
+
+%\allauthors
+
+%\listofchanges
+
+\end{document}
+
+
